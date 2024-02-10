@@ -1,0 +1,80 @@
+/* header section style */
+.header {
+  position: fixed; /* fixed has absolute into itself */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--body-color);
+  padding: 0.75rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s ;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__toggle {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__menu {
+    @media (max-width: 767px) {
+      position: fixed; /* fixed has absolute into itself */
+      top: -100%; /* in toggle change to 4 rem */
+      left: 0;
+      right: 0;
+      width: 90vw;
+      margin: 0 auto;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+      background: var(--container-color);
+      border-radius: 1rem;
+      padding: 2.5rem 0;
+      z-index: -1;
+
+      transition: all 0.4s;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__item-link,
+  &__toggle,
+  &__logo {
+    color: var(--title-color);
+  }
+}
+
+.show-menu {
+  top: 5rem;  
+}
+
+.nav-scroll{
+  box-shadow: 0px 1px 4px rgb(0, 0, 0, 0.09);
+}
+.active-link{
+  position: relative;
+  transition: 1s;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 45%;
+
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: black;
+  }
+}

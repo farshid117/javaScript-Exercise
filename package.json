@@ -1,0 +1,23 @@
+{
+  "name": "readybootstraptemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farshid117/ReadyBootstrapTemplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farshid117/ReadyBootstrapTemplate/issues"
+  },
+  "homepage": "https://github.com/farshid117/ReadyBootstrapTemplate#readme",
+  "dependencies": {
+    "sass": "^1.70.0"
+  }
+}
