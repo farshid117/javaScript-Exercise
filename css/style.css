@@ -153,8 +153,6 @@ h4 {
 }
 .button__red {
   background: red;
-  padding: 5px 15px;
-  border-radius: 5px;
 }
 
 /* header section style */
@@ -252,7 +250,8 @@ h4 {
 .home__links {
   display: flex;
   flex-direction: row-reverse;
-  column-gap: 0.5rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 /* Responsive Styles */

@@ -20,23 +20,43 @@
     <title>Prompt method</title>
 
 </head>
-
+<style>
+    .name, .fname{
+        color: red;
+    }
+    .list{
+        padding-right: 30px;
+    }
+</style>
 <body>
     <div class="container">
         <h1 align="center">این تست پرامت است</h1>
         <p class="fw-bold">به طور کلی ما سه نوع دیالوگ سیستمی داریم</p>
-        <ul class="fw-bold">
+        <ul class="fw-bold list">
             <li>1 : Prompt</li>
             <li>2: alert</li>
             <li>3: confirm</li>
         </ul>
         <p>در این مطلب میخواهیم مورد سوم Prompt را چک نمائیم :</p>
-        <p>نام : <span class="fw-bold"></span>name</p>
-        <p>نام خانوادگی :<span class="fw-bold">fname</span></p>
+        <p class="fw-bold" >نام : <span class="fw-bold name"></span></p>
+        <p class="fw-bold" >نام خانوادگی :<span class="fw-bold fname"></span></p>
     </div>
-<script>
-    let name = prompt("نام خود را وارد کنید")
-    let fname = prompt("نام خانوادگی خودت را وارد کن")
+
+<script  >
+    const name =document.querySelector(".name")
+    const fname =document.querySelector(".fname")
+    
+   /*  name.innerHTML = prompt("نام خود را وارد کنید")
+    fname.innerHTML = prompt("نام خانوادگی خودت را وارد کن") */
+   /*  alert(typeof Number(fname.innerHTML) )
+    alert(typeof parseInt(fname.innerHTML) )
+    alert(typeof +fname.innerHTML ) */
+  /*   alert(+[])
+    alert(parseInt([]))
+    alert(parseFloat([]))
+    alert(Number([])) */
+
+   alert(5%3)
 </script>
    
 </body>
