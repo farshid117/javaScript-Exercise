@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,13 +20,76 @@
     <title>Basic-operators-math</title>
 
 </head>
+
+<style>
+    p{
+        line-height: 1.5;
+        color: cornflowerblue;
+    }
+</style>
+
 <body>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        2 + "1" ==>
+        <span class="exa1 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        2 + 2 + "1" ==>
+        <span class="exa2 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        "1" + 2 + 2 ==>
+        <span class="exa3 d-inline-block text-danger "></span>
+    </div>
+
     
-    <div class="returnBtn">
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        6 - '2' ==>
+        <span class="exa4 d-inline-block text-danger"></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        '6' / '2' ==>
+        <span class="exa5 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        'alireza' / 2 ==>
+        <span class="exa6 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        typeof NaN ==>
+        <span class="exa7 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        4 + "12" ==>
+        <span class="exa8 d-inline-block text-danger "></span>
+    </div>
+
+
+    <h4 class="text-end fw-bold fs-5 px-5 text-black" dir="ltr">Unery Plus :</s>
+    <p class="text-end fw-bold fs-5 px-5 " dir="ltr">
+        The binary + is the only operator that supports strings in
+        such a way. Other arithmetic operators work only with
+        numbers and always convert their operands to numbers.
+    </p>
+
+
+
+
+    <div class="returnBtn text-center">
         <a href="/" class="button">برگشت</a>
     </div>
     <script>
+        document.querySelector(".exa1").innerHTML = 2 + "1"
+        document.querySelector(".exa2").innerHTML = 2 + 2 + "1"
+        document.querySelector(".exa3").innerHTML = "1" + 2 + 2
+        document.querySelector(".exa4").innerHTML = 6 - '2'
+        document.querySelector(".exa5").innerHTML = '6' / '2'
+        document.querySelector(".exa6").innerHTML = 'alireza' / 2
+        document.querySelector(".exa7").innerHTML = typeof NaN
+        document.querySelector(".exa8").innerHTML = 4+ "12n"
+
 
     </script>
 </body>
+
 </html>
