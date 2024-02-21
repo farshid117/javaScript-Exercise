@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Basic-operators-math</title>
+
+</head>
+
+<style>
+    p {
+        line-height: 1.5;
+        color: cornflowerblue;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+   <div class="container">
+    <h2>Comparison Operators</h2>
+    <p>در عملگرهای مقایسه ای اگر دو طرف عملگر نوع یکسانی داشته باشد که موضوع ساده است. مقایسه میشند. در مقایسه رشته ها
+        نکته اش این است که حرف به حرف مقایسه میشه اگر اولین حرف کلمه بزرگتر باشد تمام است مقایسه
+    </p>
+    <p>در عملگرهای مقایسه ای اگر دو طرف عملگر نوع یکسانی <span class="text__red fw-bold">نداشته باشد</span> شروع چالش از همینجا هست. 
+    به عنوان یک نکته کلیدی این رو داشته باش که در عملگرهای مقایسه ای که نوع عملوندها یکسان نباشد. 
+    ابتدا عملوندها به Number تبدیل میشوند سپس مقایسه میگردند
+    در مورد null - undefined یک سری قوانینی هست که بهش میرسیم
+    </p>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        "2" > 1 ==>
+        <span class="exa1 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        "01" == 1 ==>
+        <span class="exa2 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        true == 1 ==>
+        <span class="exa3 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        false == 0 ==>
+        <span class="exa4 d-inline-block text-danger"></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        '0' == 0 ==>
+        <span class="exa5 d-inline-block text-danger "></span>
+    </div>
+    <h3 class="text-center fw-bold">Comparison of <span class="text__pink">Null & undefined</span> with <span class="text__violet">Strange Result</span></h3>
+    <p>
+        در مورد Null & undefined
+         باید بگویم که اول از هر چیز یادت باشد که اینها
+         <span class="text__orange fw-bold fs-5"> Sweet Couple</span>
+          هستند. 
+          <span class="text__violet fw-bold" >با هم مساوی هستند ولی با هیچ چیز مساوی نیستند</span><br>
+          <span class="fw-bold text-center d-block text__green fs-5">They equal other but not any other value</span>
+    </p>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        'alireza' / 2 ==>
+        <span class="exa6 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        typeof NaN ==>
+        <span class="exa7 d-inline-block text-danger "></span>
+    </div>
+    <div class="fw-bold fs-4 text-center" dir="ltr">
+        4 + "12" ==>
+        <span class="exa8 d-inline-block text-danger "></span>
+    </div>
+    
+    
+    <h4 class="text-end fw-bold fs-5 px-5 text-black" dir="ltr">Unery Plus :</s>
+        <p class="text-end fw-bold fs-5 px-5 " dir="ltr">
+            The binary + is the only operator that supports strings in
+            such a way. Other arithmetic operators work only with
+            numbers and always convert their operands to numbers.
+        </p>
+    
+    
+    
+    
+        <div class="returnBtn text-center">
+            <a href="/" class="button">برگشت</a>
+        </div>
+   </div>
+       
+</body>
+
+<script>
+    document.querySelector(".exa1").innerHTML =  String("2" > 1)
+    document.querySelector(".exa2").innerHTML =  String("01" == 1)
+    document.querySelector(".exa3").innerHTML =  String(true == 1)
+    document.querySelector(".exa4").innerHTML =  String(false == 0)
+    document.querySelector(".exa5").innerHTML =  String('0' == 0)
+    document.querySelector(".exa6").innerHTML =  String()
+    document.querySelector(".exa7").innerHTML =  String()
+    document.querySelector(".exa8").innerHTML =  String()
+</script>
+</html>
