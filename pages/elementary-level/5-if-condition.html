@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>if condition & question mark</title>
+
+</head>
+
+<style>
+    p {
+        line-height: 1.5;
+        color: cornflowerblue;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>if Condition & question mark</h2>
+
+        <p class="text-end fs-4"> <strong class="text__red">Falsy values :</strong>0 &nbsp;"" &nbsp; null &nbsp;
+            undefined &nbsp; NaN ---> means false</p>
+        <div class="fw-bold fs-4 text-end " dir="ltr">
+            <code>let accessAllowed = (age > 18) ? true : false &#9986; &#9992; &#9995 </code>
+        </div>
+        <p class="text-end fs-4" dir="ltr"><strong class="text__red">Please note:</strong><br>
+            In the example above, you can avoid using the question mark operator because the comparison itself returns
+            <span class="text__blue fw-bold">true/false</span>
+        </p>
+        <code class="text-end fw-bold fs-5" dir="ltr">
+            // the same<br>
+            let accessAllowed = age > 18;
+        </code>
+        <p class="text-end fs-4">Multiple ‘?’ </p>
+        <div class="p-4 bg__green text-end rounded-4" dir="ltr">
+            <code class="text-end fw-bold fs-5" dir="ltr">
+            let age = prompt('age?', 18);<br>
+            let message = (age < 3) ? 'Hi, baby!' : <br> (age < 18) ? 'Hello!' : <br> (age < 100) ? 'Greetings!' : 'What an unusual age!' ;<br><br>
+                alert( message )
+            
+            /code>
+        </div>
+
+        <div class="returnBtn text-center">
+            <a href="/" class="button">برگشت</a>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+</script>
+
+</html>
