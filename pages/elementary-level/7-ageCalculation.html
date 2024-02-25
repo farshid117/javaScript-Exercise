@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Age Calculation</title>
+
+</head>
+
+<!-- //todo: styles section -->
+<style>
+
+
+</style>
+<!-- //todo: body section -->
+
+<body>
+    <div class="container text-center">
+        <h3 class="text-center fw-bold">محاسبه سن کاربر</h3>
+
+
+
+        <div class="returnBtn">
+            <a href="/" class="button">برگشت</a>
+        </div>
+    </div>
+
+</body>
+
+<!-- //todo: script section -->
+<script>
+    let userName = prompt("لطفا نام و نام خانوادگی خود را وارد کنید", "فرشید خیاطپور")
+    let userGender = prompt("لطفا جنسیت خود را وارد کنید", "مرد")
+    let userNumber = prompt("لطفا سال تولد خود را وارد کنید", 1364)
+
+    let age = 1402-userNumber
+    let gender = userGender=="مرد" ? "جناب آقای " : "سرکار خانم "
+
+    alert(`${gender} ${userName} سن شما ${age} سال میباشد 😼`)
+
+
+
+
+</script>
+
+</html>
