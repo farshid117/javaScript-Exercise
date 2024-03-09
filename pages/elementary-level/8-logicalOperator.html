@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Age Calculation</title>
+    <title>Logical Operator</title>
 
 </head>
 
@@ -30,7 +30,7 @@
 
 <body>
     <div class="container text-center">
-        <h3 class="text-center fw-bold">محاسبه سن کاربر</h3>
+        <h3 class="text-center fw-bold">عملگر های منطقی Logical Operator</h3>
 
 
 
@@ -43,24 +43,17 @@
 
 <!-- //todo: script section -->
 <script>
-    let userName = prompt("لطفا نام و نام خانوادگی خود را وارد کنید", "فرشید خیاطپور")
-    let userGender = prompt("لطفا جنسیت خود را وارد کنید", "مرد")
-    let useYear = prompt("لطفا سال تولد خود را وارد کنید", 1364)
-    
-     userAge = 1402 - useYear
+    let age = prompt("لطفا سن خود را وارد کنید", 24)
+    let gender = prompt("لطفا جنسیت خود را وارد کنید", "زن")
 
-    if(isNaN(userAge)){
-         alert("لطفا سال تولد را درست وارد کنید")
-         useYear = prompt("لطفا سال تولد خود را وارد کنید", 1364)
+    if (gender == "زن" || age < 18) {
+       alert(gender == "زن" ? "شما زن هستید و باید برید آشپزخونه😃" : "گوچولو برو سر درست")
+    } else {
+        alert("بفرمائید تو آقای خان")
     }
-
-
-    let gender = userGender=="مرد" ? "جناب آقای " : "سرکار خانم "
-    alert(`${gender} ${userName} سن شما ${userAge} سال میباشد 😼`)
-
 
 
 
 </script>
-
+ 
 </html>
