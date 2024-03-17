@@ -17,41 +17,42 @@
     <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
     <link rel="stylesheet" href="../../css/style.css">
 
-    <title>Logical Operator</title>
+    <title>Prompt method</title>
 
 </head>
-
-<!-- //todo: styles section -->
 <style>
-
-
+  
 </style>
-<!-- //todo: body section -->
 
 <body>
-    <div class="container text-center">
-        <h3 class="text-center fw-bold">عملگر های منطقی Logical Operator</h3>
-
-
-
-        <div class="returnBtn">
-            <a href="/" class="button">برگشت</a>
-        </div>
+    <div class="container">
+        <h2 align="center">این تست string است</h2>
+     
     </div>
-
+    <div class="returnBtn text-center">
+        <a href="/" class="button">برگشت</a>
+    </div>
 </body>
 
-<!-- //todo: script section -->
 <script>
-    let age = prompt("لطفا سن خود را وارد کنید", 24)
-    let gender = prompt("لطفا جنسیت خود را وارد کنید", "زن")
+let text = "I Love javascript  "
+console.log(text.charAt(2))
+console.log(text.charCodeAt(2))
+console.log(text.concat(" & React"))
+console.log(text.trim())
+console.log(text.toLowerCase())
+console.log(text.toUpperCase())
+console.log(text.search("java"))
+console.log(text.indexOf("javab"))
+console.log(text.includes("java"))
 
-    if (gender == "زن" || age < 18) {
-       alert(gender == "زن" ? "شما زن هستید و باید برید آشپزخونه😃" : "گوچولو برو سر درست")
-    } else {
-        alert("بفرمائید تو آقای خان")
-    }
-    
+/* let userName = prompt("Enter your userName:", "ali10312")
+if (userName.toLowerCase() ==="ali"){
+    alert("you are login")
+}else{
+    alert("you are not login")
+} */
+
 </script>
- 
+
 </html>
