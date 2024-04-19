@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Mouse Event</title>
+
+</head>
+
+<!-- //todo: styles section -->
+<style>
+body{
+    background: #1c1a39;
+    color: #fff;
+}
+h3{
+    color: #fff;
+}
+.outer{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner{
+    width: 150px;
+    height: 150px;
+    background: blueviolet;
+}
+</style>
+<!-- //todo: body section -->
+
+<body>
+    <div class="container ">
+        <h3 class="text-center fw-bold">تست عملی رویدادهای موس</h3>
+        <h5>در این جلسه رویدادهای زیر بررسی میشود :</h5>
+        <ul class="text-end  m-auto d-flex" dir="ltr" style="direction: ltr;">
+            <li class="fw-bold ms-4">1- mousemove</li>
+            <li class="fw-bold ms-4">2- mouseenter</li>
+            <li class="fw-bold ms-4">3- mouseleave</li>
+            <li class="fw-bold ms-4">4- mouseover</li>
+            <li class="fw-bold ms-4">5- mouseout</li>
+            <li class="fw-bold ms-4">6- contextmenu</li>
+        </ul>
+        <div class="outer m-auto">
+            <div class="inner">
+
+            </div>
+        </div>
+
+        <div class="returnBtn text-center">
+            <a href="/" class="button">برگشت</a>
+        </div>
+    </div>
+
+</body>
+
+<!-- //todo: script section -->
+<script>
+    //mouseup
+    //mousedown
+    //mousemove
+    //mouseenter 
+    //mouseleave
+    //mouseover
+    //mouseout
+    //contextmenu
+    const outer = document.querySelector(".outer")
+    console.log("outer: ", outer);
+    outer.addEventListener("mousedown", () => {
+        outer.style.background = "blue";
+    })
+    outer.addEventListener("mouseup", () => {
+        outer.style.background = "yellow";
+    })
+
+
+</script>
+
+</html>
