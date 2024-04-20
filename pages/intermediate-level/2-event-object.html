@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Mouse Event</title>
+
+</head>
+
+<!-- //todo: styles section -->
+<style>
+    body {
+        background: #1c1a39;
+        color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+/*    body{
+  height:1000px;
+  width:2000px;
+} */
+button{
+  margin-top:40px;
+  margin-left:40px;
+}
+
+</style>
+<!-- //todo: body section -->
+
+<body>
+    <div class="containerr">
+        <div class="row">
+            <div class="col-12" id="app-body">
+                <Button type="button" class="btn btn-primary">Button 1</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- //todo: script section -->
+<script>
+ 
+    const button = document.querySelector('button');
+    button.addEventListener('click', (event) => {
+        const p = document.createElement('p');
+        p.style.marginTop = "20px"
+        p.innerHTML = `
+		clientX , clientY : ${event.clientX} , ${event.clientY} <br />
+		offsetX , offsetY : ${event.offsetX} , ${event.offsetY} <br />
+		pageX , pageY : ${event.pageX} , ${event.pageY} <br />
+		screenX , screenY : ${event.screenX} , ${event.screenY}`;
+        document.getElementById("app-body").appendChild(p);
+    });
+    button.addEventListener('click', (event) => {
+        const p = document.createElement('p');
+        p.innerHTML = `
+        the element is : ${event.target} <br />
+         and the type Event is : ${event.type}
+		`
+          document.getElementById("app-body").appendChild(p);
+    });
+
+</script>
+
+</html>
