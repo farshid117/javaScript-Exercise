@@ -26,6 +26,13 @@
     body {
         background: #1c1a39;
         color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
     }
 
     h3 {
@@ -51,12 +58,12 @@
 <!-- //todo: body section -->
 
 <body>
-    <div class="container ">
+    <div class="containerr">
         <div class="row">
             <div class="col-12">
                 <h3 class="text-center fw-bold">تست عملی رویدادهای موس</h3>
                 <h5>در این جلسه رویدادهای زیر بررسی میشود :</h5>
-                <ul class="text-end  m-auto d-flex" dir="ltr" style="direction: ltr;">
+                <ul class="text-end  m-auto d-flex flex-wrap"  style="direction: ltr;">
                     <li class="fw-bold ms-4">1- mousemove</li>
                     <li class="fw-bold ms-4">2- mouseenter</li>
                     <li class="fw-bold ms-4">3- mouseleave</li>
@@ -64,9 +71,11 @@
                     <li class="fw-bold ms-4">5- mouseout</li>
                     <li class="fw-bold ms-4">6- contextmenu</li>
                 </ul>
-                <div class="outer m-auto">
-                    <div class="inner">
-
+                <div class="box  d-flex justify-content-center">
+                    <div class="outer m-auto">
+                        <div class="inner">
+                    
+                        </div>
                     </div>
                 </div>
 
@@ -76,7 +85,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 <!-- //todo: script section -->
