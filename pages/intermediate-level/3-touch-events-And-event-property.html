@@ -35,8 +35,6 @@
         flex-wrap: wrap;
         text-align: left;
     }
-
-
 </style>
 <!-- //todo: body section -->
 
@@ -44,11 +42,8 @@
     <div class="containerr">
         <div class="row">
             <div class="col-12 text-center" id="app-body">
-                <Button type="button" class="btn btn-primary" onclick="clickhandler(this)">Button 1</button>
-                <div class="my-3">
-                    <input id="input1" type="text" class="form-control">
-                    <input id="input2" type="text" class="form-control my-3">
-                    <input id="input3" type="text" class="form-control">
+                <div class="touch my-3">
+
                 </div>
                 <p></p>
             </div>
@@ -58,8 +53,16 @@
         </div>
     </div>
 
-    
-    <script>
 
+    <script>
+        const div = document.querySelector('.touch');
+        div.addEventListener('touchstart', handler);
+        div.addEventListener('touchmove', handler);
+        div.addEventListener('touchend', handler);
+        div.addEventListener('touchcancel', handler);
+        function handler(event) {
+            const p = document.querySelector('p');
+            p.textContent += event.type + ' ';
+        }
     </script>
 </body>
