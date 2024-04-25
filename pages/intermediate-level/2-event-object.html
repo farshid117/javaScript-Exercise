@@ -36,23 +36,28 @@
         text-align: left;
     }
 
-/*    body{
+    /*    body{
   height:1000px;
   width:2000px;
 } */
-button{
-  margin-top:40px;
-  margin-left:40px;
-}
-
+    button {
+        margin-top: 40px;
+        margin-left: 40px;
+    }
 </style>
 <!-- //todo: body section -->
 
 <body>
     <div class="containerr">
         <div class="row">
-            <div class="col-12" id="app-body">
-                <Button type="button" class="btn btn-primary">Button 1</button>
+            <div class="col-12 text-center" id="app-body">
+                <Button type="button" class="btn btn-primary" onclick="clickhandler(this)">Button 1</button>
+                <div class="my-3">
+                    <input id="input1" type="text" class="form-control">
+                    <input id="input2" type="text" class="form-control my-3">
+                    <input id="input3" type="text" class="form-control">
+                </div>
+                <p></p>
             </div>
         </div>
     </div>
@@ -60,7 +65,9 @@ button{
 
 <!-- //todo: script section -->
 <script>
- 
+    const clickhandler = (x) => {
+        console.log(x)
+    }
     const button = document.querySelector('button');
     button.addEventListener('click', (event) => {
         const p = document.createElement('p');
@@ -73,13 +80,57 @@ button{
         document.getElementById("app-body").appendChild(p);
     });
     button.addEventListener('click', (event) => {
+        console.log(typeof event.target)
         const p = document.createElement('p');
         p.innerHTML = `
         the element is : ${event.target} <br />
          and the type Event is : ${event.type}
 		`
-          document.getElementById("app-body").appendChild(p);
+        document.getElementById("app-body").appendChild(p);
     });
+    button.addEventListener('click', (event) => {
+
+        const p = document.createElement('p');
+        p.innerHTML =
+            `
+            Button: ${event.button}<br />
+            Alt: ${event.altKey}<br />
+            Ctrl: ${event.ctrlKey}<br />
+            Shift: ${event.shiftKey}
+		`
+        document.getElementById("app-body").appendChild(p);
+    });
+
+    const input = document.querySelector('#input1');
+    input.addEventListener('keypress', handler);
+
+    function handler(event) {
+        const p = document.querySelector('p');
+        p.innerHTML =`charCode is : ${event.charCode} <br /> ` ;
+        event.target.innerHTML = ""
+    }
+
+    const input2 = document.querySelector('#input2');
+        input2.addEventListener('keydown', handler2);
+
+        function handler2(event) {
+            const p = document.querySelector('p');
+            p.innerHTML = `keyCode is : ${event.keyCode} <br />`;
+           
+            console.log(event)
+        }
+    const input3 = document.querySelector('#input3');
+        input3.addEventListener('keydown', handler3);
+
+        function handler3(event) {
+            const p = document.querySelector('p');
+            p.innerHTML =
+            `
+                key  property in EventObject is : ${event.key} <br />
+                code property in EventObject is : ${event.code} <br />
+            
+            `           
+        }
 
 </script>
 
