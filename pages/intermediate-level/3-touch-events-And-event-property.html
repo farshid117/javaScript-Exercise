@@ -61,13 +61,16 @@
 
     <script>
         const div = document.querySelector('.touch');
+        div.addEventListener('click', handler);
         div.addEventListener('touchstart', handler);
         div.addEventListener('touchmove', handler);
         div.addEventListener('touchend', handler);
         div.addEventListener('touchcancel', handler);
         function handler(event) {
             const p = document.querySelector('p');
-            p.textContent += event.type + ' ';
+            p.innerHTML += `
+              event.type is : ${event.type} <br/>
+            ` ;
         }
     </script>
 </body>
