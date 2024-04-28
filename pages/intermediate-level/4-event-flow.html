@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
+    <meta name="description" content="توضیحی از پروژه" />
+    <meta name="outher" content="مهندس علیرضا خیاطپور" />
+
+    <link rel="icon" href="img/logo3.png" type="image/png">
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Event-Flow : Propagation & Delegation</title>
+
+</head>
+
+<!-- //todo: styles section -->
+<style>
+    body {
+        background: #1c1a39;
+        color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+    }
+
+    h3 {
+        color: orange;
+    }
+
+    li {
+        cursor: pointer;
+    }
+</style>
+<!-- //todo: body section -->
+
+<body>
+    <div class="containerr">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center fw-bold">Test of Event Flow</h3>
+                <h5>در این جلسه بحث حرفه ای جریان رویدادها را بررسی میکنیم :</h5>
+                <ul class="text-end  m-auto d-flex flex-wrap my-4" style="direction: ltr;">
+                    <li class="fw-bold ms-4">1- Home</li>
+                    <li class="fw-bold ms-4">2- Services</li>
+                    <li class="fw-bold ms-4">3- AboutUS</li>
+                    <li class="fw-bold ms-4">4- ContactUs</li>
+                    <li class="fw-bold ms-4">5- Contracts</li>
+                    <li class="fw-bold ms-4">6- Production</li>
+                </ul>
+
+
+                <div class="returnBtn text-center">
+                    <a href="%public_url%/../../../index.html" class="button">برگشت</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- //todo: script section -->
+<script>
+    // Event Flow : 1-capturing Phase  
+    //              2-traget Phase 
+    //              3-Bubbling Phase
+
+
+    // event.stopPropagation (توقف انتشار جریان رویداد)
+    //Event Delegation 
+    //(چون همه رویدادهای فرزندان به تگ والد هم میرسد در رویدادهای مشترک یک هندلر به تگ والد میدهیم تا اجرا شود )
+
+    //1- event.currentTarget
+    //2- event.target
+    //3- event.eventPhase
+
+    const ul = document.querySelector("ul")
+    const li = document.querySelector("li")
+    
+
+
+    const liHandler = function (event) {
+        alert("li clicked !...")
+        //event.stopPropagation()
+
+        console.log("----------Li HANDLER-----------")
+        console.log("event.target : ", event.target)
+        console.log("event.currentTarget : ", event.currentTarget)
+          if (event.eventPhase == 1) {
+            console.log("event.eventPhase : ", "Capturing Phase")
+        } else if (event.eventPhase == 2) {
+            console.log("event.eventPhase : ", "Target Phase")
+        } else {
+            console.log("event.eventPhase : ", "Bubbling Phase")
+        }
+    }
+
+    const ulHandler = function (event) {
+        alert("ul clicked !...")
+
+        console.log("----------UL HANDLER-----------")
+        console.log("event.target : ", event.target)
+        console.log("event.currentTarget : ", event.currentTarget)
+        if(event.eventPhase == 1){
+            console.log("event.eventPhase : ", "Capturing Phase")
+        }else if(event.eventPhase == 2){
+            console.log("event.eventPhase : ", "target Phase")
+        }else{
+            console.log("event.eventPhase : ", "Bubbling Phase")
+        }
+    }
+
+    li.addEventListener("click", liHandler)
+    ul.addEventListener("click", ulHandler, false)
+
+
+
+</script>
+
+</html>
