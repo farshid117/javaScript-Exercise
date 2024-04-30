@@ -39,6 +39,11 @@
         color: #fff;
     }
 
+    input::placeholder {
+        font-size: 12px !important;
+        font-weight: bold;
+        color: #777 !important;
+    }
 </style>
 <!-- //todo: body section -->
 
@@ -48,16 +53,24 @@
             <div class="col-12">
                 <h3 class="text-center fw-bold">تست عملی رویدادها و خاصیت‌های فرم</h3>
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
-               
-                <form action="" method="get">
-                    <label for="full-name" class="form-label">نام : </label>
-                    <input type="text" class="from-control" id="full-name" placeholder="نام و نام خانوادگی را وارد کنید">
-                    <label for="password-num" class="form-label">پسورد : </label>
-                    <input type="password" class="from-control" id="password-num" placeholder=" پسورد را وارد کنید">
-                    <label for="email-address" class="form-label">ایمیل : </label>
-                    <input type="email" class="from-control" id="email-address" placeholder="ایمیل را وارد کنید">
 
-                    <button type="submit">ارسال</button>
+                <form action="" method="get" class="myform" id="myform" name="my-form">
+                    <label for="full-name" class="form-label">نام : </label>
+                    <input type="text"
+                           id="full-name"
+                           class="form-control"
+                           name="fname"   
+                           value="نامت چیست؟"
+                           placeholder="نام و نام خانوادگی را وارد کنید"
+                    >
+
+                    <label for="password-num" class="form-label mt-3">پسورد : </label>
+                    <input type="password" class="form-control" name="pass" id="password-num"
+                        placeholder=" پسورد را وارد کنید">
+                    <label for="email-address" class="form-label mt-3">ایمیل : </label>
+                    <input type="email" class="form-control" name="mail" id="email-address"
+                        placeholder="ایمیل را وارد کنید">
+                    <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
 
                 <div class="returnBtn text-center">
@@ -70,7 +83,33 @@
 
 <!-- //todo: script section -->
 <script>
+    const myForm1 = document.getElementsByClassName("myform")[0].elements["password-num"]; //HTMLCollection
+    //console.log("myForm1: ", myForm1);
+
+    const myForm2 = document.forms[0].elements //HTMLFormControllCollection --> like Array
+    //console.log("myForm2: ", myForm2);
+
+    const myForm3 = document.forms.myform.elements[2]; //Access by index
+    //console.log("Access by Index myForm3: ", myForm3);
+
+    const myForm4 = document.forms["my-form"].elements["full-name"]; //Access by id Attr
+    //console.log("Access by id Attr myForm4: ", myForm4);
+
+    const myForm5 = document.forms.myform.elements.fname; //Access by name Attr
+    console.log("Access by name Attr myForm5: ", myForm5);
+
+    const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
+    //console.log("Length of myForm6 is: ", myForm6);
+
     
+    const inputName = document.forms.myform.elements.fname; //Access by name Attr
+    console.log("inputName.disabled",inputName.disabled)
+    console.log("inputName.readOnly",inputName.readOnly)
+    console.log("inputName.required",inputName.required)
+    console.log("inputName.form",inputName.form)
+    console.log("inputName.value",inputName.value)
+    console.log("inputName.tabIndex",inputName.tabIndex)
+
 
 </script>
 
