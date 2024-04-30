@@ -56,13 +56,8 @@
 
                 <form action="" method="get" class="myform" id="myform" name="my-form">
                     <label for="full-name" class="form-label">نام : </label>
-                    <input type="text"
-                           id="full-name"
-                           class="form-control"
-                           name="fname"   
-                           value="نامت چیست؟"
-                           placeholder="نام و نام خانوادگی را وارد کنید"
-                    >
+                    <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
+                        placeholder="نام و نام خانوادگی را وارد کنید">
 
                     <label for="password-num" class="form-label mt-3">پسورد : </label>
                     <input type="password" class="form-control" name="pass" id="password-num"
@@ -72,6 +67,40 @@
                         placeholder="ایمیل را وارد کنید">
                     <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
+
+               <!--  <section id="checkbox" class="my-3">
+                    <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
+                    <label>دیپلم</label> <br>
+                    <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked> <label>لیسانس</label>
+                    <br>
+                    <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class=""> <label>فوق
+                        لیسانس</label> <br>
+                </section> -->
+
+                <section id="order" class="text-center">
+                    <h1 class="text-white">منوی سفارش</h1>
+                   <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="my-4">
+                                <input type="checkbox" value="کوبیده" checked /><label>کوبیده</label> <br />
+                                <input type="checkbox" value="جوجه کباب" /><label>جوجه کباب</label><br />
+                                <input type="checkbox" value="نوشابه" /><label>نوشابه</label><br />
+                                <input type="checkbox" value="دوغ" /><label>دوغ</label><br />
+                                <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
+                            </form>
+                        </div>
+                    </div>
+                   </div>
+                    <h2 class="text-warning">سفارش فعلی شما</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <div id="result" class="d-flex justify-content-center my-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <div class="returnBtn text-center">
                     <a href="%public_url%/../../../index.html" class="button">برگشت</a>
@@ -101,16 +130,46 @@
     const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
     //console.log("Length of myForm6 is: ", myForm6);
 
+
+    /*  const inputName = document.forms.myform.elements.fname; //Access by name Attr
+     console.log("inputName.disabled",inputName.disabled)
+     console.log("inputName.readOnly",inputName.readOnly)
+     console.log("inputName.required",inputName.required)
+     console.log("inputName.form",inputName.form)
+     console.log("inputName.value",inputName.value)
+     console.log("inputName.tabIndex",inputName.tabIndex) */
+
+/* -------------section checkbox -------------------------- */
+ /*    const checkbox1 = document.getElementById("checkinp2");
+    console.log("checkbox1: ", checkbox1);
+
+    console.log(checkbox1.checked)
+    console.log(checkbox1.value)
+    console.log(checkbox1.form)
+
+    checkbox1.addEventListener("change", () => {
+
+        console.log(checkbox1.checked)
+        console.log(checkbox1.value)
     
-    const inputName = document.forms.myform.elements.fname; //Access by name Attr
-    console.log("inputName.disabled",inputName.disabled)
-    console.log("inputName.readOnly",inputName.readOnly)
-    console.log("inputName.required",inputName.required)
-    console.log("inputName.form",inputName.form)
-    console.log("inputName.value",inputName.value)
-    console.log("inputName.tabIndex",inputName.tabIndex)
+    }) */
 
+    /* section order */
+    const button = document.querySelector('.orderBtn');
+    button.addEventListener('click', handler);
 
+    function handler() {
+        const inputs = document.querySelectorAll('input');
+        let html = '<table class="table border-success table-striped" >';
+        for (let input of inputs) {
+            if (input.checked) {
+                html += `<tr><td>${input.value}</td></tr>`;
+            }
+        }
+        html += '</table>';
+        const div = document.getElementById('result');
+        div.innerHTML = html;
+    }
 </script>
 
 </html>
