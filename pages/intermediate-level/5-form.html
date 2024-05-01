@@ -35,8 +35,14 @@
         flex-wrap: wrap;
     }
 
-    h3 {
+    h3,
+    h2,
+    h1{
         color: #fff;
+    }
+     
+    #result2{
+        color:orange;
     }
 
     input::placeholder {
@@ -68,7 +74,7 @@
                     <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
 
-               <!--  <section id="checkbox" class="my-3">
+                <!--  <section id="checkbox" class="my-3">
                     <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
                     <label>دیپلم</label> <br>
                     <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked> <label>لیسانس</label>
@@ -79,19 +85,19 @@
 
                 <section id="order" class="text-center">
                     <h1 class="text-white">منوی سفارش</h1>
-                   <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <form class="my-4">
-                                <input type="checkbox" value="کوبیده" checked /><label>کوبیده</label> <br />
-                                <input type="checkbox" value="جوجه کباب" /><label>جوجه کباب</label><br />
-                                <input type="checkbox" value="نوشابه" /><label>نوشابه</label><br />
-                                <input type="checkbox" value="دوغ" /><label>دوغ</label><br />
-                                <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
-                            </form>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="my-4">
+                                    <input type="checkbox" value="کوبیده" checked /><label>کوبیده</label> <br />
+                                    <input type="checkbox" value="جوجه کباب" /><label>جوجه کباب</label><br />
+                                    <input type="checkbox" value="نوشابه" /><label>نوشابه</label><br />
+                                    <input type="checkbox" value="دوغ" /><label>دوغ</label><br />
+                                    <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                   </div>
                     <h2 class="text-warning">سفارش فعلی شما</h2>
                     <div class="container">
                         <div class="row">
@@ -100,6 +106,35 @@
                             </div>
                         </div>
                     </div>
+                </section>
+
+                <section id="radio" class="mt-5">
+                    <h1>انتخاب وضعیت</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <form>
+                                    <input type="radio" name="marriage" value="مجرد" checked /><label
+                                        class="ms-2">مجرد</label><br>
+                                    <input type="radio" name="marriage" value="متاهل" /><label
+                                        class="ms-2">متاهل</label><br>
+                                    <hr />
+                                    <input type="radio" name="education" value="دیپلم" /><label
+                                        class="ms-2">دیپلم</label><br>
+                                    <input type="radio" name="education" value="لیسانس" checked /><label
+                                        class="ms-2">لیسانس</label><br>
+                                    <input type="radio" name="education" value="فوق لیسانس" /><label class="ms-2">فوق
+                                        لیسانس</label><br>
+                                    <input type="radio" name="education" value="دکتری" /><label
+                                        class="ms-2">دکتری</label><br>
+                                    <hr />
+                                    <button type="button" class="btn btn-primary statusBtn">مشاهده‌ی وضعیت</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>وضعیت فعلی شما</h2>
+                    <p id="result2"></p>
                 </section>
 
                 <div class="returnBtn text-center">
@@ -139,20 +174,20 @@
      console.log("inputName.value",inputName.value)
      console.log("inputName.tabIndex",inputName.tabIndex) */
 
-/* -------------section checkbox -------------------------- */
- /*    const checkbox1 = document.getElementById("checkinp2");
-    console.log("checkbox1: ", checkbox1);
-
-    console.log(checkbox1.checked)
-    console.log(checkbox1.value)
-    console.log(checkbox1.form)
-
-    checkbox1.addEventListener("change", () => {
-
-        console.log(checkbox1.checked)
-        console.log(checkbox1.value)
-    
-    }) */
+    /* -------------section checkbox -------------------------- */
+    /*    const checkbox1 = document.getElementById("checkinp2");
+       console.log("checkbox1: ", checkbox1);
+   
+       console.log(checkbox1.checked)
+       console.log(checkbox1.value)
+       console.log(checkbox1.form)
+   
+       checkbox1.addEventListener("change", () => {
+   
+           console.log(checkbox1.checked)
+           console.log(checkbox1.value)
+       
+       }) */
 
     /* section order */
     const button = document.querySelector('.orderBtn');
@@ -169,6 +204,30 @@
         html += '</table>';
         const div = document.getElementById('result');
         div.innerHTML = html;
+    }
+
+/******************** Radio Button *******************/
+    const statusBtn = document.querySelector('.statusBtn');
+    statusBtn.addEventListener('click', handler3);
+
+    function handler3() {
+        const marriageInputs  = document.querySelectorAll('input[name="marriage"]'); //NodeList
+        const educationInputs = document.querySelectorAll('input[name="education"]'); //NodeList
+        let marriage, education;
+        for (let input of marriageInputs) {
+            if (input.checked) {
+                marriage = input.value;
+                break;
+            }
+        }
+        for (let input of educationInputs) {
+            if (input.checked) {
+                education = input.value;
+                break;
+            }
+        }
+        const result2 = document.getElementById('result2'); //object
+        result2.innerHTML = `<p>شما ${marriage} هستید و دارای مدرک ${education} هستید.</p>`;
     }
 </script>
 
