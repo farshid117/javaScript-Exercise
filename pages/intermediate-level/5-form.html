@@ -37,12 +37,12 @@
 
     h3,
     h2,
-    h1{
+    h1 {
         color: #fff;
     }
-     
-    #result2{
-        color:orange;
+
+    #result2 {
+        color: orange;
     }
 
     input::placeholder {
@@ -140,15 +140,15 @@
                 <section id="drop-down" class="mt-5">
                     <h1>انتخاب وضعیت</h1>
                     <form>
-                        <select name="marriage" class="form-select">
+                        <select name="marriage" id="marriage" class="form-select">
                             <option value="مجرد" selected>مجرد</option>
                             <option value="متاهل">متاهل</option>
                         </select>
                         <hr />
-                        <select name="education" class="form-select">
+                        <select name="education" id="education" class="form-select">
                             <option value="دیپلم">دیپلم</option>
-                            <option value="لیسانس" >لیسانس</option>
-                            <option value="فوق لیسانس" selected>فوق لیسانس</option>
+                            <option value="لیسانس">لیسانس</option>
+                            <option value="فوق لیسانس">فوق لیسانس</option>
                             <option value="دکتری">دکتری</option>
                         </select>
                         <hr />
@@ -227,12 +227,12 @@
         div.innerHTML = html;
     }
 
-/******************** Radio Button *******************/
+    /******************** Radio Button *******************/
     const statusBtn = document.querySelector('.statusBtn');
     statusBtn.addEventListener('click', handler3);
 
     function handler3() {
-        const marriageInputs  = document.querySelectorAll('input[name="marriage"]'); //NodeList
+        const marriageInputs = document.querySelectorAll('input[name="marriage"]'); //NodeList
         const educationInputs = document.querySelectorAll('input[name="education"]'); //NodeList
         let marriage, education;
         for (let input of marriageInputs) {
@@ -253,16 +253,25 @@
 
 
     /* ------------------DropDown List ------------------------ */
-    const button4 = document.querySelector('.statusBtn2'); //object
-        button4.addEventListener('click', handler);
+    const button4 = document.querySelector('.statusBtn2'); //
+    const marriageSelect = document.querySelector("#marriage");
+    const educationSelect = document.querySelector('select[name="education"]');
 
-        function handler() {
-            const marriageMenu = document.querySelector('select[name="marriage"]');
-            const educationMenu = document.querySelector('select[name="education"]');
-            
-            const result4 = document.getElementById('result4');
-            result4.innerHTML = `<p>شما ${marriageMenu.value} هستید و دارای مدرک ${educationMenu.value} هستید.</p>`;
-        }
+   /*  marriageSelect.value = "متاهل"
+    educationSelect.value = "فوق لیسانس"; */
+
+    
+    educationSelect.selectedIndex =0; // -1 means dont show any options value
+
+    console.log("marriage: ", marriageSelect.value);
+    console.log("education: ", educationSelect.value);
+
+    button4.addEventListener('click', handler);
+
+    function handler() {
+        const result4 = document.getElementById('result4');
+        result4.innerHTML = `<p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>`;
+    }
 </script>
 
 </html>
