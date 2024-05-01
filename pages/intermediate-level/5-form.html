@@ -137,6 +137,27 @@
                     <p id="result2"></p>
                 </section>
 
+                <section id="drop-down" class="mt-5">
+                    <h1>انتخاب وضعیت</h1>
+                    <form>
+                        <select name="marriage" class="form-select">
+                            <option value="مجرد" selected>مجرد</option>
+                            <option value="متاهل">متاهل</option>
+                        </select>
+                        <hr />
+                        <select name="education" class="form-select">
+                            <option value="دیپلم">دیپلم</option>
+                            <option value="لیسانس" >لیسانس</option>
+                            <option value="فوق لیسانس" selected>فوق لیسانس</option>
+                            <option value="دکتری">دکتری</option>
+                        </select>
+                        <hr />
+                        <button type="button" class="btn btn-primary statusBtn2">مشاهده‌ی وضعیت</button>
+                    </form>
+                    <h2>وضعیت فعلی شما</h2>
+                    <p id="result4"></p>
+                </section>
+
                 <div class="returnBtn text-center">
                     <a href="%public_url%/../../../index.html" class="button">برگشت</a>
                 </div>
@@ -229,6 +250,19 @@
         const result2 = document.getElementById('result2'); //object
         result2.innerHTML = `<p>شما ${marriage} هستید و دارای مدرک ${education} هستید.</p>`;
     }
+
+
+    /* ------------------DropDown List ------------------------ */
+    const button4 = document.querySelector('.statusBtn2'); //object
+        button4.addEventListener('click', handler);
+
+        function handler() {
+            const marriageMenu = document.querySelector('select[name="marriage"]');
+            const educationMenu = document.querySelector('select[name="education"]');
+            
+            const result4 = document.getElementById('result4');
+            result4.innerHTML = `<p>شما ${marriageMenu.value} هستید و دارای مدرک ${educationMenu.value} هستید.</p>`;
+        }
 </script>
 
 </html>
