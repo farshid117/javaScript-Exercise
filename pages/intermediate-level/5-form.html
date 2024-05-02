@@ -74,14 +74,15 @@
                     <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
 
-                <!--  <section id="checkbox" class="my-3">
+                <section id="checkbox" class="my-3">
                     <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
                     <label>دیپلم</label> <br>
-                    <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked> <label>لیسانس</label>
+                    <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked>
+                    <label>لیسانس</label>
                     <br>
                     <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class=""> <label>فوق
                         لیسانس</label> <br>
-                </section> -->
+                </section>
 
                 <section id="order" class="text-center">
                     <h1 class="text-white">منوی سفارش</h1>
@@ -157,6 +158,22 @@
                     <h2>وضعیت فعلی شما</h2>
                     <p id="result4"></p>
                 </section>
+                <hr>
+                <section id="Focus" class="mt-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11 col-md-6">
+                                <form action="http://alicoder.ir">
+                                    <input type="text" class="form-control" name="firstname" id="firstname"
+                                        value="name" /><br /><br />
+                                    <input type="text" class="form-control" name="lastname" id="lastname"
+                                        value="family" /><br /><br />
+                                    <button type="submit" class="focusBtn btn btn-success">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <div class="returnBtn text-center">
                     <a href="%public_url%/../../../index.html" class="button">برگشت</a>
@@ -196,26 +213,25 @@
      console.log("inputName.tabIndex",inputName.tabIndex) */
 
     /* -------------section checkbox -------------------------- */
-    /*    const checkbox1 = document.getElementById("checkinp2");
-       console.log("checkbox1: ", checkbox1);
-   
-       console.log(checkbox1.checked)
-       console.log(checkbox1.value)
-       console.log(checkbox1.form)
-   
-       checkbox1.addEventListener("change", () => {
-   
-           console.log(checkbox1.checked)
-           console.log(checkbox1.value)
-       
-       }) */
+    const checkbox1 = document.getElementById("checkinp2");
+    console.log("checkbox1: ", checkbox1);
+
+    console.log(checkbox1.checked)
+    console.log(checkbox1.value)
+    console.log(checkbox1.form)
+
+    checkbox1.addEventListener("change", () => {
+        console.log(checkbox1.checked)
+        console.log(checkbox1.value)
+    })
 
     /* section order */
-    const button = document.querySelector('.orderBtn');
-    button.addEventListener('click', handler);
+    const orderBtn = document.querySelector('.orderBtn');
+    orderBtn.addEventListener('click', orderHandler);
 
-    function handler() {
-        const inputs = document.querySelectorAll('input');
+    function orderHandler() {
+        console.log("salam")
+        const inputs = document.querySelectorAll('input[type="checkbox"]');
         let html = '<table class="table border-success table-striped" >';
         for (let input of inputs) {
             if (input.checked) {
@@ -257,11 +273,13 @@
     const marriageSelect = document.querySelector("#marriage");
     const educationSelect = document.querySelector('select[name="education"]');
 
-   /*  marriageSelect.value = "متاهل"
-    educationSelect.value = "فوق لیسانس"; */
+    /*
+     marriageSelect.value  = "متاهل"
+     educationSelect.value = "فوق لیسانس";
+    */
 
-    
-    educationSelect.selectedIndex =0; // -1 means dont show any options value
+
+    educationSelect.selectedIndex = 2; // -1 means dont show any options value
 
     console.log("marriage: ", marriageSelect.value);
     console.log("education: ", educationSelect.value);
@@ -272,6 +290,29 @@
         const result4 = document.getElementById('result4');
         result4.innerHTML = `<p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>`;
     }
+
+    /* ************** focus & blur Event ***************** */
+    const firstInput = document.getElementById('firstname');
+    const lastInput = document.getElementById('lastname');
+
+    firstInput.addEventListener('focus', selectText);
+    lastInput.addEventListener('focus', selectText);
+
+    function selectText(event) {
+        event.target.select();
+    }
+
+    /* *************** validate with blur Event **************** */
+    const day = document.getElementById('day');
+    const month = document.getElementById('month');
+
+    day.addEventListener('blur', (event) => {
+        if (!(day.value >= 1 && day.value <= 31)) {
+            alert('روز باید عددی بین 1 تا 31 باشد');
+        }
+    });
+
+    /* ******************        *************** */
 </script>
 
 </html>
