@@ -52,8 +52,9 @@
     }
 
     #textarea1,
-    #check1, #check2 {
-        accent-color: orange !important;
+    #check1,
+    input[type="checkbox"] {
+        accent-color: pink !important;
     }
 </style>
 <!-- //todo: body section -->
@@ -64,53 +65,61 @@
             <div class="col-12">
                 <h3 class="text-center fw-bold">تست عملی رویدادها و خاصیت‌های فرم</h3>
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
-                <!-- --------------------------checkBox --------------------------- -->
-                <form action="" method="get" class="myform" id="my-form" name="myform">
-                    <label for="full-name" class="form-label">نام : </label>
-                    <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
-                        placeholder="نام و نام خانوادگی را وارد کنید ">
+                <!-- --------------------------section1 get form & controll with forms shortcut --------------------------- -->
+                <section id="form-text" class="mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="" method="get" class="myform" id="my-form" name="myform">
+                                <label for="full-name" class="form-label">نام : </label>
+                                <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
+                                    placeholder="نام و نام خانوادگی را وارد کنید ">
 
-                    <label for="password-num" class="form-label mt-3">پسورد : </label>
-                    <input type="password" class="form-control" name="pass" id="password-num"
-                        placeholder="پسورد را وارد کنید ">
-                    <label for="email-address" class="form-label mt-3">ایمیل : </label>
-                    <input type="email" class="form-control" name="mail" id="email-address"
-                        placeholder="ایمیل را وارد کنید ">
-                    <button type="submit" class="btn btn-success mt-3">ارسال</button>
-                </form>
-                 
-                <section id="checkbox" class="my-3">
-                    <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
-                    <label>دیپلم</label> <br>
-                    <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked>
-                    <label>لیسانس</label>
-                    <br>
-                    <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class=""> <label>فوق
-                        لیسانس</label> <br>
+                                <label for="password-num" class="form-label mt-3">پسورد : </label>
+                                <input type="password" class="form-control" name="pass" id="password-num"
+                                    placeholder="پسورد را وارد کنید ">
+                                <label for="email-address" class="form-label mt-3">ایمیل : </label>
+                                <input type="email" class="form-control" name="mail" id="email-address"
+                                    placeholder="ایمیل را وارد کنید "><br>
+                                <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
+                                <label>دیپلم</label><br>
+                                <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked>
+                                <label>لیسانس</label><br>
+                                <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class="">
+                                <label>فوق لیسانس</label> <br>
+                                <button type="submit" class="btn btn-success mt-3">ارسال</button>
+                            </form>
+                        </div>
+                    </div>
                 </section>
-                <!-- ------------------- order with checkBox ---------------------- -->
+                <hr>
+
+                <!-- ------------------- order with checkbox Event & property  ---------------------- -->
                 <section id="order" class="text-center">
-                    <h1 class="text-white">منوی سفارش</h1>
+                    <h3 class="text-center fw-bold">checkbox Example : Resturant Order</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
                                 <form class="my-4">
-                                    <input type="checkbox" name="check2" id="check2" value="کوبیده" checked class="me-2" /><label>کوبیده</label>
+                                    <input type="checkbox" name="check2" id="check2" value="کوبیده" checked
+                                        class="me-2" /><label>کوبیده</label>
                                     <br />
-                                    <input type="checkbox" name="check2" id="check2" value="جوجه کباب" class="me-2" /><label>جوجه
-                                        کباب</label><br />
-                                    <input type="checkbox" name="check2" id="check2" value="نوشابه" class="me-2" /><label>نوشابه</label><br />
-                                    <input type="checkbox" name="check2" id="check2" value="دوغ" class="me-2" /><label>دوغ</label><br />
+                                    <input type="checkbox" name="check2" id="check3" value="جوجه کباب"
+                                        class="me-2" /><label>جوجه کباب</label><br />
+                                    <input type="checkbox" name="check2" id="check4" value="نوشابه"
+                                        class="me-2" /><label>نوشابه</label><br />
+                                    <input type="checkbox" name="check2" id="check5" value="دوغ"
+                                        class="me-2" /><label>دوغ</label><br />
                                     <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
+                                    <button type="reset" class="btn btn-danger delOrder mt-3">حذف سفارش</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <h2 class="text-warning">سفارش فعلی شما</h2>
+                    <h3 class="text-warning fw-bold order-title"></h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-11">
-                                <div id="result" class="d-flex justify-content-center my-4"></div>
+                                <div id="order-table" class="d-flex justify-content-center my-4"></div>
                             </div>
                         </div>
                     </div>
@@ -139,7 +148,7 @@
                                         لیسانس</label><br>
                                     <input type="radio" name="education" value="دکتری" /><label
                                         class="ms-2">دکتری</label><br>
-                                    
+
                                     <button type="button" class="btn btn-primary statusBtn my-3">مشاهده‌ی وضعیت</button>
                                 </form>
                             </div>
@@ -151,22 +160,34 @@
                 <hr>
                 <!-- ------------------ dropDown control propery ------------------ -->
                 <section id="drop-down" class="mt-5">
-                    <h2 class="fw-bold text-center">DropDown VS Radio Example</h2>
-                    <form>
-                        <select name="marriage2" id="marriage2" class="form-select">
-                            <option value="مجرد" selected>مجرد</option>
-                            <option value="متاهل">متاهل</option>
-                        </select>
-                        <hr />
-                        <select name="education2" id="education" class="form-select">
-                            <option value="دیپلم">دیپلم</option>
-                            <option value="لیسانس">لیسانس</option>
-                            <option value="فوق لیسانس">فوق لیسانس</option>
-                            <option value="دکتری">دکتری</option>
-                        </select>
-                        <hr />
-                        <button type="button" class="btn btn-primary statusBtn2">مشاهده‌ی وضعیت</button>
-                    </form>
+                    <h2 class="fw-bold text-center">Dropdown VS Radio Example</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <select name="marriage2" id="marriage2" class="form-select">
+                                                <option value="مجرد" selected>مجرد</option>
+                                                <option value="متاهل">متاهل</option>
+                                            </select>
+                                            <br>
+                                            <select name="education2" id="education" class="form-select">
+                                                <option value="دیپلم">دیپلم</option>
+                                                <option value="لیسانس">لیسانس</option>
+                                                <option value="فوق لیسانس">فوق لیسانس</option>
+                                                <option value="دکتری">دکتری</option>
+                                            </select>
+                                            <br />
+                                            <button type="button" class="btn btn-primary statusBtn2">مشاهده‌ی
+                                                وضعیت</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <h3 class="fw-bold">وضعیت فعلی شما</h3>
                     <p id="result4"></p>
                 </section>
@@ -255,8 +276,8 @@
      */
     const myForm1 = document.getElementsByClassName("myform")[0].elements["password-num"]; //HTMLCollection
     //console.log("myForm1: ", myForm1);
-       const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
-        //console.log("Length of myForm6 is: ", myForm6);
+    const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
+    //console.log("Length of myForm6 is: ", myForm6);
 
     const myForm2 = document.forms[0].elements //HTMLFormControllCollection --> like Array
     //console.log("myForm2: ", myForm2);
@@ -270,8 +291,6 @@
     const myForm5 = document.forms.myform.elements.fname; //Access by name Attr
     console.log("Access by name Attr myForm5: ", myForm5);
 
- 
-
 
     /*  const inputName = document.forms.myform.elements.fname; //Access by name Attr
      console.log("inputName.disabled",inputName.disabled)
@@ -281,11 +300,15 @@
      console.log("inputName.value",inputName.value)
      console.log("inputName.tabIndex",inputName.tabIndex) */
 
-    /* -------------section checkbox -------------------------- */
+    /* -------------section checkbox : Resturan Order-------------------------- */
     const checkbox1 = document.getElementById("checkinp2");
     console.log("checkbox1: ", checkbox1);
 
     console.log(checkbox1.checked)
+
+    console.log(checkbox1.disabled)
+    console.log(checkbox1.readOnly)
+    console.log(checkbox1.required)
     console.log(checkbox1.value)
     console.log(checkbox1.form)
 
@@ -296,28 +319,40 @@
 
     /* section order */
     const orderBtn = document.querySelector('.orderBtn');
-    orderBtn.addEventListener('click', orderHandler);
+    const delOrderBtn = document.querySelector('.delOrder');
+    const orderTable = document.getElementById('order-table');
+    const orderTitle = document.querySelector('.order-title');
 
+    orderBtn.addEventListener('click', orderHandler);
     function orderHandler() {
-        const inputs = document.querySelectorAll('input[name="check2"]');
+
+        orderTitle.innerHTML = "سفارش فعلی شما"
+
+        const checkInputs = document.querySelectorAll('input[name="check2"]'); //NodeList
         let html = '<table class="table border-success table-striped" >';
-        for (let input of inputs) {
-            if (input.checked) {
-                html += `<tr><td>${input.value}</td></tr>`;
+        for (let checkInput of checkInputs) {
+            if (checkInput.checked) {
+                html += `<tr><td>${checkInput.value}</td></tr>`;
             }
         }
         html += '</table>';
-        const div = document.getElementById('result');
-        div.innerHTML = html;
+
+        orderTable.innerHTML = html;
     }
+
+    delOrderBtn.addEventListener('click', () => {
+        orderTable.innerHTML = "";
+        orderTitle.innerHTML = ""
+    })
 
     /******************** section Radio Button *******************/
     const statusBtn = document.querySelector('.statusBtn');
-    statusBtn.addEventListener('click', handler3);
+    statusBtn.addEventListener('click', radioHandler);
 
-    function handler3() {
+    function radioHandler() {
         const marriageInputs = document.querySelectorAll('input[name="marriage"]'); //NodeList
         const educationInputs = document.querySelectorAll('input[name="education"]'); //NodeList
+
         let marriage, education;
         for (let input of marriageInputs) {
             if (input.checked) {
@@ -336,30 +371,30 @@
     }
 
 
-    /* ------------------DropDown List ------------------------ */
-    const button4 = document.querySelector('.statusBtn2'); //
-    const marriageSelect = document.querySelector("#marriage2");
-    const educationSelect = document.querySelector('select[name="education2"]');
+    /* ------------------DropDown(select) List ------------------------ */
+    const selectBtn = document.querySelector('.statusBtn2');
+    const marriageSelect = document.querySelector("#marriage2");//approach1
+    const educationSelect = document.querySelector('select[name="education2"]') //approach2
 
     /*
+    read & write Property
      marriageSelect.value  = "متاهل"
      educationSelect.value = "فوق لیسانس";
     */
-
 
     educationSelect.selectedIndex = 2; // -1 means dont show any options value
 
     console.log("marriage: ", marriageSelect.value);
     console.log("education: ", educationSelect.value);
 
-    button4.addEventListener('click', dropdownHandler);
+    selectBtn.addEventListener('click', dropdownHandler);
 
     function dropdownHandler() {
         const result4 = document.getElementById('result4');
         result4.innerHTML = `<p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>`;
     }
 
-    /* ************** focus & blur Event ***************** */
+    /* **************select input value focus & blur Event ***************** */
     const firstInput = document.getElementById('firstname');
     const lastInput = document.getElementById('lastname');
 
@@ -371,7 +406,7 @@
     }
 
     /* *************** validate with blur Event **************** */
-    const day   = document.getElementById('day');
+    const day = document.getElementById('day');
     const month = document.getElementById('month');
 
     day.addEventListener('blur', (event) => {
