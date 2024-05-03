@@ -65,17 +65,17 @@
                 <h3 class="text-center fw-bold">تست عملی رویدادها و خاصیت‌های فرم</h3>
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
                 <!-- --------------------------checkBox --------------------------- -->
-                <form action="" method="get" class="myform" id="myform" name="my-form">
+                <form action="" method="get" class="myform" id="my-form" name="myform">
                     <label for="full-name" class="form-label">نام : </label>
                     <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
-                        placeholder="نام و نام خانوادگی را وارد کنید">
+                        placeholder="نام و نام خانوادگی را وارد کنید ">
 
                     <label for="password-num" class="form-label mt-3">پسورد : </label>
                     <input type="password" class="form-control" name="pass" id="password-num"
-                        placeholder=" پسورد را وارد کنید">
+                        placeholder="پسورد را وارد کنید ">
                     <label for="email-address" class="form-label mt-3">ایمیل : </label>
                     <input type="email" class="form-control" name="mail" id="email-address"
-                        placeholder="ایمیل را وارد کنید">
+                        placeholder="ایمیل را وارد کنید ">
                     <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
                  
@@ -191,7 +191,7 @@
                 <hr>
                 <!-- ---------- blur Example --------------- -->
                 <section id="blurExample" class="mt-5">
-                    <h3 class="text-center">Validation with Blur Event</h3>
+                    <h2 class="text-center fw-bold">Validation with Blur Event</h2>
                     <div class="container">
                         <div class="row">
                             <div class="col-11 col-md-6">
@@ -245,8 +245,18 @@
 
 <!-- //todo: script section -->
 <script>
+
+    /*
+      Form properties : 
+        1- action
+        2- method
+        3- elements
+        4- length 
+     */
     const myForm1 = document.getElementsByClassName("myform")[0].elements["password-num"]; //HTMLCollection
     //console.log("myForm1: ", myForm1);
+       const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
+        //console.log("Length of myForm6 is: ", myForm6);
 
     const myForm2 = document.forms[0].elements //HTMLFormControllCollection --> like Array
     //console.log("myForm2: ", myForm2);
@@ -260,8 +270,7 @@
     const myForm5 = document.forms.myform.elements.fname; //Access by name Attr
     console.log("Access by name Attr myForm5: ", myForm5);
 
-    const myForm6 = document.forms["my-form"].length //count of controls that exist in the form
-    //console.log("Length of myForm6 is: ", myForm6);
+ 
 
 
     /*  const inputName = document.forms.myform.elements.fname; //Access by name Attr
@@ -302,7 +311,7 @@
         div.innerHTML = html;
     }
 
-    /******************** Radio Button *******************/
+    /******************** section Radio Button *******************/
     const statusBtn = document.querySelector('.statusBtn');
     statusBtn.addEventListener('click', handler3);
 
@@ -362,7 +371,7 @@
     }
 
     /* *************** validate with blur Event **************** */
-    const day = document.getElementById('day');
+    const day   = document.getElementById('day');
     const month = document.getElementById('month');
 
     day.addEventListener('blur', (event) => {
