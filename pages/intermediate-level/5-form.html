@@ -50,6 +50,11 @@
         font-weight: bold;
         color: #777 !important;
     }
+
+    #textarea1,
+    #check1 {
+        accent-color: orange !important;
+    }
 </style>
 <!-- //todo: body section -->
 
@@ -59,7 +64,7 @@
             <div class="col-12">
                 <h3 class="text-center fw-bold">تست عملی رویدادها و خاصیت‌های فرم</h3>
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
-
+                <!-- --------------------------checkBox --------------------------- -->
                 <form action="" method="get" class="myform" id="myform" name="my-form">
                     <label for="full-name" class="form-label">نام : </label>
                     <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
@@ -83,7 +88,7 @@
                     <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class=""> <label>فوق
                         لیسانس</label> <br>
                 </section>
-
+                <!-- ------------------- order with checkBox ---------------------- -->
                 <section id="order" class="text-center">
                     <h1 class="text-white">منوی سفارش</h1>
                     <div class="container">
@@ -108,7 +113,7 @@
                         </div>
                     </div>
                 </section>
-
+                <!-- ------------- radio Button --------------------- -->
                 <section id="radio" class="mt-5">
                     <h1>انتخاب وضعیت</h1>
                     <div class="container">
@@ -194,20 +199,31 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- ------------------  text Change Event   ------------------- -->
+                <hr>
+                <!-- ------------------  Test Change Event   ------------------- -->
                 <section id="change-event" class="mt-5">
-                    <form action="http://alicoder.com">
-                        <input type="text" name="text1" id="text1" class="form-control" /><br /><br />
-                        <input type="checkbox" name="check1" id="check1" class="form-control" /><br /><br />
-                        <textarea name="textarea1" id="textarea1" class="form-control"></textarea><br /><br />
-                        <select name="select1" id="select1" class="form-select">
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select><br /><br />
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </form>
+                    <h3 class="text-center my-3 fw-bold">Text Change Event</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <form action="http://alicoder.com">
+                                    <input type="text" name="text1" id="text1" class="form-control" /><br /><br />
+                                    <input type="checkbox" name="check1" id="check1" class="me-2" />remember
+                                    me<br /><br />
+                                    <textarea type="textarea" name="textarea1" id="textarea1"
+                                        class="form-control text-start">
+                                        لطفا چیزی وارد کنید...
+                                    </textarea><br /><br />
+                                    <select name="select1" id="select1" class="form-select">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select><br /><br />
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <div class="returnBtn text-center">
@@ -355,7 +371,20 @@
         }
     });
 
-    /* ******************        *************** */
+    /* ******************  Test Change Event      *************** */
+    const text = document.getElementById('text1');
+    const check = document.getElementById('check1');
+    const select = document.getElementById('select1');
+    const textarea = document.getElementById('textarea1');
+
+    text.addEventListener('change', handler);
+    textarea.addEventListener('change', handler);
+    check.addEventListener('change', handler);
+    select.addEventListener('change', handler);
+
+    function handler(event) {
+        alert('Changed');
+    }
 </script>
 
 </html>
