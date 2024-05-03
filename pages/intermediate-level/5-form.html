@@ -38,7 +38,7 @@
     h3,
     h2,
     h1 {
-        color: #fff;
+        color: orange;
     }
 
     #result2 {
@@ -52,7 +52,7 @@
     }
 
     #textarea1,
-    #check1 {
+    #check1, #check2 {
         accent-color: orange !important;
     }
 </style>
@@ -78,7 +78,7 @@
                         placeholder="ایمیل را وارد کنید">
                     <button type="submit" class="btn btn-success mt-3">ارسال</button>
                 </form>
-
+                 
                 <section id="checkbox" class="my-3">
                     <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
                     <label>دیپلم</label> <br>
@@ -95,10 +95,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <form class="my-4">
-                                    <input type="checkbox" value="کوبیده" checked /><label>کوبیده</label> <br />
-                                    <input type="checkbox" value="جوجه کباب" /><label>جوجه کباب</label><br />
-                                    <input type="checkbox" value="نوشابه" /><label>نوشابه</label><br />
-                                    <input type="checkbox" value="دوغ" /><label>دوغ</label><br />
+                                    <input type="checkbox" name="check2" id="check2" value="کوبیده" checked class="me-2" /><label>کوبیده</label>
+                                    <br />
+                                    <input type="checkbox" name="check2" id="check2" value="جوجه کباب" class="me-2" /><label>جوجه
+                                        کباب</label><br />
+                                    <input type="checkbox" name="check2" id="check2" value="نوشابه" class="me-2" /><label>نوشابه</label><br />
+                                    <input type="checkbox" name="check2" id="check2" value="دوغ" class="me-2" /><label>دوغ</label><br />
                                     <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
                                 </form>
                             </div>
@@ -114,17 +116,21 @@
                     </div>
                 </section>
                 <!-- ------------- radio Button --------------------- -->
+                <hr>
                 <section id="radio" class="mt-5">
-                    <h1>انتخاب وضعیت</h1>
+                    <h2 class="text-center fw-bold">Radio Button Example</h2>
                     <div class="container">
                         <div class="row">
                             <div class="col-11">
                                 <form>
+                                    <h5 class="text-warning">وضعیت تاهل :</h5>
                                     <input type="radio" name="marriage" value="مجرد" checked /><label
                                         class="ms-2">مجرد</label><br>
                                     <input type="radio" name="marriage" value="متاهل" /><label
-                                        class="ms-2">متاهل</label><br>
-                                    <hr />
+                                        class="ms-2">متاهل</label><br><br>
+
+
+                                    <h5 class="text-warning">سطح تحصیلات :</h5>
                                     <input type="radio" name="education" value="دیپلم" /><label
                                         class="ms-2">دیپلم</label><br>
                                     <input type="radio" name="education" value="لیسانس" checked /><label
@@ -133,25 +139,26 @@
                                         لیسانس</label><br>
                                     <input type="radio" name="education" value="دکتری" /><label
                                         class="ms-2">دکتری</label><br>
-                                    <hr />
-                                    <button type="button" class="btn btn-primary statusBtn">مشاهده‌ی وضعیت</button>
+                                    
+                                    <button type="button" class="btn btn-primary statusBtn my-3">مشاهده‌ی وضعیت</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <h2>وضعیت فعلی شما</h2>
+                    <h3>وضعیت فعلی شما</h3>
                     <p id="result2"></p>
                 </section>
-
+                <hr>
+                <!-- ------------------ dropDown control propery ------------------ -->
                 <section id="drop-down" class="mt-5">
-                    <h1>انتخاب وضعیت</h1>
+                    <h2 class="fw-bold text-center">DropDown VS Radio Example</h2>
                     <form>
-                        <select name="marriage" id="marriage" class="form-select">
+                        <select name="marriage2" id="marriage2" class="form-select">
                             <option value="مجرد" selected>مجرد</option>
                             <option value="متاهل">متاهل</option>
                         </select>
                         <hr />
-                        <select name="education" id="education" class="form-select">
+                        <select name="education2" id="education" class="form-select">
                             <option value="دیپلم">دیپلم</option>
                             <option value="لیسانس">لیسانس</option>
                             <option value="فوق لیسانس">فوق لیسانس</option>
@@ -160,11 +167,13 @@
                         <hr />
                         <button type="button" class="btn btn-primary statusBtn2">مشاهده‌ی وضعیت</button>
                     </form>
-                    <h2>وضعیت فعلی شما</h2>
+                    <h3 class="fw-bold">وضعیت فعلی شما</h3>
                     <p id="result4"></p>
                 </section>
+                <!-- -------------- Focus & Blur Event ---------------------- -->
                 <hr>
                 <section id="Focus" class="mt-5">
+                    <h2 class="fw-bold text-center">Select Input Value With Focus & Blur Event</h2>
                     <div class="container">
                         <div class="row">
                             <div class="col-11 col-md-6">
@@ -202,7 +211,7 @@
                 <hr>
                 <!-- ------------------  Test Change Event   ------------------- -->
                 <section id="change-event" class="mt-5">
-                    <h3 class="text-center my-3 fw-bold">Text Change Event</h3>
+                    <h3 class="text-center my-3 fw-bold">Test Change Event</h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -281,8 +290,7 @@
     orderBtn.addEventListener('click', orderHandler);
 
     function orderHandler() {
-        console.log("salam")
-        const inputs = document.querySelectorAll('input[type="checkbox"]');
+        const inputs = document.querySelectorAll('input[name="check2"]');
         let html = '<table class="table border-success table-striped" >';
         for (let input of inputs) {
             if (input.checked) {
@@ -321,8 +329,8 @@
 
     /* ------------------DropDown List ------------------------ */
     const button4 = document.querySelector('.statusBtn2'); //
-    const marriageSelect = document.querySelector("#marriage");
-    const educationSelect = document.querySelector('select[name="education"]');
+    const marriageSelect = document.querySelector("#marriage2");
+    const educationSelect = document.querySelector('select[name="education2"]');
 
     /*
      marriageSelect.value  = "متاهل"
@@ -335,9 +343,9 @@
     console.log("marriage: ", marriageSelect.value);
     console.log("education: ", educationSelect.value);
 
-    button4.addEventListener('click', handler);
+    button4.addEventListener('click', dropdownHandler);
 
-    function handler() {
+    function dropdownHandler() {
         const result4 = document.getElementById('result4');
         result4.innerHTML = `<p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>`;
     }
@@ -383,7 +391,7 @@
     select.addEventListener('change', handler);
 
     function handler(event) {
-        alert('Changed');
+        alert('changedddd');
     }
 </script>
 
