@@ -129,28 +129,35 @@
                 <section id="radio" class="mt-5">
                     <h2 class="text-center fw-bold">Radio Button Example</h2>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-11">
-                                <form>
-                                    <h5 class="text-warning">وضعیت تاهل :</h5>
-                                    <input type="radio" name="marriage" value="مجرد" checked /><label
-                                        class="ms-2">مجرد</label><br>
-                                    <input type="radio" name="marriage" value="متاهل" /><label
-                                        class="ms-2">متاهل</label><br><br>
+                        <div class="row justify-content-center">
+                            <div class="col-11 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <h5 class="text-warning">وضعیت تاهل :</h5>
+                                            <input type="radio" name="marriage" value="مجرد" checked /><label
+                                                class="ms-2">مجرد</label><br>
+                                            <input type="radio" name="marriage" value="متاهل" /><label
+                                                class="ms-2">متاهل</label><br><br>
 
 
-                                    <h5 class="text-warning">سطح تحصیلات :</h5>
-                                    <input type="radio" name="education" value="دیپلم" /><label
-                                        class="ms-2">دیپلم</label><br>
-                                    <input type="radio" name="education" value="لیسانس" checked /><label
-                                        class="ms-2">لیسانس</label><br>
-                                    <input type="radio" name="education" value="فوق لیسانس" /><label class="ms-2">فوق
-                                        لیسانس</label><br>
-                                    <input type="radio" name="education" value="دکتری" /><label
-                                        class="ms-2">دکتری</label><br>
+                                            <h5 class="text-warning">سطح تحصیلات :</h5>
+                                            <input type="radio" name="education" value="دیپلم" /><label
+                                                class="ms-2">دیپلم</label><br>
+                                            <input type="radio" name="education" value="لیسانس" checked /><label
+                                                class="ms-2">لیسانس</label><br>
+                                            <input type="radio" name="education" value="فوق لیسانس" /><label
+                                                class="ms-2">فوق
+                                                لیسانس</label><br>
+                                            <input type="radio" name="education" value="دکتری" /><label
+                                                class="ms-2">دکتری</label><br>
 
-                                    <button type="button" class="btn btn-primary statusBtn my-3">مشاهده‌ی وضعیت</button>
-                                </form>
+                                            <button type="button" class="btn btn-primary statusBtn my-3">مشاهده‌ی
+                                                وضعیت</button>
+                                        </form>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -158,11 +165,11 @@
                     <p id="result2"></p>
                 </section>
                 <hr>
-                <!-- ------------------ dropDown control propery ------------------ -->
+                <!-- ------------------ dropDown(List) control propery ------------------ -->
                 <section id="drop-down" class="mt-5">
                     <h2 class="fw-bold text-center">Dropdown VS Radio Example</h2>
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <div class="col-12 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -181,6 +188,7 @@
                                             <br />
                                             <button type="button" class="btn btn-primary statusBtn2">مشاهده‌ی
                                                 وضعیت</button>
+                                            <button type="button" class="btn btn-danger deleteSelectBtn">حذف</button>
                                         </form>
 
                                     </div>
@@ -191,40 +199,56 @@
                     <h3 class="fw-bold">وضعیت فعلی شما</h3>
                     <p id="result4"></p>
                 </section>
-                <!-- -------------- Focus & Blur Event ---------------------- -->
+                <!-- --------------select input value Focus & Blur Event ---------------------- -->
                 <hr>
                 <section id="Focus" class="mt-5">
                     <h2 class="fw-bold text-center">Select Input Value With Focus & Blur Event</h2>
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
-                                <form action="http://alicoder.ir">
-                                    <input type="text" class="form-control" name="firstname" id="firstname"
-                                        value="name" /><br /><br />
-                                    <input type="text" class="form-control" name="lastname" id="lastname"
-                                        value="family" /><br /><br />
-                                    <button type="submit" class="focusBtn btn btn-success">Send</button>
-                                </form>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="http://alicoder.ir" method="POST">
+                                            <input type="text" class="form-control" name="firstname" id="firstname"
+                                                value="name" /><br />
+                                            <input type="text" class="form-control" name="lastname" id="lastname"
+                                                value="family" /><br />
+                                            <button type="submit" class="focusBtn btn btn-success">Send</button>
+                                        </form>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <hr>
-                <!-- ---------- blur Example --------------- -->
+                <!-- ----------validation with blur Event --------------- -->
                 <section id="blurExample" class="mt-5">
                     <h2 class="text-center fw-bold">Validation with Blur Event</h2>
                     <div class="container">
-                        <div class="row">
+                        <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
-                                <form>
-                                    <label>Day</label>
-                                    <input type="text" name="day" id="day" class="form-control" /><br />
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <div class="card-title">
+                                            <h4 class="text-end fw-bold fs-4 text-white">Validation With Blur Event</h4>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <label>Day</label>
+                                            <input type="text" name="day" id="day" class="form-control" /><br />
 
-                                    <label>Month</label>
-                                    <input type="text" name="month" id="month" class="form-control" /><br /><br />
+                                            <label>Month</label>
+                                            <input type="text" name="month" id="month"
+                                                class="form-control" /><br /><br />
 
-                                    <button type="submit" class="btn btn-warning">Send</button>
-                                </form>
+                                            <button type="submit" class="btn btn-warning">Send</button>
+                                        </form>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -372,14 +396,16 @@
 
 
     /* ------------------DropDown(select) List ------------------------ */
-    const selectBtn = document.querySelector('.statusBtn2');
+    const statusSelectBtn = document.querySelector('.statusBtn2');
+    const deleteSelectBtn = document.querySelector('.deleteSelectBtn');
     const marriageSelect = document.querySelector("#marriage2");//approach1
     const educationSelect = document.querySelector('select[name="education2"]') //approach2
 
     /*
     read & write Property
-     marriageSelect.value  = "متاهل"
+     marriageSelect.value  = "متاهل" 
      educationSelect.value = "فوق لیسانس";
+     must be have oneof the option values
     */
 
     educationSelect.selectedIndex = 2; // -1 means dont show any options value
@@ -387,11 +413,23 @@
     console.log("marriage: ", marriageSelect.value);
     console.log("education: ", educationSelect.value);
 
-    selectBtn.addEventListener('click', dropdownHandler);
+    statusSelectBtn.addEventListener('click', dropdownHandler);
+    deleteSelectBtn.addEventListener('click', deleteSelectHandler);
 
     function dropdownHandler() {
         const result4 = document.getElementById('result4');
-        result4.innerHTML = `<p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>`;
+        result4.innerHTML =
+        `
+            <div class="card">
+                <div class="card-body">
+                    <p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>
+                </div>
+            </div>
+            
+        `
+    }
+    function deleteSelectHandler() {
+        result4.innerHTML = ""
     }
 
     /* **************select input value focus & blur Event ***************** */
@@ -410,18 +448,24 @@
     const month = document.getElementById('month');
 
     day.addEventListener('blur', (event) => {
-        if (!(day.value >= 1 && day.value <= 31)) {
-            alert('روز باید عددی بین 1 تا 31 باشد');
-            day.focus();
-            day.select()
-            event.preventDefault();
-        } else if (!(month.value >= 1 && month.value <= 12)) {
-            alert('ماه باید عددی بین 1 تا 12 باشد');
-            month.focus();
-            month.select();
-            event.preventDefault();
+        if (event.target.value) {
+            if (!(day.value >= 1 && day.value <= 31)) {
+                alert('روز باید عددی بین 1 تا 31 باشد');
+                event.target.value = ""
+                event.target.focus();
+            }
         }
     });
+    month.addEventListener('blur', (event) => {
+        if (event.target.value) {
+            if (!(month.value >= 1 && month.value <= 12)) {
+                event.target.value = ""
+                event.target.focus();
+                alert('ماه باید عددی بین 1 تا 12 باشد');
+
+            }
+        }
+    })
 
     /* ******************  Test Change Event      *************** */
     const text = document.getElementById('text1');
