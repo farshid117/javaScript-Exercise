@@ -56,7 +56,7 @@
     input[type="checkbox"] {
         accent-color: pink !important;
     }
-    #usererror, #passerror {
+    #usererror, #passerror , #yearerror{
         color: red;
         font-size: 13px;
     }
@@ -323,9 +323,15 @@
                                             <label>نام کاربری</label>
                                             <input type="text" name="user" id="user" class="form-control" />
                                             <span id="usererror"></span><br /><br />
+
                                             <label>کلمه‌ی عبور</label>
                                             <input type="password" name="pass" id="pass" class="form-control" />
                                             <span id="passerror"></span><br /><br />
+
+                                            <label>سال تولد</label>
+                                            <input type="text" name="year" id="year" class="form-control" />
+                                            <span id="yearerror"></span><br /><br />
+
                                             <button type="submit" class="btn btn-primary">ورود</button>
                                         </form>
 
@@ -559,18 +565,34 @@
     function validate(event) {
         const user = document.getElementById('user');
         const pass = document.getElementById('pass');
+        const year = document.getElementById('year');
         const usererror = document.getElementById('usererror');
         const passerror = document.getElementById('passerror');
-        usererror.textContent = '';
+        const yearerror = document.getElementById('yearerror');
+
+        usererror.textContent = ''; //empty previouse value
         passerror.textContent = '';
+        yearerror.textContent = '';
+
         if (user.value.length < 5 || user.value.length > 15) { //approach1
             usererror.textContent = 'نام کاربری باید 5 تا 15 کاراکتر باشد';
             event.preventDefault();
         }
+
         if (!(pass.value.length >= 6 && pass.value.length <= 20)) { //approach2
             passerror.textContent = 'کلمه‌ی عبور باید 6 تا 20 کاراکتر باشد';
             event.preventDefault();
         }
+
+        if (!Number.isInteger(+year.value)) { //year.value is string
+            yearerror.textContent = 'سال تولد باید یک عدد صحیح باشد';
+            event.preventDefault();
+        } else if (year.value < 1300 || year.value > 1400) {
+            yearerror.textContent = 'سال تولد باید بین 1300 تا 1400 باشد';
+            event.preventDefault();
+        }
+
+
     }
 </script>
 
