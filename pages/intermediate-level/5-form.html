@@ -56,7 +56,11 @@
     input[type="checkbox"] {
         accent-color: pink !important;
     }
-    #usererror, #passerror , #yearerror{
+
+    #usererror,
+    #passerror,
+    #yearerror, #codeerror,
+    #emailerror {
         color: red;
         font-size: 13px;
     }
@@ -311,7 +315,7 @@
                             <div class="col-12">
                                 <h3 class="text-center my-3 fw-bold">Test Change Event For All Form </h3>
                             </div>
-                            <div class="col-11 col-md-6">
+                            <div class="col-11 col-md-8">
                                 <div class="card">
                                     <div class="card-header bg-primary">
                                         <div class="card-title text-white fs-4 fw-bold text-end">
@@ -331,6 +335,14 @@
                                             <label>سال تولد</label>
                                             <input type="text" name="year" id="year" class="form-control" />
                                             <span id="yearerror"></span><br /><br />
+
+                                            <label>کد ملی</label>
+                                            <input type="text" name="code" id="code" class="form-control" />
+                                            <span id="codeerror"></span><br /><br />
+
+                                            <label>ایمیل</label>
+                                            <input type="text" name="useremail" id="useremail" class="form-control" />
+                                            <span id="emailerror"></span><br /><br />
 
                                             <button type="submit" class="btn btn-primary">ورود</button>
                                         </form>
@@ -566,31 +578,53 @@
         const user = document.getElementById('user');
         const pass = document.getElementById('pass');
         const year = document.getElementById('year');
-        const usererror = document.getElementById('usererror');
-        const passerror = document.getElementById('passerror');
-        const yearerror = document.getElementById('yearerror');
+        const nationalCode = document.getElementById('code');
+        const userEmail = document.getElementById('useremail');
 
-        usererror.textContent = ''; //empty previouse value
-        passerror.textContent = '';
-        yearerror.textContent = '';
+        const userError = document.getElementById('usererror');
+        const passError = document.getElementById('passerror');
+        const yearError = document.getElementById('yearerror');
+        const codeError = document.getElementById('codeerror');
+        const emailError = document.getElementById('emailerror');
+
+        userError.textContent = ''; //empty previouse value
+        passError.textContent = '';
+        yearError.textContent = '';
+        codeError.textContent = '';
+        emailError.textContent = '';
 
         if (user.value.length < 5 || user.value.length > 15) { //approach1
-            usererror.textContent = 'نام کاربری باید 5 تا 15 کاراکتر باشد';
+            userError.textContent = 'نام کاربری باید 5 تا 15 کاراکتر باشد';
             event.preventDefault();
         }
 
         if (!(pass.value.length >= 6 && pass.value.length <= 20)) { //approach2
-            passerror.textContent = 'کلمه‌ی عبور باید 6 تا 20 کاراکتر باشد';
+            passError.textContent = 'کلمه‌ی عبور باید 6 تا 20 کاراکتر باشد';
             event.preventDefault();
         }
 
         if (!Number.isInteger(+year.value)) { //year.value is string --> Number(year.value)
-            yearerror.textContent = 'سال تولد باید یک عدد صحیح باشد';
+            yearError.textContent = 'سال تولد باید یک عدد صحیح باشد';
             event.preventDefault();
         } else if (year.value < 1300 || year.value > 1400) {
             yearerror.textContent = 'سال تولد باید بین 1300 تا 1400 باشد';
             event.preventDefault();
         }
+
+        if (!/^\d+$/.test(nationalCode.value)) {
+            codeError.textContent = "کدملی باید یک عدد صحیح باشد";
+            event.preventDefault();
+        } else if (nationalCode.value.length !== 10) {
+            codeError.textContent = "کدملی باید ده رقم باشد";
+            event.preventDefault();
+        }
+        const simpleEmail = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        if (!simpleEmail.test(userEmail.value)) {
+            emailError.textContent = 'لطفاً یک ایمیل معتبر وارد کنید';
+            event.preventDefault();
+        }
+
+
 
 
     }
