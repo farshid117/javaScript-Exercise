@@ -584,7 +584,7 @@
             event.preventDefault();
         }
 
-        if (!Number.isInteger(+year.value)) { //year.value is string
+        if (!Number.isInteger(+year.value)) { //year.value is string --> Number(year.value)
             yearerror.textContent = 'سال تولد باید یک عدد صحیح باشد';
             event.preventDefault();
         } else if (year.value < 1300 || year.value > 1400) {
