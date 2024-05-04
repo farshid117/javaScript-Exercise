@@ -67,51 +67,66 @@
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
                 <!-- --------------------------section1 get form & controll with forms shortcut --------------------------- -->
                 <section id="form-text" class="mt-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="" method="get" class="myform" id="my-form" name="myform">
-                                <label for="full-name" class="form-label">نام : </label>
-                                <input type="text" id="full-name" class="form-control" name="fname" value="نامت چیست؟"
-                                    placeholder="نام و نام خانوادگی را وارد کنید ">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-11 col-md-10">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="" method="get" class="myform" id="my-form" name="myform">
+                                            <label for="full-name" class="form-label">نام : </label>
+                                            <input type="text" id="full-name" class="form-control" name="fname"
+                                                value="نامت چیست؟" placeholder="نام و نام خانوادگی را وارد کنید ">
 
-                                <label for="password-num" class="form-label mt-3">پسورد : </label>
-                                <input type="password" class="form-control" name="pass" id="password-num"
-                                    placeholder="پسورد را وارد کنید ">
-                                <label for="email-address" class="form-label mt-3">ایمیل : </label>
-                                <input type="email" class="form-control" name="mail" id="email-address"
-                                    placeholder="ایمیل را وارد کنید "><br>
-                                <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم" class="">
-                                <label>دیپلم</label><br>
-                                <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس" class="" checked>
-                                <label>لیسانس</label><br>
-                                <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس" class="">
-                                <label>فوق لیسانس</label> <br>
-                                <button type="submit" class="btn btn-success mt-3">ارسال</button>
-                            </form>
+                                            <label for="password-num" class="form-label mt-3">پسورد : </label>
+                                            <input type="password" class="form-control" name="pass" id="password-num"
+                                                placeholder="پسورد را وارد کنید ">
+                                            <label for="email-address" class="form-label mt-3">ایمیل : </label>
+                                            <input type="email" class="form-control" name="mail" id="email-address"
+                                                placeholder="ایمیل را وارد کنید "><br>
+                                            <input type="checkbox" name="checkinp" id="checkinp1" value="دیپلم"
+                                                class="">
+                                            <label>دیپلم</label><br>
+                                            <input type="checkbox" name="checkinp" id="checkinp2" value="لیسانس"
+                                                class="" checked>
+                                            <label>لیسانس</label><br>
+                                            <input type="checkbox" name="checkinp" id="checkinp3" value="فوق لیسانس"
+                                                class="">
+                                            <label>فوق لیسانس</label> <br>
+                                            <button type="submit" class="btn btn-success mt-3">ارسال</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </section>
                 <hr>
 
                 <!-- ------------------- order with checkbox Event & property  ---------------------- -->
-                <section id="order" class="text-center">
+                <section id="order" class="">
                     <h3 class="text-center fw-bold">checkbox Example : Resturant Order</h3>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <form class="my-4">
-                                    <input type="checkbox" name="check2" id="check2" value="کوبیده" checked
-                                        class="me-2" /><label>کوبیده</label>
-                                    <br />
-                                    <input type="checkbox" name="check2" id="check3" value="جوجه کباب"
-                                        class="me-2" /><label>جوجه کباب</label><br />
-                                    <input type="checkbox" name="check2" id="check4" value="نوشابه"
-                                        class="me-2" /><label>نوشابه</label><br />
-                                    <input type="checkbox" name="check2" id="check5" value="دوغ"
-                                        class="me-2" /><label>دوغ</label><br />
-                                    <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
-                                    <button type="reset" class="btn btn-danger delOrder mt-3">حذف سفارش</button>
-                                </form>
+                        <div class="row justify-content-center">
+                            <div class="col-11 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form class="my-4">
+                                            <input type="checkbox" name="check2" id="check2" value="کوبیده" checked
+                                                class="me-2" /><label>کوبیده</label>
+                                            <br />
+                                            <input type="checkbox" name="check2" id="check3" value="جوجه کباب"
+                                                class="me-2" /><label>جوجه کباب</label><br />
+                                            <input type="checkbox" name="check2" id="check4" value="نوشابه"
+                                                class="me-2" /><label>نوشابه</label><br />
+                                            <input type="checkbox" name="check2" id="check5" value="دوغ"
+                                                class="me-2" /><label>دوغ</label><br />
+                                            <button type="button" class="btn btn-primary orderBtn mt-3">سفارش</button>
+                                            <button type="reset" class="btn btn-danger delOrder mt-3">حذف سفارش</button>
+                                        </form>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,8 +167,10 @@
                                             <input type="radio" name="education" value="دکتری" /><label
                                                 class="ms-2">دکتری</label><br>
 
-                                            <button type="button" class="btn btn-primary statusBtn my-3">مشاهده‌ی
+                                            <button type="button" class="btn btn-primary statusRadioBtn my-3">مشاهده‌ی
                                                 وضعیت</button>
+                                            <button type="button"
+                                                class="btn btn-danger deleteRadioBtn my-3">حذف</button>
                                         </form>
 
                                     </div>
@@ -254,33 +271,37 @@
                     </div>
                 </section>
                 <hr>
-                <!-- ------------------  Test Change Event   ------------------- -->
+                <!-- ------------------  Test Change Event for All forms Controls   ------------------- -->
                 <section id="change-event" class="mt-5">
-                    <h3 class="text-center my-3 fw-bold">Test Change Event</h3>
+                    <h3 class="text-center my-3 fw-bold">Test Change Event For All Form Controls</h3>
                     <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-md-6">
-                                <form action="http://alicoder.com">
-                                    <input type="text" name="text1" id="text1" class="form-control" /><br /><br />
-                                    <input type="checkbox" name="check1" id="check1" class="me-2" />remember
-                                    me<br /><br />
-                                    <textarea type="textarea" name="textarea1" id="textarea1"
-                                        class="form-control text-start">
-                                        لطفا چیزی وارد کنید...
-                                    </textarea><br /><br />
-                                    <select name="select1" id="select1" class="form-select">
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select><br /><br />
-                                    <button type="submit" class="btn btn-primary">Send</button>
-                                </form>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="http://alicoder.com">
+                                            <input type="text" name="text1" id="text1"
+                                                class="form-control" /><br /><br />
+                                            <input type="checkbox" name="check1" id="check1" class="me-2" />remember me<br /><br />
+                                            <textarea type="textarea" name="textarea1" id="textarea1"
+                                                class="form-control text-start">
+                                                                                                                لطفا چیزی وارد کنید...
+                                                                                                            </textarea><br /><br />
+                                            <select name="select1" id="select1" class="form-select">
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </select><br /><br />
+                                            <button type="submit" class="btn btn-primary">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="returnBtn text-center">
+                <div class="returnBtn text-center mt-4">
                     <a href="%public_url%/../../../index.html" class="button">برگشت</a>
                 </div>
             </div>
@@ -370,8 +391,10 @@
     })
 
     /******************** section Radio Button *******************/
-    const statusBtn = document.querySelector('.statusBtn');
-    statusBtn.addEventListener('click', radioHandler);
+    const statusRadioBtn = document.querySelector('.statusRadioBtn');
+    const deleteRadioBtn = document.querySelector('.deleteRadioBtn');
+    statusRadioBtn.addEventListener('click', radioHandler);
+    deleteRadioBtn.addEventListener('click', deleteRadioHandler);
 
     function radioHandler() {
         const marriageInputs = document.querySelectorAll('input[name="marriage"]'); //NodeList
@@ -391,11 +414,20 @@
             }
         }
         const result2 = document.getElementById('result2'); //object
-        result2.innerHTML = `<p>شما ${marriage} هستید و دارای مدرک ${education} هستید.</p>`;
+        result2.innerHTML =
+            `
+         <div class="card">
+            <div class="card-body">
+                <p>شما ${marriage} هستید و دارای مدرک ${education} هستید.</p>
+            </div>
+         </div>
+        `
+    }
+    function deleteRadioHandler() {
+        result2.innerHTML = ""
     }
 
-
-    /* ------------------DropDown(select) List ------------------------ */
+    /* ------------------DropDown(Select)List ------------------------ */
     const statusSelectBtn = document.querySelector('.statusBtn2');
     const deleteSelectBtn = document.querySelector('.deleteSelectBtn');
     const marriageSelect = document.querySelector("#marriage2");//approach1
@@ -419,7 +451,7 @@
     function dropdownHandler() {
         const result4 = document.getElementById('result4');
         result4.innerHTML =
-        `
+            `
             <div class="card">
                 <div class="card-body">
                     <p>شما ${marriageSelect.value} هستید و دارای مدرک ${educationSelect.value} هستید.</p>
@@ -479,7 +511,7 @@
     select.addEventListener('change', handler);
 
     function handler(event) {
-        alert('changedddd');
+        alert('change Event happened...!');
     }
 </script>
 
