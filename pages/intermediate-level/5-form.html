@@ -225,12 +225,13 @@
                             <div class="col-11 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form action="http://alicoder.ir" method="POST">
+                                        <form action="http://alicoder.ir" method="POST" id="selctedFrom">
                                             <input type="text" class="form-control" name="firstname" id="firstname"
                                                 value="name" /><br />
                                             <input type="text" class="form-control" name="lastname" id="lastname"
                                                 value="family" /><br />
-                                            <button type="submit" class="focusBtn btn btn-success">Send</button>
+                                            <button type="submit" class="focusBtn btn btn-success"
+                                                disabled>Send</button>
                                         </form>
 
                                     </div>
@@ -282,7 +283,8 @@
                                         <form action="http://alicoder.com">
                                             <input type="text" name="text1" id="text1"
                                                 class="form-control" /><br /><br />
-                                            <input type="checkbox" name="check1" id="check1" class="me-2" />remember me<br /><br />
+                                            <input type="checkbox" name="check1" id="check1" class="me-2" />remember
+                                            me<br /><br />
                                             <textarea type="textarea" name="textarea1" id="textarea1"
                                                 class="form-control text-start">
                                                                                                                 لطفا چیزی وارد کنید...
@@ -465,11 +467,14 @@
     }
 
     /* **************select input value focus & blur Event ***************** */
-    const firstInput = document.getElementById('firstname');
-    const lastInput = document.getElementById('lastname');
+    const selctedFrom = document.getElementById('selctedFrom');
+    const firstInput  = document.getElementById('firstname');
+    const lastInput   = document.getElementById('lastname');
 
-    firstInput.addEventListener('focus', selectText);
-    lastInput.addEventListener('focus', selectText);
+    selctedFrom.addEventListener('focus', selectText); //delegation
+
+    /* firstInput.addEventListener('focus', selectText);
+    lastInput.addEventListener('focus', selectText); */
 
     function selectText(event) {
         event.target.select();
@@ -491,9 +496,9 @@
     month.addEventListener('blur', (event) => {
         if (event.target.value) {
             if (!(month.value >= 1 && month.value <= 12)) {
+                alert('ماه باید عددی بین 1 تا 12 باشد');
                 event.target.value = ""
                 event.target.focus();
-                alert('ماه باید عددی بین 1 تا 12 باشد');
 
             }
         }
