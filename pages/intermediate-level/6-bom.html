@@ -53,7 +53,7 @@
     .square2{
         width: 200px;
         height: 200px;
-         background: url(../../img/narges1.jpg);
+         background: url(../../img/khodam.png);
          background-position: center;
          background-size: cover;
     }
@@ -152,16 +152,13 @@
     var angle2 = 0
     var timer2 
 
-
     startAnimationlBtn.addEventListener("click", () => {
        timer2 = window.requestAnimationFrame(square2Animation)
     })
 
-
     stopAnimationlBtn.addEventListener("click", () => {
         cancelAnimationFrame(timer2)
     })
-
     function square2Animation() { //Hosting
         console.log("interval")
         square2.style.transform = `rotate(${angle2}deg)`
