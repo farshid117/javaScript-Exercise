@@ -36,13 +36,18 @@
     }
 
     h3 {
-        color: #fff;
+        color: orange;
     }
 
-    .square {
+    .square{
         width: 150px;
         height: 150px;
         background: red;
+    }
+    .square2{
+        width: 200px;
+        height: 200px;
+        background: violet;
     }
 </style>
 <!-- //todo: body section -->
@@ -63,25 +68,29 @@
                     <li class="fw-bold ms-4">6- کاربا پنجره‌ها و رویدادهای مرورگر</li>
                 </ul>
             </div>
+            <hr class="mt-3">
             <!-- ------------- make Animate with setInterval ------------- -->
-            <div class="col-12 my-5">
-                <div class="square m-auto d-flex justify-content-center align-items-center">
+            <div class="col-12 my-3">
+                <h3 class="text-center">ایجاد انیمیشن با setInterval</h3>
+                <div class="square m-auto d-flex justify-content-center align-items-center mt-5">
                     setInterval
                 </div>
             </div>
-            <div class="btn btn-warning col-4 my-5 stopBtn">stop interval</div>
-            <div class="btn btn-success col-4 my-5 ms-2 startBtn">start interval</div>
-
+            <div class="btn btn-warning col-4 my-5 stopIntervalBtn">stop interval</div>
+            <div class="btn btn-success col-4 my-5 ms-2 startIntervalBtn">start interval</div>
+            <hr class="mt-3">
             <!-- -------------Make Animate with requestAnimationFrame ------------- -->
             <div class="col-12">
-                <div class="col-12 my-5">
-                    <div class="square m-auto d-flex justify-content-center align-items-center">
-                        setInterval
+                <div class="col-12 my-3">
+                    <h3 class="text-center">ایجاد انیمیشن با requestAnimationFrame</h3>
+                    <div class="square2 m-auto d-flex justify-content-center align-items-center mt-5">
+                        requestAnimationFrame
                     </div>
                 </div>
-                <div class="btn btn-warning col-4 my-5 stopBtn">stop interval</div>
-                <div class="btn btn-success col-4 my-5 ms-2 startBtn">start interval</div>
             </div>
+            <div class="btn btn-warning col-4 my-5 stopAnimationlBtn">stop interval</div>
+            <div class="btn btn-success col-4 my-5 ms-2 startAnimationlBtn">start interval</div>
+
             <div class="returnBtn text-center">
                 <a href="%public_url%/../../../index.html" class="button">برگشت</a>
             </div>
@@ -93,19 +102,19 @@
 <script>
     /* ************* make Animate with setInterval **************** */
     const square = document.querySelector(".square");
-    const stopBtn = document.querySelector(".stopBtn");
-    const startBtn = document.querySelector(".startBtn");
+    const stopIntervalBtn = document.querySelector(".stopIntervalBtn");
+    const startIntervalBtn = document.querySelector(".startIntervalBtn");
     var angle = 0
     var timer
 
-    startBtn.addEventListener("click", () => {
+    startIntervalBtn.addEventListener("click", () => {
         clearInterval(timer)
         timer = setInterval(squareInterval, 50)
 
     })
 
 
-    stopBtn.addEventListener("click", () => {
+    stopIntervalBtn.addEventListener("click", () => {
         clearInterval(timer)
     })
 
@@ -115,8 +124,30 @@
         angle += 1
     }
 
-     /* ************* Make Animate with requestAnimationFrame **************** */
+    /* ************* Make Animate with requestAnimationFrame **************** */
+    const square2 = document.querySelector(".square2");
+    const stopAnimationlBtn = document.querySelector(".stopAnimationlBtn");
+    const startAnimationlBtn = document.querySelector(".startAnimationlBtn");
+    var angle2 = 0
+    var timer2 
 
+
+    startAnimationlBtn.addEventListener("click", () => {
+       timer2 = window.requestAnimationFrame(square2Animation)
+    })
+
+
+    stopAnimationlBtn.addEventListener("click", () => {
+        cancelAnimationFrame(timer2)
+    })
+
+    function square2Animation() { //Hosting
+        console.log("interval")
+        square2.style.transform = `rotate(${angle2}deg)`
+        angle2 += 1
+        cancelAnimationFrame(timer2)
+        timer2 = window.requestAnimationFrame(square2Animation)
+    }
 
 
 </script>
