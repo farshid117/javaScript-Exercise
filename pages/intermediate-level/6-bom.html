@@ -112,6 +112,8 @@
             <div class="btn btn-warning col-4 my-5 stopAnimationlBtn">stop Animate</div>
             <div class="btn btn-success col-4 my-5 ms-2 startAnimationlBtn">start Animate</div>
 
+            <!-- ----------------- ----------------- -->
+
             <div class="returnBtn text-center">
                 <a href="%public_url%/../../../index.html" class="button mb-5">برگشت</a>
             </div>
@@ -133,7 +135,6 @@
         timer = setInterval(squareInterval, 50)
 
     })
-
 
     stopIntervalBtn.addEventListener("click", () => {
         clearInterval(timer)
@@ -166,6 +167,16 @@
         cancelAnimationFrame(timer2)
         timer2 = window.requestAnimationFrame(square2Animation)
     }
+
+    /* ---------------- BOM Object ----------------- */
+   /*  alert(location.href)
+    alert(location.host)
+    alert(location.hostname)
+    alert(location.port)
+    alert(location.pathname)
+    alert(location.search)
+    alert(location.hash) */
+
 
 
 </script>
