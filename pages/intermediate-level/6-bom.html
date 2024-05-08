@@ -169,6 +169,7 @@
     }
 
     /* ---------------- BOM Object ----------------- */
+    /* ------ location ----------- */
    /*  alert(location.href)
     alert(location.host)
     alert(location.hostname)
@@ -177,6 +178,26 @@
     alert(location.search)
     alert(location.hash) */
 
+    /* -------- navigator object property ----------- */
+
+    alert(`navigator.userAgent is : ${navigator.userAgent}`)
+    alert(`navigator.platform is : ${navigator.platform}`)
+    alert(`navigator.cookiEnabled is : ${navigator.cookieEnabled}`) //true
+    alert(`navigator.language is : ${navigator.language}`) //en-Us
+    alert(`navigator.onLine is : ${navigator.onLine}`) // true
+    console.log(`navigator.plugins is : ${navigator.plugins}`)
+/* ----------- screen object property ----------------- */
+alert(`screen.width is : ${screen.width}`) //1366
+alert(`screen.height is : ${screen.height}`) //768
+
+alert(`screen.availWidth is  : ${screen.availWidth}`) //1366
+alert(`screen.availHeight is : ${screen.availHeight}`)//728 --> 768-40px(taskbar)
+
+alert(`window.outerWidth is  : ${window.outerWidth}`) //1366
+alert(`window.outerHeight is : ${window.outerHeight}`) //728
+
+alert(`window.innerWidth is  : ${window.innerWidth}`) //1366
+alert(`window.innerHeight is : ${window.innerHeight}`)//607 --> viwport Height
 
 
 </script>
