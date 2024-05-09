@@ -23,9 +23,10 @@
 
 <!-- //todo: styles section -->
 <style>
-    *{
+    * {
         overflow-x: none !important;
     }
+
     body {
         background: #1c1a39;
         color: #fff;
@@ -42,22 +43,23 @@
         color: orange;
     }
 
-    .square{
+    .square {
         width: 150px;
         height: 150px;
         background: url(../../img/khodam.png);
-         background-position: center;
-         background-size: cover;
+        background-position: center;
+        background-size: cover;
     }
-    
-    .square2{
+
+    .square2 {
         width: 200px;
         height: 200px;
-         background: url(../../img/khodam.png);
-         background-position: center;
-         background-size: cover;
+        background: url(../../img/khodam.png);
+        background-position: center;
+        background-size: cover;
     }
-    .text{
+
+    .text {
         color: #fff;
     }
 </style>
@@ -81,8 +83,9 @@
             </div>
             <div class="col-12">
                 <h3>ایجاد انیمیشن</h3>
-                <p class="text">یک انیمیشن از نمایش متوالی تعدادی تصویر که هر یک تغییر کوچکی نسبت به تصویر قبلی دارد به وجود می‌آید. به هر یک از این
-                تصاویر متوالی یک فریم (Frame) گفته می‌شود.</p>
+                <p class="text">یک انیمیشن از نمایش متوالی تعدادی تصویر که هر یک تغییر کوچکی نسبت به تصویر قبلی دارد به
+                    وجود می‌آید. به هر یک از این
+                    تصاویر متوالی یک فریم (Frame) گفته می‌شود.</p>
                 <h5>دو روش برای ایجاد انیمیشن وجود دارد :</h5>
                 <ul class="text-end  m-auto" dir="ltr">
                     <li class="fw-bold ms-4">1- استفاده از setInterval</li>
@@ -94,7 +97,7 @@
             <div class="col-12 my-3">
                 <h3 class="text-center">ایجاد انیمیشن با setInterval</h3>
                 <div class="square m-auto d-flex justify-content-center align-items-center mt-5">
-                    
+
                 </div>
             </div>
             <div class="btn btn-warning col-4 my-5 stopIntervalBtn">stop interval</div>
@@ -105,14 +108,55 @@
                 <div class="col-12 my-3">
                     <h3 class="text-center">ایجاد انیمیشن با requestAnimationFrame</h3>
                     <div class="square2 m-auto d-flex justify-content-center align-items-center mt-5">
-                        
+
                     </div>
                 </div>
             </div>
             <div class="btn btn-warning col-4 my-5 stopAnimationlBtn">stop Animate</div>
             <div class="btn btn-success col-4 my-5 ms-2 startAnimationlBtn">start Animate</div>
+            <hr>
+            <!-- ----------------- test-bom-object ----------------- -->
+            <section id="bom-object" class="my-5 text-end">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white fw-bold fs-4">
+                                    Location - Property
+                                </div>
+                                <div class="card-body">
+                                    <p id="bom-object-location"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <div class="card">
+                                <div class="card-header bg-success text-white fw-bold fs-4">
+                                    Navigator - Property
+                                </div>
+                                <div class="card-body">
+                                    <p id="bom-object-navigator"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <div class="card">
+                                <div class="card-header bg-warning fw-bold fs-4">
+                                    Screen - Property
+                                </div>
+                                <div class="card-body">
+                                    <p id="bom-object-screen"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <!-- ----------------- ----------------- -->
 
             <div class="returnBtn text-center">
                 <a href="%public_url%/../../../index.html" class="button mb-5">برگشت</a>
@@ -151,10 +195,10 @@
     const stopAnimationlBtn = document.querySelector(".stopAnimationlBtn");
     const startAnimationlBtn = document.querySelector(".startAnimationlBtn");
     var angle2 = 0
-    var timer2 
+    var timer2
 
     startAnimationlBtn.addEventListener("click", () => {
-       timer2 = window.requestAnimationFrame(square2Animation)
+        timer2 = window.requestAnimationFrame(square2Animation)
     })
 
     stopAnimationlBtn.addEventListener("click", () => {
@@ -169,37 +213,51 @@
     }
 
     /* ---------------- BOM Object ----------------- */
+    const pLocation = document.querySelector("#bom-object-location")
+    const pNavigator = document.querySelector("#bom-object-navigator")
+    const pScreen = document.querySelector("#bom-object-screen")
+
     /* ------ location ----------- */
-   /*  alert(location.href)
-    alert(location.host)
-    alert(location.hostname)
-    alert(location.port)
-    alert(location.pathname)
-    alert(location.search)
-    alert(location.hash) */
+    pLocation.innerHTML =
+        `
+     <span class="fw-bold fs-5">location.href is</span> :  ${location.href}<br />
+     <span class="fw-bold fs-5">location.host is</span> :  ${location.host}<br />
+     <span class="fw-bold fs-5">location.hostname is</span> :  ${location.hostname}<br />
+     <span class="fw-bold fs-5">location.port is</span> :  ${location.port}<br />
+     <span class="fw-bold fs-5">location.pathname is</span> :  ${location.pathname}<br />
+     <span class="fw-bold fs-5">location.search is</span> :  ${location.search}<br />
+     <span class="fw-bold fs-5">location.hash is</span> :  ${location.hash}<br />
 
+     <span class="text-success fw-bold">Note : if url don't be search & hash . this properties return empoty string</span>
+
+    `
     /* -------- navigator object property ----------- */
-
-    alert(`navigator.userAgent is : ${navigator.userAgent}`)
-    alert(`navigator.platform is : ${navigator.platform}`)
-    alert(`navigator.cookiEnabled is : ${navigator.cookieEnabled}`) //true
-    alert(`navigator.language is : ${navigator.language}`) //en-Us
-    alert(`navigator.onLine is : ${navigator.onLine}`) // true
+    pNavigator.innerHTML = 
+    `
+    <span class="fw-bold fs-5">navigator.userAgent is</span> :  ${navigator.userAgent}<br />
+    <span class="fw-bold fs-5">navigator.platform is</span> :  ${navigator.platform}<br />
+    <span class="fw-bold fs-5">navigator.cookiEnabled is</span> :  ${navigator.cookiEnabled}<br />
+    <span class="fw-bold fs-5">navigator.language is</span> :  ${navigator.language}<br />
+    <span class="fw-bold fs-5">navigator.onLine is</span> :  ${navigator.onLine}<br />
+     
+    `
     console.log(`navigator.plugins is : ${navigator.plugins}`)
+
+
 /* ----------- screen object property ----------------- */
-alert(`screen.width is : ${screen.width}`) //1366
-alert(`screen.height is : ${screen.height}`) //768
-
-alert(`screen.availWidth is  : ${screen.availWidth}`) //1366
-alert(`screen.availHeight is : ${screen.availHeight}`)//728 --> 768-40px(taskbar)
-
-alert(`window.outerWidth is  : ${window.outerWidth}`) //1366
-alert(`window.outerHeight is : ${window.outerHeight}`) //728
-
-alert(`window.innerWidth is  : ${window.innerWidth}`) //1366
-alert(`window.innerHeight is : ${window.innerHeight}`)//607 --> viwport Height
-
-
+pScreen.innerHTML = 
+`
+  <span class="fw-bold fs-5">screen.width is </span> :  ${screen.width}<br />
+  <span class="fw-bold fs-5">screen.height is </span> :  ${screen.height}<br /><br />
+  <span class="fw-bold fs-5">screen.availWidth is </span> :  ${screen.availWidth}<br />
+  <span class="fw-bold fs-5">screen.availHeight is </span> :  ${screen.availHeight}   <span class="me-4 text-danger">728 --> 768-40px</span><br /><br />
+  <span class="fw-bold fs-5">window.outerWidth is </span> :  ${window.outerWidth}<br />
+  <span class="fw-bold fs-5">window.outerHeight is </span> :  ${window.outerHeight}<br /><br />
+  <span class="fw-bold fs-5">window.innerWidth is </span> :  ${window.innerWidth}<br />
+  <span class="fw-bold fs-5">window.innerHeight is </span> :  ${window.innerHeight}
+   <span class="me-4 text-danger">607 --> viewport Height</span><br />
+  
+`
 </script>
 
 </html>
