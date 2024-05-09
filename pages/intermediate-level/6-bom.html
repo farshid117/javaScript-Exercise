@@ -223,10 +223,10 @@
      <span class="fw-bold fs-5">location.href is</span> :  ${location.href}<br />
      <span class="fw-bold fs-5">location.host is</span> :  ${location.host}<br />
      <span class="fw-bold fs-5">location.hostname is</span> :  ${location.hostname}<br />
-     <span class="fw-bold fs-5">location.port is</span> :  ${location.port}<br />
+     <span class="fw-bold fs-5">location.port is</span> :  ${location.port? location.port : "have'nt Port"}<br />
      <span class="fw-bold fs-5">location.pathname is</span> :  ${location.pathname}<br />
-     <span class="fw-bold fs-5">location.search is</span> :  ${location.search}<br />
-     <span class="fw-bold fs-5">location.hash is</span> :  ${location.hash}<br />
+     <span class="fw-bold fs-5">location.search is</span> :  ${location.search?location.search:"Not search"}<br />
+     <span class="fw-bold fs-5">location.hash is</span> :  ${location.hash ? location.hash : "Not Hash"}<br />
 
      <span class="text-success fw-bold">Note : if url don't be search & hash . this properties return empoty string</span>
 
