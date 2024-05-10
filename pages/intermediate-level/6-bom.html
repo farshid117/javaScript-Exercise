@@ -24,10 +24,12 @@
 <!-- //todo: styles section -->
 <style>
     * {
+        margin: 0 !important;
         overflow-x: none !important;
     }
 
     body {
+        
         background: #1c1a39;
         color: #fff;
         overflow-x: hidden !important;
@@ -118,7 +120,7 @@
             <!-- ----------------- test-bom-object ----------------- -->
             <section id="bom-object" class="my-3 text-end">
                 <div class="container">
-                    <h3 class="text-center fw-bolds">Test BOM Objects</h3>
+                    <h3 class="text-center fw-bold">Test BOM Objects</h3>
 
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8">
@@ -154,6 +156,18 @@
                                     <p id="bom-object-screen"></p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <!-- ------------- Browser-Event & Methods ------------- -->
+            <section id="browser-Event-mehod" class="my-5 ">
+                <div class="container ">
+                    <h3 class="text-center fw-bold">Browser Event & methods</h3>
+                    <div class="row justify-content-center ">
+                        <div class="col-12 col-md-8 ">
+                            <button class="btn btn-primary d-block m-auto openBtn"> click me! </button>
                         </div>
                     </div>
                 </div>
@@ -221,49 +235,55 @@
 
     /* ------ location ----------- */
     pLocation.innerHTML =
-        `
+    `
      <span class="fw-bold fs-5">location.href is</span> :  ${location.href}<br />
      <span class="fw-bold fs-5">location.host is</span> :  ${location.host}<br />
      <span class="fw-bold fs-5">location.hostname is</span> :  ${location.hostname}<br />
-     <span class="fw-bold fs-5">location.port is</span> :  ${location.port? location.port : "have'nt Port"}<br />
+     <span class="fw-bold fs-5">location.port is</span> :  ${location.port ? location.port : "have'nt Port"}<br />
      <span class="fw-bold fs-5">location.pathname is</span> :  ${location.pathname}<br />
-     <span class="fw-bold fs-5">location.search is</span> :  ${location.search?location.search:"Not search"}<br />
+     <span class="fw-bold fs-5">location.search is</span> :  ${location.search ? location.search : "Not search"}<br />
      <span class="fw-bold fs-5">location.hash is</span> :  ${location.hash ? location.hash : "Not Hash"}<br />
 
      <span class="text-success fw-bold">Note : if url don't be search & hash . this properties return empoty string</span>
 
     `
     /* -------- navigator object property ----------- */
-    pNavigator.innerHTML = 
+    pNavigator.innerHTML =
     `
-    <span class="fw-bold fs-5">navigator.userAgent is</span> :  ${navigator.userAgent}<br />
-    <span class="fw-bold fs-5">navigator.platform is</span> :  ${navigator.platform}<br />
-    <span class="fw-bold fs-5">navigator.cookieEnabled is</span> :  ${navigator.cookieEnabled}<br />
-    <span class="fw-bold fs-5">navigator.language is</span> :  ${navigator.language}<br />
-    <span class="fw-bold fs-5">navigator.onLine is</span> :  ${navigator.onLine}<br />
-     
+        <span class="fw-bold fs-5">navigator.userAgent is</span> :  ${navigator.userAgent}<br />
+        <span class="fw-bold fs-5">navigator.platform is</span> :  ${navigator.platform}<br />
+        <span class="fw-bold fs-5">navigator.cookieEnabled is</span> :  ${navigator.cookieEnabled}<br />
+        <span class="fw-bold fs-5">navigator.language is</span> :  ${navigator.language}<br />
+        <span class="fw-bold fs-5">navigator.onLine is</span> :  ${navigator.onLine}<br /> 
     `
     console.log(`navigator.plugins is : ${navigator.plugins}`)
 
 
-/* ----------- screen object property ----------------- */
-pScreen.innerHTML = 
-`
-  <span class="fw-bold fs-5">screen.width is </span> :  ${screen.width}<br />
-  <span class="fw-bold fs-5">screen.height is </span> :  ${screen.height}<br /><br />
-  
-  <span class="fw-bold fs-5">screen.availWidth is </span> :  ${screen.availWidth}<br />
-  <span class="fw-bold fs-5">screen.availHeight is </span> :  ${screen.availHeight} <br />  
-  <span class="text-danger" dir="ltr">728 --> (768px - 40px)</span><br /><br />
+    /* ----------- screen object property ----------------- */
+    pScreen.innerHTML =
+    `
+        <span class="fw-bold fs-5">screen.width is </span> :  ${screen.width}<br />
+        <span class="fw-bold fs-5">screen.height is </span> :  ${screen.height}<br /><br />
+        
+        <span class="fw-bold fs-5">screen.availWidth is </span> :  ${screen.availWidth}<br />
+        <span class="fw-bold fs-5">screen.availHeight is </span> :  ${screen.availHeight} <br />  
+        <span class="text-danger" dir="ltr">728 --> (768px - 40px)</span><br /><br />
 
-  <span class="fw-bold fs-5">window.outerWidth is </span> :  ${window.outerWidth}<br />
-  <span class="fw-bold fs-5">window.outerHeight is </span> :  ${window.outerHeight}<br /><br />
+        <span class="fw-bold fs-5">window.outerWidth is </span> :  ${window.outerWidth}<br />
+        <span class="fw-bold fs-5">window.outerHeight is </span> :  ${window.outerHeight}<br /><br />
 
-  <span class="fw-bold fs-5">window.innerWidth is </span> :  ${window.innerWidth}<br />
-  <span class="fw-bold fs-5">window.innerHeight is </span> :  ${window.innerHeight}<br />
-   <span class="text-danger" dir="ltr">607 --> viewport Height</span><br />
+        <span class="fw-bold fs-5">window.innerWidth is </span> :  ${window.innerWidth}<br />
+        <span class="fw-bold fs-5">window.innerHeight is </span> :  ${window.innerHeight}<br />
+        <span class="text-danger" dir="ltr">607 --> viewport Height</span><br />
   
-`
+    `
+     /*-- ------------- Browser-Event & Methods ------------- -- */
+     /* const pointer = window.open(arg1, arg2, arg3) */
+     const openBtn = document.querySelector(".openBtn")
+
+     openBtn.addEventListener("click",()=>{
+      const pointer = window.open("https://www.google.com",tab1)
+     })
 </script>
 
 </html>
