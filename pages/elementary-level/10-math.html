@@ -52,12 +52,12 @@
                         <p class="text-white fs-5 fw-bold">محاسبه مجموع رقم‌های یک عدد</p>
                     </div>
                     <div class="card-body">
-                        <form action="" class="text-center">
-                            <input type="text" class="form-control digit" placeholder="عددی وارد کنید">
+                        <form action="" id="digit" class="text-center">
+                            <input type="text" name="digit-input" class="form-control digit-input" placeholder="عددی وارد کنید">
                             <input type="submit" value="محاسبه" class="btn btn-primary mt-3">
                         </form>
                         <div class="calc">
-                            <P>مجموع ارقام عدد وارد شده : <span class="sum-digit"> </span> میباشد</P>
+                            <P>مجموع ارقام عدد وارد شده : <span class="sum-digit text-danger fw-bold"> </span> میباشد</P>
                         </div>
                         
                     </div>
@@ -74,7 +74,7 @@
 </body>
 
 <script>
-console.log(Math.PI)
+/* console.log(Math.PI)
 console.log(Math.pow(2,4))
 console.log(Math.sqrt(16))
 console.log(Math.abs(-12))
@@ -84,7 +84,34 @@ console.log(Math.trunc(13.25))
 console.log(Math.round(15.6))
 console.log(Math.floor(123.8565))
 console.log(Math.ceil(17.4))
-console.log(Math.floor(Math.random() * 10000 + 10000))
+console.log(Math.floor(Math.random() * 10000 + 10000)) */
+
+/*---------------- digit calculator Project ------------- */
+const form = document.forms.digit;
+const inputDigit = document.forms[0]["digit-input"]
+const sumDigit  = document.querySelector(".sum-digit")
+
+let sum = 0
+let digit = 
+form.addEventListener("submit", (event)=>{
+    event.preventDefault()
+    if(inputDigit.value){
+        digit = inputDigit.value //is string
+        for (let i = 0; (digit/10) !== 0; i++){
+            
+                sum += digit % 10
+                console.log("sum: ", sum);
+                digit = Math.floor(digit / 10)
+                console.log("digit: ", digit);
+         
+        }
+        sumDigit.innerHTML = sum
+        sum = 0
+
+    }else{
+        alert("لطفا عددی را وارد کنید")
+    }
+})
    
 </script>
 
