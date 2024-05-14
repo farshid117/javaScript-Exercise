@@ -7,7 +7,11 @@
     <title>Markdown to HTML</title>
     <!-- Prism.js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-
+    <link rel="stylesheet" href="../../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/bootstrap-icons.css" />
     <style>
         body {
             background: #1c1a39;
@@ -44,7 +48,16 @@
 
     <!-- Markdown to HTML -->
 
-    <div class="markdown" id="markdown-container"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-11">
+                <div class="markdown" id="markdown-container">
+                    
+                
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Prism.js JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
@@ -67,16 +80,20 @@ alert( str ); // Bilbo;Gandalf;Nazgul
 \`\`\`
 
 ## Array.<span style="color:#00b050">from( )</span> Method
-<p dir="rtl">
+<h5 dir="rtl" class="mt-5">
     بعضی وقت ها ما شبه آرایه هایی داریم مثل NodeList ها که میتوانیم length و حلقه بعضا روی آنها بزنیم ولی دیگر متدهای آرایه را نمیتوان روی آنها اجرا کرد به همین خاطر اول آنها را با استفاده از متد Array.from(arrayLike) به آرایه تبدیل میکنیم سپس متدهای آرایه ها را روی آنها پیاده سازی میکنیم.
 
-</p>
+</h5>
 
 
 ### Array.<span style="color:#00b050">from( )</span> Method
-<p dir="rtl">
-    بعضی وقت ها ما شبه آرایه هایی داریم مثل NodeList ها که میتوانیم length و حلقه بعضا روی آنها بزنیم ولی دیگر متدهای آرایه را نمیتوان روی آنها اجرا کرد به همین خاطر اول آنها را با استفاده از متد Array.from(arrayLike) به آرایه تبدیل میکنیم سپس متدهای آرایه ها را روی آنها پیاده سازی میکنیم.
-</p>
+# <span style="color:#ffff00">summary</span>
+The function fn is called on each element of the array similar to map. If <span style="color:#ffff00">any</span> / <span style="color:#ffff00">all</span> results are true, returns true, <span style="color:#ff0000">otherwise</span> false.
+
+<span style="color:#ffff00" >لپ مطلب </span>: متد some درواقع مکمل متد includes هست. includes فقط برای عناصر آرایه از نوع Primitive عمل میکند و اگر آبجکت به آن بدهیم false برمیگرداند. متد some هم برای عناصر Primitive و هم Refrences کاربرد دارد. و کامل موجودیت و یا عدم موجودیت یک عنصر با هر نوعی را درون آرایه بررسی میکند. به محض اینکه اولین عنصر از آرایه شرط را داشته باشد True را برمیگرداند. 
+در متد every به محض اینکه یک عنصر از آرایه شرط را نداشته باشد False  را برمیگرداند. و اگر تمامی عناصر(المانهای) آرایه شرط را داشته باشند True را برمیگرداند. 
+پس در نوشتن این متدها یا جلوی Reurn یک عبارت منطقی میگذاریم. یا خودمان در صورت رسیدن به جواب True را برای some و false را برای every میاییم Return میکنیم تا عملیات متوقف شود. 
+
 `;
 
             // Convert Markdown to HTML
