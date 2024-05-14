@@ -54,7 +54,9 @@
 
                 <div class="markdown" id="markdown-container">
                 </div>
-                <div class="markdown mt-5" id="markdown-container2">
+                <div class="markdown my-5" id="markdown-container2">
+                </div>
+                <div class="markdown my-5" id="markdown-container3">
                 </div>
 
             </div>
@@ -119,16 +121,36 @@ let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
 let str = arr.join(';'); // glue the array into a string using 
 alert( str ); // Bilbo;Gandalf;Nazgul 
 \`\`\`
+`;
+
+const markdownText3 = `
+## <span style="color:#00b050">map</span> Method:
+#js--map-method
+The []()
+<div>
+    the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">arr.map</a> method is one of the <span style="color:#ffff00">most useful and often used</span>.
+It calls the function for each element of the array and <span style="color:#ff0000">returns</span> <span style="color:#00b050">the array of results.</span>
+like <span style="color:#b769f2">filter</span> method.
+پس متد map هم مثل متد filter <span style="color:#00b050">یک آرایه برمیگرداند</span> و <span style="color:#b769f2">با آرایه اصلی کاری ندارد</span>.
+</div>
+The syntax is:
+\`\`\`javascript
+    let result = arr.map((item, index, array) => {
+        // returns the new value instead of item
+    });
+\`\`\`
 `
 
 
     // Convert Markdown to HTML
-    const htmlText = marked(markdownText); // اینجا مشکل است
-    const htmlText2 = marked(markdownText2); // اینجا مشکل است
+    const htmlText = marked(markdownText); 
+    const htmlText2 = marked(markdownText2); 
+    const htmlText3 = marked(markdownText3); 
 
     // Render HTML
     document.getElementById('markdown-container').innerHTML = htmlText;
     document.getElementById('markdown-container2').innerHTML = htmlText2;
+    document.getElementById('markdown-container3').innerHTML = htmlText3;
 
     // Highlight code
     Prism.highlightAll(); // برای رنگی کردن کدهای بلاک جاوااسکریپت
