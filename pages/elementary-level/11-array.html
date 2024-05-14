@@ -51,10 +51,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-11">
+
                 <div class="markdown" id="markdown-container">
-
-
                 </div>
+                <div class="markdown" id="markdown-container2">
+                </div>
+
             </div>
         </div>
     </div>
@@ -107,12 +109,24 @@ alert(arraysEqual([1, 2], [1, 2])); // true
 \`\`\`
 
 `;
+            const markdownText2 = `
+# Title Header
+
+\`\`\`javascript
+let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+let str = arr.join(';'); // glue the array into a string using 
+alert( str ); // Bilbo;Gandalf;Nazgul 
+\`\`\`
+`
+
 
             // Convert Markdown to HTML
             const htmlText = marked(markdownText); // اینجا مشکل است
+            const htmlText2 = marked(markdownText2); // اینجا مشکل است
 
             // Render HTML
             document.getElementById('markdown-container').innerHTML = htmlText;
+            document.getElementById('markdown-container2').innerHTML = htmlText2;
 
             // Highlight code
             Prism.highlightAll();
