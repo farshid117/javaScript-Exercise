@@ -44,12 +44,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h3 class="text-center">Math و متدهای آن</h3>
+                <h3 class="text-center fw-bold mt-5">Math و متدهای آن</h3>
             </div>
             <div class="col-12 col-md-8">
                 <div class="card my-5">
                     <div class="card-header bg-primary text-white">
                         <p class="text-white fs-5 fw-bold">محاسبه مجموع رقم‌های یک عدد</p>
+                        <p class="text-white">برنامه ای بنویسید که یک عدد را دریافت کند و مجموع ارقام آن را محسابه کتد و نشان دهد</p>
                     </div>
                     <div class="card-body">
                         <form action="" id="digit" class="text-center">
@@ -58,8 +59,7 @@
                             <input type="submit" value="محاسبه" class="btn btn-primary mt-3">
                         </form>
                         <div class="calc">
-                            <P>مجموع ارقام عدد وارد شده : <span class="sum-digit text-danger fw-bold"> </span> میباشد
-                            </P>
+                            <P>مجموع ارقام عدد وارد شده : <span class="sum-digit text-danger fw-bold"> </span> </P>
                         </div>
 
                     </div>
@@ -102,9 +102,7 @@
                 for (let i = 0; (digit / 10) !== 0; i++) {
 
                     sum += digit % 10
-                    console.log("sum: ", sum);
                     digit = Math.floor(digit / 10)
-                    console.log("digit: ", digit);
 
                 }
                 sumDigit.innerHTML = sum
@@ -112,7 +110,7 @@
                 inputDigit.select()
 
             } else {
-                alert("لطفا عددی را وارد کنید")
+                sumDigit.innerHTML = "لطفا عددی را وارد کنید"
             }
         })
 
