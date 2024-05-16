@@ -5,14 +5,12 @@
   src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir.woff2") format("woff2"), url("../fonts/Vazir.woff") format("woff"), url("../fonts/Vazir.ttf") format("truetype");
   font-weight: normal;
 }
-
 @font-face {
   font-family: Vazir;
   src: url("../fonts/Vazir-Bold.eot");
   src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Bold.woff2") format("woff2"), url("../fonts/Vazir-Bold.woff") format("woff"), url("../fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
 }
-
 :root {
   --hue: 227;
   --sat: 47%;
@@ -41,9 +39,10 @@ html {
 
 body {
   font-family: var(--ff-primary);
+  background: var(--body-color);
   line-height: 2;
   font-size: 1rem;
-
+  text-align: right;
 }
 
 ul {
@@ -59,6 +58,18 @@ img {
   display: block;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  line-height: 2;
+}
+
+p {
+  color: var(--text-color);
+  line-height: 2;
+}
 
 h1 {
   font-size: 2rem;
@@ -87,17 +98,14 @@ h4 {
 .section {
   padding: 4rem 0 1rem 0;
 }
-
 .section__title, .section__title_center {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-bottom: 1rem;
 }
-
 .section__title_center {
   text-align: center;
 }
-
 .section__title span, .section__title_center span {
   color: var(--primary-color);
 }
@@ -163,71 +171,58 @@ h4 {
 
 /* ? Button styles for prevent DRY */
 .button {
-  display: inline-block;
-  /* for use into <a> and can get width & height  */
+  display: inline-block; /* for use into <a> and can get width & height  */
   background: var(--primary-color);
   color: var(--container-color);
   padding: 0.75rem 1.5rem;
   border-radius: 3rem;
   transition: 0.4s;
 }
-
 .button:hover {
   background: var(--container-color);
   outline: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
-
 .button__header {
   display: none;
 }
-
 .button__link {
   background: var(--container-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   padding: 0.25rem 1rem;
 }
-
 .button__link:hover {
   background: var(--primary-color);
   color: var(--container-color);
 }
-
 .button__flext {
   display: flex;
   align-items: center;
   column-gap: 1rem;
 }
-
 .button__red {
   background: red;
 }
-
 .button__pink {
   background: #E91E63;
 }
-
 .button__violet {
   background: #9C27B0;
 }
-
 .button__blue {
   background: #2196F3;
 }
-
 .button__orange {
   background: #FF5722;
 }
-
 .button__green {
   background: #4CAF50;
 }
 
 /* header section style */
 .header {
-  position: fixed;
-  /* fixed has absolute into itself */
+  position: fixed; /* fixed has absolute into itself */
   top: 0;
   left: 0;
   width: 100%;
@@ -241,24 +236,19 @@ h4 {
   align-items: center;
   transition: 0.3s;
 }
-
 .nav__logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .nav__toggle {
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
 }
-
 @media (max-width: 767px) {
   .nav__menu {
-    position: fixed;
-    /* fixed has absolute into itself */
-    top: -100%;
-    /* in toggle change to 4 rem */
+    position: fixed; /* fixed has absolute into itself */
+    top: -100%; /* in toggle change to 4 rem */
     left: 0;
     right: 0;
     width: 90vw;
@@ -271,14 +261,12 @@ h4 {
     transition: all 0.4s;
   }
 }
-
 .nav__list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
 }
-
 .nav__item-link, .nav__toggle, .nav__logo {
   color: var(--title-color);
 }
@@ -295,7 +283,6 @@ h4 {
   position: relative;
   transition: 1s;
 }
-
 .active-link::before {
   content: "";
   position: absolute;
@@ -311,25 +298,20 @@ h4 {
 .home {
   padding-top: 1rem;
 }
-
 .home__container {
   row-gap: 2.5rem;
 }
-
 .home__title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
 .home__title span {
   color: var(--primary-color);
 }
-
 .home__description {
   margin-bottom: 1.5rem;
 }
-
 .home__links {
   display: flex;
   flex-direction: row-reverse;
@@ -342,59 +324,44 @@ h4 {
   .svg__img {
     width: 100%;
   }
-
   .home {
     padding-top: 1rem;
   }
-
   .home__container {
     grid-template-columns: 1fr;
     align-items: center;
   }
-
   .home__img {
     order: 1;
   }
 }
-
 @media screen and (min-width: 768px) {
   .nav__list {
     flex-direction: row;
     column-gap: 2.5rem;
   }
-
   .nav__toggle {
     display: none;
   }
 }
-
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 3rem;
-    font-weight: bold;
   }
-
   h2 {
     font-size: 2.5rem;
-    font-weight: bold;
   }
-
   h3 {
     font-size: 1.75rem;
-    font-weight: bold;
   }
-
   h4 {
     font-size: 1rem;
-    font-weight: bold;
   }
 }
-
 @media screen and (min-width: 992px) {
   .svg__img {
     width: 400px;
   }
-
   .button__header {
     display: block;
     padding: 0.5rem 1rem;
