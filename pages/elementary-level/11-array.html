@@ -59,7 +59,7 @@
 
             </div>
             <div class="col-12">
-                <div class="returnBtn text-center">
+                <div class="returnBtn text-center mb-5">
                     <a href="%public_url%/../../../index.html" class="button btn btn-warning">برگشت</a>
                 </div>
             </div>
@@ -79,7 +79,9 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script> -->
 
     <!-- Highlighting code -->
-    <script>
+
+<!-- todo: Insert js marked package -->    
+<script>
 document.addEventListener('DOMContentLoaded', function () {
 // Markdown text
 const markdownText =
@@ -141,6 +143,7 @@ like <span style="color:#b769f2">filter</span> method.
 پس متد map هم مثل متد filter <span style="color:#00b050">یک آرایه برمیگرداند</span> و <span style="color:#b769f2">با آرایه اصلی کاری ندارد</span>.
 </div>
 The syntax is:
+
 \`\`\`javascript
     let result = arr.map((item, index, array) => {
         // returns the new value instead of item
@@ -150,12 +153,12 @@ The syntax is:
 
 
     // Convert Markdown to HTML
-    const htmlText = marked(markdownText); 
+    const htmlText  = marked(markdownText); 
     const htmlText2 = marked(markdownText2); 
     const htmlText3 = marked(markdownText3); 
 
     // Render HTML
-    document.getElementById('markdown-container').innerHTML = htmlText;
+    document.getElementById('markdown-container').innerHTML  = htmlText;
     document.getElementById('markdown-container2').innerHTML = htmlText2;
     document.getElementById('markdown-container3').innerHTML = htmlText3;
 
