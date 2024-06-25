@@ -6,7 +6,7 @@ const modalCloseBtn = $.querySelector(".close-modal")
 const statusCloseBtns = $.querySelectorAll(".close") //NodeList
 const modalTodoInput = $.querySelector("#todo_input")
 const modalSubmitBtn = $.querySelector("#todo_submit")
-const noStatusTodo = $.querySelector("#no_status")
+const noStatusColumn = $.querySelector("#no_status")
 
 //show & hide modal
 addTodoBtn.addEventListener("click",(event)=>{
@@ -31,13 +31,12 @@ modalSubmitBtn.addEventListener("click", (event) => {
     ${newTodo}
     <span class="close" onclick="closeTodoHandler(event)">&times;</span>
    `
+    noStatusColumn.append(div)
+    
     modalTodoInput.value = ""
     modal.classList.remove("active")
     overLay.classList.remove("active")
-
-    todoContainer.append(div)
-
-    
+     
 })
 
 function closeTodoHandler (event){
