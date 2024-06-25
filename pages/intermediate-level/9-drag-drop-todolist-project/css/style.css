@@ -9,6 +9,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.todo{
+  transition: .2s;
+}
 .todo:hover{
   cursor: pointer;
   background:green;
