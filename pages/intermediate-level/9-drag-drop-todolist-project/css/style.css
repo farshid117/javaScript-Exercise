@@ -9,7 +9,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.todo:hover{
+  cursor: pointer;
+  background:green;
+  color: #fff;
+}
 .todo-container {
   width: 1000px;
   height: 80vh;
