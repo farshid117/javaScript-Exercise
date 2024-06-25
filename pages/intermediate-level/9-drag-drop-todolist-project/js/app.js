@@ -38,16 +38,20 @@ modalSubmitBtn.addEventListener("click", (event) => {
     overLay.classList.remove("active")
      
 })
-
+//Remove Todo by &times;
 function closeTodoHandler (event){
     event.target.parentElement.remove()
 }
 
-/* //remove todo
-statusCloseBtns.forEach((closeBtn) => {
-    console.log(statusCloseBtns)
-    closeBtn.addEventListener("click", (event) => {
-        event.target.parentElement.remove()
+//preventDefault dragover for drop Elm
+function dragoverHandler(event){
+    event.preventDefault()
+    console.log("dragover")
+}
 
-    })
-}) */
+//Drop Event Handler Func
+function dropHandler(event) {
+    console.log("Drop")
+}
+
+
