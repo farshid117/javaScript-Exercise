@@ -31,6 +31,7 @@ h1 {
     height: 250px;
     object-fit: cover;
     transition: all .4s ease;
+    border-radius: 10px;
 }
 
 .main-music:hover i {
