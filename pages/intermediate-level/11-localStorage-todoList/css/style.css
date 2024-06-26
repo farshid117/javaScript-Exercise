@@ -3,6 +3,12 @@ body {
   color: #fff;
 }
 
+.status-btn, .delete-btn {
+  outline: 0;
+  border: none;
+}
+
+
 #todoList label {}
 
 #todoList li {
@@ -14,6 +20,7 @@ body {
 .completed {
   color: #6e6e6e;
   text-decoration: line-through;
+  background: #333;
 }
 
 .uncompleted label {
