@@ -1,16 +1,26 @@
-#todoList label{
-  width: 80%;
+body {
+  background: #120d4f;
+  color: #fff;
 }
-#todoList li{
-  list-style-type: none;
-}
-.completed{
 
+#todoList label {}
+
+#todoList li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
-.uncompleted label{
-  color: #afa7a7;
+
+.completed {
+  color: #6e6e6e;
   text-decoration: line-through;
 }
-#todoList .btn{
+
+.uncompleted label {
+  color: #151515;
+
+}
+
+#todoList .btn {
   margin-left: 10px;
 }
