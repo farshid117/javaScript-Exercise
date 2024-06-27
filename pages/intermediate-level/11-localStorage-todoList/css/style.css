@@ -8,8 +8,11 @@ body {
   border: none;
 }
 
+#itemInput{
+  font-size: 18px;
+  font-weight: bold;
 
-#todoList label {}
+}
 
 #todoList li {
   list-style-type: none;
@@ -27,7 +30,6 @@ body {
 
 .uncompleted label {
   color: #151515;
-
 }
 
 .btn {
