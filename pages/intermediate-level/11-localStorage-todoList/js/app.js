@@ -35,7 +35,7 @@ function createTodoItems(todosList) {
     UlTodoList.innerHTML = ""
     todosList.forEach((todo) => {
         const li = document.createElement("li")
-        li.className = todo.status === "uncompleted" ? "todoList_item uncompleted well" : "todoList_item completed well"
+        li.className = todo.status === "uncompleted" ? "todoList_item uncompleted well list-group-item" : "todoList_item completed well list-group-item"
         li.innerHTML =
             `
             <label>${todo.text}</label>
@@ -95,7 +95,24 @@ function deleteTodoHandler(event, id) {
 
 }
 
+//todo: filter todosArray
 
+
+function showCompletedHandler(){
+    filterTodosArray = todosArray.filter(todo => todo.status === "completed")
+    console.log("filterTodosArray: ", filterTodosArray);
+    createTodoItems(filterTodosArray)
+}
+function showUncompletedHandler(){
+    filterTodosArray = todosArray.filter(todo => todo.status === "uncompleted")
+    console.log("filterTodosArray: ", filterTodosArray);
+    createTodoItems(filterTodosArray)
+}
+function showAllTodosHandler() {
+    createTodoItems(todosArray)
+}
+
+//todo: get todos from LocalStorage in onload Event
 window.onload = () => {
     itemInput.focus()
     let localStorageTodosArray = JSON.parse(localStorage.getItem("LocalStorageTodosArray"))

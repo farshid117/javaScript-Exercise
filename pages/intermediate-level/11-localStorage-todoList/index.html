@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="SabzLearn TodoList" />
-    <meta name="author" content="SabzLearn" />
-    <title>LocalStorage TodoList</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
-      <h2 class="text-center fw-bold">Todo List App</h2>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SabzLearn TodoList" />
+  <meta name="author" content="SabzLearn" />
+  <title>LocalStorage TodoList</title>
 
-      <div class="form-group">
-        <label for="itemInput">Add Item</label>
-        <input type="text" class="form-control" name="" id="itemInput" />
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center fw-bold">Todo List App</h2>
+
+    <!-- Input New Todo -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="form-group">
+          <label for="itemInput">Add Item</label>
+          <input type="text" class="form-control" name="" id="itemInput" />
+        </div>
+        <div class="form-btn mt-3">
+          <button id="addButton" class="btn btn-primary">Add To List</button>
+          <button id="clearButton" class="btn btn-danger">Clear Todo List</button>
+        </div>
       </div>
-      <button id="addButton" class="btn btn-primary">Add To List</button>
-      <button id="clearButton" class="btn btn-danger">Clear Todo List</button>
-      <h3>Todo List</h3>
-      <ul id="todoList">
-        <!-- <li class="todoList_item completed well"> 
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 text-center">
+        <button id="addButton" class="btn btn-primary" onclick="showAllTodosHandler()">All</button>
+        <button id="clearButton" class="btn btn-success" onclick="showCompletedHandler()">completed</button>
+        <button id="clearButton" class="btn btn-warning" onclick="showUncompletedHandler()">unCompleted</button>
+      </div>
+    </div>
+    <!-- todoList Container -->
+    <h3>Todo List</h3>
+    <ul id="todoList" class="list-group mt-4">
+      <!-- <li class="todoList_item completed well"> 
           <label>Test</label>
           <div class="todoList_item__btn">
             <button class="btn btn-success status-btn">Complete</button>
             <button class="btn btn-danger delete-btn">Delete</button>
           </div>
         </li> -->
-      </ul>
-    </div>
+    </ul>
+  </div>
 
-    <script type="text/javascript" src="js/app.js"></script>
-  </body>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
 </html>

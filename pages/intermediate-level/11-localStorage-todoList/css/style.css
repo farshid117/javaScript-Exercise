@@ -18,9 +18,11 @@ body {
 }
 
 .completed {
-  color: #6e6e6e;
+  color: #aeacac;
   text-decoration: line-through;
-  background: #333;
+  text-decoration-color: red;
+  line-height: 100%;
+  background: #201939;
 }
 
 .uncompleted label {
@@ -28,6 +30,11 @@ body {
 
 }
 
-#todoList .btn {
+.btn {
   margin-left: 10px;
+}
+
+#todoList .todoList_item label {
+  font-size: 18px;
+  font-weight: bold;
 }
