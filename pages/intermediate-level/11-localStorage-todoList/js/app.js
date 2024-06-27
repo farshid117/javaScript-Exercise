@@ -8,11 +8,13 @@ const clearButton = $.querySelector("#clearButton")
 
 let todosArray = []
 
-addButton.addEventListener("click", () => { 
 
+
+//add New Todo Function
+function addNewTodo(){
     if (itemInput.value.trim()) {
         const todo = {
-            id: todosArray.length+1,
+            id: todosArray.length + 1,
             text: itemInput.value.trim(),
             status: "uncompleted",
         }
@@ -26,24 +28,31 @@ addButton.addEventListener("click", () => {
     } else {
         alert("آقای خان مقداری را وارد کن!!")
     }
-})
-
+}
 function setLocalStorage(todosList) {
     localStorage.setItem("LocalStorageTodosArray", JSON.stringify(todosList))
 }
 function createTodoItems(todosList) {
-    UlTodoList.innerHTML = ""
+    UlTodoList.innerHTML = "" // to Reset Ul innerHTML
+
     todosList.forEach((todo) => {
         const li = document.createElement("li")
         li.className = todo.status === "uncompleted" ? "todoList_item uncompleted well list-group-item" : "todoList_item completed well list-group-item"
         li.innerHTML =
-            `
+        `
             <label>${todo.text}</label>
             <div class="todoList_item__btn">
-                <button class="btn btn-success status-btn " onclick="changeStatusHandler(event, ${todo.id})"> ${todo.status === "completed" ? "uncompleted" : "completed"} </button>
-                <button class="btn btn-danger delete-btn" onclick="deleteTodoHandler(event, ${todo.id})">Delete</button>
-            </div>
-          
+                <button class="btn btn-success status-btn" 
+                        onclick="changeStatusHandler(event, ${todo.id})"
+                > 
+                    ${todo.status === "completed" ? "uncompleted" : "completed"}
+                </button>
+                <button class="btn btn-danger delete-btn"  
+                        onclick="deleteTodoHandler(event, ${todo.id})"
+                >
+                    Delete
+                </button>
+            </div>  
         `
         UlTodoList.append(li)
         itemInput.value = ""
@@ -85,19 +94,13 @@ function changeStatusHandler(event, id) {
 }
 function deleteTodoHandler(event, id) {
     event.target.parentElement.parentElement.remove()
-    // let array = JSON.parse(localStorage.getItem("LocalStorageTodosArray"))
-
+  
     let todoIndex = todosArray.findIndex(todo => todo.id === id)
     todosArray.splice(todoIndex, 1)
     localStorage.setItem("LocalStorageTodosArray", JSON.stringify(todosArray))
-
-    console.log(JSON.parse(localStorage.getItem("LocalStorageTodosArray")))
-
 }
 
 //todo: filter todosArray
-
-
 function showCompletedHandler(){
     filterTodosArray = todosArray.filter(todo => todo.status === "completed")
     console.log("filterTodosArray: ", filterTodosArray);
@@ -112,14 +115,37 @@ function showAllTodosHandler() {
     createTodoItems(todosArray)
 }
 
+//todo: EvenListeners
+addButton.addEventListener("click", addNewTodo)
+clearButton.addEventListener("click", () => {
+    todosArray = []
+    setLocalStorage(todosArray)
+    createTodoItems(todosArray)
+    // localStorage.removeItem("LocalStorageTodosArray")
+    itemInput.focus()
+})
+itemInput.addEventListener("keyup", (event) => {
+    if (event.keyCode === 13) {
+        addNewTodo()
+    }
+})
+
+
+
+
+
+
 //todo: get todos from LocalStorage in onload Event
 window.onload = () => {
     itemInput.focus()
     let localStorageTodosArray = JSON.parse(localStorage.getItem("LocalStorageTodosArray"))
-    if (localStorageTodosArray.length>0){
+    if (localStorageTodosArray.length > 0){
         todosArray = localStorageTodosArray
-        createTodoItems(todosArray)
+        
     }else{
-        alert("Haven't Any Todos")
+        todosArray = []
+        alert("Haven't Any Todos in LocalStorage")
     }
+
+    createTodoItems(todosArray)
 }
