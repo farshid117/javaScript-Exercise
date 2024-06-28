@@ -143,10 +143,9 @@ itemInput.addEventListener("keyup", (event) => {
     }
 })
 
-
-
-
-
+window.addEventListener("storage",() => {
+    alert("LocalStrage Update!")
+})
 
 //todo: get todos from LocalStorage in onload Event
 window.onload = () => {
