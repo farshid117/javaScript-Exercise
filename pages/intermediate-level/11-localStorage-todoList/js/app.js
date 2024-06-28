@@ -96,8 +96,8 @@ function deleteTodoHandler(event, id) {
     event.target.parentElement.parentElement.remove()
   
     let todoIndex = todosArray.findIndex(todo => todo.id === id)
-    todosArray.splice(todoIndex, 1)
-    localStorage.setItem("LocalStorageTodosArray", JSON.stringify(todosArray))
+    todosArray.splice(todoIndex, 1) // splice: swiss army knife & change self array
+    setLocalStorage(todosArray)
 }
 
 //todo: filter todosArray
