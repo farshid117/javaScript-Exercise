@@ -37,7 +37,9 @@ function createTodoItems(todosList) {
 
     todosList.forEach((todo) => {
         const li = document.createElement("li")
-        li.className = todo.status === "uncompleted" ? "todoList_item uncompleted well list-group-item" : "todoList_item completed well list-group-item"
+        li.className = todo.status === "uncompleted" ? 
+                       "todoList_item uncompleted well list-group-item" : 
+                       "todoList_item completed well list-group-item"
         li.innerHTML =
         `
             <label>${todo.text}</label>
@@ -60,37 +62,48 @@ function createTodoItems(todosList) {
     })
 }
 function changeStatusHandler(event, id) {
-    console.log("changeBtn Clicked!")
+    // console.log("changeBtn Clicked!")
 
-    let targetElm = event.target.parentElement.parentElement
+ /*    let targetElm = event.target.parentElement.parentElement
     if (targetElm.classList.contains("completed")) {
         targetElm.classList.remove("completed")
         targetElm.classList.add("uncompleted")
-        event.target.innerHTML = "completed"
+        event.target.innerText = "completed"
 
         let todoIndex = todosArray.findIndex(todo => todo.id === id)
         let todo = todosArray.find(todo => todo.id === id)
         todo.status = "uncompleted"
 
         todosArray[todoIndex] = todo
-        console.log("array1: ", todosArray);
+        setLocalStorage(todosArray)
 
-        localStorage.setItem("LocalStorageTodosArray", JSON.stringify(todosArray))
     } else {
         targetElm.classList.remove("uncompleted")
         targetElm.classList.add("completed")
-        event.target.innerHTML = "uncompleted"
+        event.target.innerText = "uncompleted"
 
         let todoIndex = todosArray.findIndex(todo => todo.id === id)
         let todo = todosArray.find(todo => todo.id === id)
         todo.status = "completed"
 
         todosArray[todoIndex] = todo
-        console.log("array2: ", todosArray);
+        setLocalStorage(todosArray)
+    } */
 
-        localStorage.setItem("LocalStorageTodosArray", JSON.stringify(todosArray))
-        console.log("localStorage Tosos: ", JSON.parse(localStorage.getItem("LocalStorageTodosArray")))
-    }
+    //approach 2
+    todosArray.forEach(todo => {
+        if(todo.id === id){
+            if (todo.status === "completed"){
+                todo.status = "uncompleted"
+                event.target.innerText = "completed"
+            }else{
+                todo.status = "completed"
+                event.target.innerText = "uncompleted"
+            }
+        }
+    })
+    setLocalStorage(todosArray)
+    createTodoItems(todosArray)
 }
 function deleteTodoHandler(event, id) {
     event.target.parentElement.parentElement.remove()
