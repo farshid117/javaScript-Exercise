@@ -41,10 +41,6 @@ function prevItem() {
    }
 }
 
-
-
-
-// setInterval(nextItem , 4000)
 prev.addEventListener("click", prevItem)
 next.addEventListener("click", nextItem)
 window.addEventListener("keyup", (event)=>{
