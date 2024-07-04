@@ -43,6 +43,7 @@ function prevItem() {
 
 
 
+
 // setInterval(nextItem , 4000)
 prev.addEventListener("click", prevItem)
 next.addEventListener("click", nextItem)
@@ -51,4 +52,7 @@ window.addEventListener("keyup", (event)=>{
   if (event.keyCode === 37) prevItem()
 })
 
-window.onload = loadImg(0)
+window.onload = ()=>{
+  loadImg(0)
+  setInterval(nextItem, 3000)
+}
