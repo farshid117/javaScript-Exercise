@@ -3,7 +3,8 @@ const prev = $.querySelector(".prev");
 const next = $.querySelector(".next");
 let sliderItem = $.querySelectorAll(".slider-item");
 let index = 0;
-// console.log(sliderItem);
+
+const imageSrc = ["image/1.jpg", "image/2.png", "image/3.jpg"]
 
 function prevItem() {
     index--

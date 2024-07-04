@@ -37,6 +37,8 @@ body {
     display: none;
     animation: fade 230ms;
 }
+
+/* Responsive Section */
 @keyframes fade {
     0%{
         opacity: 0;
