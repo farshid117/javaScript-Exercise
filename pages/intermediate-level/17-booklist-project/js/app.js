@@ -35,7 +35,11 @@ function showBooks() {
     booksArray.forEach(book => (
       tbody.innerHTML += 
         `
-            <tr>
+        <tr>
+            <th>
+                <i class="fa fa-trash trash-icon text-danger fs-4"></i>
+                <i class="fa fa-edit trash-icon text-success me-4 fs-4"></i>
+            </th>
             <th>${book.title}</th>
             <th>${book.author}</th>
             <th>${book.year}</th>
