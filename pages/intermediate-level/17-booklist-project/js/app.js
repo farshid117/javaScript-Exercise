@@ -14,13 +14,14 @@ function addNewBook(event) {
     if (isValid) {
         tbody.innerHTML = ""
         let newBook = {
+            id: Math.floor(Math.random() *100) ,
             title: titleInput.value,
             author: authorInput.value,
             year: yearInput.value
         }
         booksArray.push(newBook)
 
-        localStorage.setItem("booksStorage", JSON.stringify(booksArray))
+        updateLocalStorage(booksArray)
 
         titleInput.value = ""
         titleInput.focus()
@@ -31,14 +32,16 @@ function addNewBook(event) {
     showBooks()
 
 }
+
 function showBooks() {
+    tbody.innerHTML = ""
     booksArray.forEach(book => (
       tbody.innerHTML += 
         `
         <tr>
             <th>
-                <i class="fa fa-trash trash-icon text-danger fs-4"></i>
-                <i class="fa fa-edit trash-icon text-success me-4 fs-4"></i>
+                <i class="fa fa-trash trash-icon text-danger fs-4" onclick="deleteBook(${book.id})"></i>
+                <i class="fa fa-edit trash-icon text-success me-4 fs-4" onclick="deleteBook(${book.id})"></i>
             </th>
             <th>${book.title}</th>
             <th>${book.author}</th>
@@ -47,8 +50,8 @@ function showBooks() {
         `
         )
     )
-    console.log(tbody.innerHTML)
 }
+
 function validationInputs() {
     if (titleInput.value.length > 0 && authorInput.value.length > 0 && yearInput.value.length > 0 && isFinite(yearInput.value)) {
         return true
@@ -57,12 +60,21 @@ function validationInputs() {
     }
 }
 
+function deleteBook(id){
+    let arrayBooksFitered = booksArray.filter(book => book.id !== id)
+    booksArray = arrayBooksFitered
+    showBooks()
+    updateLocalStorage(booksArray)
+}
+
+function updateLocalStorage(array){
+    console.log("invoke updateLocalStorage")
+    localStorage.setItem("booksStorage", JSON.stringify(array))
+}
+
 submitBtn.addEventListener("click", addNewBook)
-
-
 window.onload = () => {
     titleInput.focus()
     booksArray = JSON.parse(localStorage.getItem("booksStorage")) || []
-    console.log("booksArray: ", booksArray);
     showBooks()
 }
