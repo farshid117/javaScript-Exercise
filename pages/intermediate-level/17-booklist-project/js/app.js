@@ -4,6 +4,7 @@ const authorInput = $.getElementById("author")
 const yearInput = $.getElementById("year")
 const submitBtn = $.querySelector(".submit-btn")
 const tbody = $.querySelector("#book-list")
+const clearBtn = $.querySelector(".clear-btn")
 
 
 let booksArray = [];
@@ -72,7 +73,15 @@ function updateLocalStorage(array){
     localStorage.setItem("booksStorage", JSON.stringify(array))
 }
 
+function clearBookList(){
+    booksArray = []
+    localStorage.clear()
+    showBooks()
+}
+
+/* addEventListener Section */
 submitBtn.addEventListener("click", addNewBook)
+clearBtn.addEventListener("click", clearBookList)
 window.onload = () => {
     titleInput.focus()
     booksArray = JSON.parse(localStorage.getItem("booksStorage")) || []
