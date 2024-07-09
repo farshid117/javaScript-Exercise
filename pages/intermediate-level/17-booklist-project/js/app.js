@@ -24,11 +24,10 @@ function addNewBook(event) {
 
         updateLocalStorage(booksArray)
 
-        makeEmptyInputs()
+       
 
     }
-    showBooks()
-
+    
 }
 function makeEmptyInputs(){
     titleInput.value = ""
@@ -72,6 +71,8 @@ function deleteBook(id){
 
 function updateLocalStorage(allBooksArray){
     localStorage.setItem("booksStorage", JSON.stringify(allBooksArray))
+    makeEmptyInputs()
+    showBooks()
 }
 
 function clearBookList(){
