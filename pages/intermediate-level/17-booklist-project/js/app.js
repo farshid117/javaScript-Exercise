@@ -24,16 +24,18 @@ function addNewBook(event) {
 
         updateLocalStorage(booksArray)
 
-        titleInput.value = ""
-        titleInput.focus()
-        authorInput.value = ""
-        yearInput.value = ""
+        makeEmptyInputs()
 
     }
     showBooks()
 
 }
-
+function makeEmptyInputs(){
+    titleInput.value = ""
+    titleInput.focus()
+    authorInput.value = ""
+    yearInput.value = ""
+}
 function showBooks() {
     tbody.innerHTML = ""
     booksArray.forEach(book => (
@@ -68,9 +70,8 @@ function deleteBook(id){
     updateLocalStorage(booksArray)
 }
 
-function updateLocalStorage(array){
-    console.log("invoke updateLocalStorage")
-    localStorage.setItem("booksStorage", JSON.stringify(array))
+function updateLocalStorage(allBooksArray){
+    localStorage.setItem("booksStorage", JSON.stringify(allBooksArray))
 }
 
 function clearBookList(){
@@ -79,7 +80,7 @@ function clearBookList(){
     showBooks()
 }
 
-/* addEventListener Section */
+/* todo:  addEventListener Section */
 submitBtn.addEventListener("click", addNewBook)
 clearBtn.addEventListener("click", clearBookList)
 window.onload = () => {
