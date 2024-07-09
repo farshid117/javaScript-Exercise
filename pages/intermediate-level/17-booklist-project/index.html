@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
   <meta charset="UTF-8" />
@@ -26,31 +26,31 @@
 
     <form id="book-form" autocomplete="off" class="fw-bold">
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title" class="fw-bold">نام کتاب</label>
         <input type="text" id="title" class="form-control" />
       </div>
 
       <div class="form-group my-3">
-        <label for="author">Author</label>
+        <label for="author">نویسنده</label>
         <input type="text" id="author" class="form-control" />
       </div>
 
       <div class="form-group">
-        <label for="year">Year</label>
+        <label for="year">سال نشر</label>
         <input type="text" id="year" class="form-control" />
       </div>
-      <div class="buttons d-flex align-items-center mt-3 ">
-        <input type="submit" value="Add Book" class="btn btn-success submit-btn" />
+      <div class="buttons d-flex align-items-center justify-content-center mt-3 ">
         <button class="btn btn-warning clear-btn me-3">clear List</button>
+        <input type="submit" value="Add Book" class="btn btn-success submit-btn" />
       </div>
     </form>
     <table class="table table-striped mt-5 text-center">
       <thead>
         <tr>
-          <th>Remove/Edit</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Year</th>
+          <th class="fw-bold text-danger">نام کتاب</th>
+          <th class="fw-bold text-danger">نویسنده</th>
+          <th class="fw-bold text-danger">سال</th>
+          <th class="fw-bold text-danger">عملیات</th>
         </tr>
       </thead>
       <tbody id="book-list">

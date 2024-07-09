@@ -15,21 +15,16 @@ function addNewBook(event) {
     if (isValid) {
         tbody.innerHTML = ""
         let newBook = {
-            id: Math.floor(Math.random() *100) ,
+            id: Math.floor(Math.random() * 100),
             title: titleInput.value,
             author: authorInput.value,
             year: yearInput.value
         }
         booksArray.push(newBook)
-
         updateLocalStorage(booksArray)
-
-       
-
     }
-    
 }
-function makeEmptyInputs(){
+function makeEmptyInputs() {
     titleInput.value = ""
     titleInput.focus()
     authorInput.value = ""
@@ -38,19 +33,19 @@ function makeEmptyInputs(){
 function showBooks() {
     tbody.innerHTML = ""
     booksArray.forEach(book => (
-      tbody.innerHTML += 
+        tbody.innerHTML +=
         `
-        <tr>
-            <th>
-                <i class="fa fa-trash trash-icon text-danger fs-4" onclick="deleteBook(${book.id})"></i>
-                <i class="fa fa-edit trash-icon text-success me-4 fs-4" onclick="deleteBook(${book.id})"></i>
-            </th>
-            <th>${book.title}</th>
-            <th>${book.author}</th>
-            <th>${book.year}</th>
-          </tr>
+            <tr>
+                <th>${book.title}</th>
+                <th>${book.author}</th>
+                <th>${book.year}</th>
+                <th>
+                    <i class="fa fa-trash trash-icon text-danger fs-4" onclick="deleteBook(${book.id})"></i>
+                    <i class="fa fa-edit trash-icon text-success ms-4 fs-4" onclick="deleteBook(${book.id})"></i>
+                </th>
+            </tr>
         `
-        )
+    )
     )
 }
 
@@ -62,20 +57,20 @@ function validationInputs() {
     }
 }
 
-function deleteBook(id){
+function deleteBook(id) {
     let arrayBooksFitered = booksArray.filter(book => book.id !== id)
     booksArray = arrayBooksFitered
     showBooks()
     updateLocalStorage(booksArray)
 }
 
-function updateLocalStorage(allBooksArray){
+function updateLocalStorage(allBooksArray) {
     localStorage.setItem("booksStorage", JSON.stringify(allBooksArray))
     makeEmptyInputs()
     showBooks()
 }
 
-function clearBookList(){
+function clearBookList() {
     booksArray = []
     localStorage.clear()
     showBooks()
@@ -85,7 +80,7 @@ function clearBookList(){
 submitBtn.addEventListener("click", addNewBook)
 clearBtn.addEventListener("click", clearBookList)
 window.onload = () => {
-    titleInput.focus()
     booksArray = JSON.parse(localStorage.getItem("booksStorage")) || []
+    titleInput.focus()
     showBooks()
 }
