@@ -84,3 +84,25 @@ window.onload = () => {
     titleInput.focus()
     showBooks()
 }
+/* Date & Time */
+let myTime = new Date()
+
+let monthes =["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان",]
+let days = ["یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه", "شنبه"]
+console.log("myTime is : ", myTime);
+console.log("typeof myTime is: ",typeof myTime); // object
+console.log("getFullYear is: ", myTime.getFullYear());
+console.log("getMonth is: ", monthes[myTime.getMonth()]);//(0-11) --> index of array monthes
+console.log("getMonth is: ", myTime.getMonth());//(0-11) --> index of array monthes
+console.log("getDate is: ", myTime.getDate());//(0-31)
+
+console.log("getDay is: ", days[myTime.getDay()])//day of weak (0-6) 
+console.log("getDay is: ", myTime.getDay())//day of weak 
+console.log("getHours is: ", myTime.getHours());
+console.log("getMinutes is: ", myTime.getMinutes());
+console.log("getSeconds is: ", myTime.getSeconds());
+console.log("getMilliseconds is: ", myTime.getMilliseconds());
+
+console.log("getTime is: ", myTime.getTime());
+console.log("Date.now() is: ", Date.now());
+
