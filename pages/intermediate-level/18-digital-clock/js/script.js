@@ -4,7 +4,40 @@ const minuteElem = $.querySelector('#minute')
 const secondElem = $.querySelector('#seconds')
 
 
-setInterval(function () {
+setInterval(() => {
+    let timeNow =new Date()
+    let hour = timeNow.getHours()
+    let minutes = timeNow.getMinutes()
+    let seconds = timeNow.getSeconds()
+    hourElem.innerHTML   = hour < 10 ? '0' + hour : hour
+    minuteElem.innerHTML = minutes < 10 ? '0' + minutes : minutes
+    secondElem.innerHTML = seconds < 10 ? '0' + seconds : seconds
+
+}, 1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* setInterval(function () {
     let myDate = new Date()
 
     let nowHour = myDate.getHours()
@@ -26,4 +59,4 @@ setInterval(function () {
     secondElem.innerHTML = nowSecond
 
     console.log(myDate);
-}, 1000);
+}, 1000); */
