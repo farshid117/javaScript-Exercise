@@ -14,21 +14,45 @@ let $ = document
 const amountInputElem = $.querySelector('#amount')
 const generateBtnElem = $.querySelector('button')
 const resultElem = $.querySelector('#result')
+//Approach1 : For Loop
+/* function textGenerate(event) {
+  resultElem.innerHTML = ""
+  event.preventDefault()
+  console.log(amountInputElem.value)
+  if (amountInputElem.value <= 0 || isNaN(amountInputElem.value)) {
+    let randomTextIndex = Math.floor(Math.random() * dummyText.length)
+    console.log("randomTextIndex: ", randomTextIndex);
+    resultElem.innerHTML = dummyText[randomTextIndex]
+  } else {
 
+    for (let i = 0; i < amountInputElem.value; i++) {
+
+      resultElem.innerHTML +=
+        `
+           <p>${dummyText[i]}</p>
+        `
+    }
+    amountInputElem.select()
+  }
+}
+generateBtnElem.addEventListener('click', textGenerate) */
+
+
+//Apprch2 : Map method
 generateBtnElem.addEventListener('click', function (e) {
   e.preventDefault()
 
-  let amountElemValue = amountInputElem.value // 
+  let amountElemValue = amountInputElem.value 
   let randomTextIndex = Math.floor(Math.random() * dummyText.length)
 
   if (amountElemValue < 0 || amountElemValue > 9 || amountElemValue === '' || isNaN(amountElemValue)) {
     resultElem.innerHTML = dummyText[randomTextIndex]
   } else {
-    let slicedArray = dummyText.slice(0, amountElemValue)
+    let slicedArray = dummyText.slice(0, amountElemValue) // [0, amountElemValue)
 
     let finalTextsArray = slicedArray.map(function (item) {
       return '<p>'+ item + '</p>'
-    }).join('')
+    }).join('') //Convert Array to String
 
     resultElem.innerHTML = finalTextsArray
 
@@ -36,4 +60,4 @@ generateBtnElem.addEventListener('click', function (e) {
   }
 
   console.log('Click');
-})
+}) 
