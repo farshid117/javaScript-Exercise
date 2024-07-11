@@ -45,7 +45,7 @@ generateBtnElem.addEventListener('click', function (e) {
   let amountElemValue = amountInputElem.value 
   let randomTextIndex = Math.floor(Math.random() * dummyText.length)
 
-  if (amountElemValue < 0 || amountElemValue > 9 || amountElemValue === '' || isNaN(amountElemValue)) {
+  if (amountElemValue <= 0 || amountElemValue > 9 || amountElemValue === '' || isNaN(amountElemValue)) {
     resultElem.innerHTML = dummyText[randomTextIndex]
   } else {
     let slicedArray = dummyText.slice(0, amountElemValue) // [0, amountElemValue)
