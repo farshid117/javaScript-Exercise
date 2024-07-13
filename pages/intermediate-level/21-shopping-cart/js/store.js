@@ -79,6 +79,8 @@ function removeProductFromBasket(productId) {
 }
 
 removeAllProductsBtn.addEventListener('click', function () {
+    userBasket = []
+    basketProductsGenerator(userBasket)
 
 })
 
