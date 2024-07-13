@@ -4,7 +4,7 @@
 @font-face {
     font-family: "Booter - Zero Zero";
     src: url("../Fonts/Booter - Zero Zero.woff") format("woff"),
-         url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
+        url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -82,6 +82,7 @@ html, body {
     margin: 0 auto;
     padding: 0 1.5em;
 }
+
 .section-header {
     font-family: "Metal Mania";
     font-weight: normal;
@@ -121,26 +122,6 @@ html, body {
 .footer-nav img {
     width: 30px;
     height: 30px;
-}
-
-.btn {
-    text-align: center;
-    vertical-align: middle;
-    padding: .67em .67em;
-    cursor: pointer;
-}
-
-
-.btn-primary {
-    color: white;
-    background-color: #56CCF2;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: #2D9CDB;
 }
 
 .shop-item {
@@ -223,17 +204,6 @@ html, body {
     border-radius: 10px;
 }
 
-.btn-danger {
-    color: white;
-    background-color: #EB5757;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-}
-
-.btn-danger:hover {
-    background-color: #CC4C4C;
-}
 
 .cart-quantity-input {
     height: 34px;
