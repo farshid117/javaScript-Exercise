@@ -1,13 +1,14 @@
 let allProducts = [
-    { id: 1, title: 'Album 1', price: 5,   img: 'Images/Album1.png', count: 1 },
-    { id: 2, title: 'Album 2', price: 15,  img: 'Images/Album2.png', count: 1 },
-    { id: 3, title: 'Album 3', price: 20,  img: 'Images/Album3.png', count: 1 },
+    { id: 1, title: 'Album 1', price: 5, img: 'Images/Album1.png', count: 1 },
+    { id: 2, title: 'Album 2', price: 15, img: 'Images/Album2.png', count: 1 },
+    { id: 3, title: 'Album 3', price: 20, img: 'Images/Album3.png', count: 1 },
     { id: 4, title: 'Album 4', price: 100, img: 'Images/Album4.png', count: 1 },
-    { id: 5, title: 'Coffee', price: 5,    img: 'Images/Cofee.png',   count: 1 },
-    { id: 6, title: 'Shirt',  price: 50,   img: 'Images/Shirt.png',   count: 1 },
+    { id: 5, title: 'Coffee', price: 5, img: 'Images/Cofee.png', count: 1 },
+    { id: 6, title: 'Shirt', price: 50, img: 'Images/Shirt.png', count: 1 },
 ]
 
 let userBasket = []
+let tableRowCount = 1
 
 let $ = document
 const shopItemsContainer = $.querySelector('.shop-items')
@@ -17,7 +18,7 @@ const cartTotalPriceElem = $.querySelector('.cart-total-price')
 
 allProducts.forEach(function (product) {
     shopItemsContainer.innerHTML +=
-    `
+        `
         <div class="product-item" />
         <span class="shop-item-title">Album ${product.id}</span>
         <img class="shop-item-image" src=${product.img} />
@@ -32,21 +33,19 @@ allProducts.forEach(function (product) {
 })
 
 function addProductToBasketArray(productId) {
-    console.log("productId: ", productId);
     let newAddProduct = allProducts.find(product => product.id === productId)
     userBasket.push(newAddProduct)
     basketProductsGenerator(userBasket)
-    
+
 }
 
 function basketProductsGenerator(userBasketArray) {
-    console.log("userBasketArray: ", userBasketArray);
     tBodyContainer.innerHTML = ""
-    userBasketArray.forEach( selectedProduct => {
-        tBodyContainer.innerHTML += 
-        `
+    userBasketArray.forEach((selectedProduct, index) => {
+        tBodyContainer.innerHTML +=
+            `
           <tr>
-            <th scope="row">${selectedProduct.id}</th>
+            <th scope="row">${index+1}</th>
             <td>
               <img class="cart-item-image ms-3" src=${selectedProduct.img} width="100" height="100 />
               <span class="fw-bold">${selectedProduct.title}</span>
@@ -56,7 +55,7 @@ function basketProductsGenerator(userBasketArray) {
             </td>
             <td>
               <input class="cart-quantity-input" type="number" value="1" />
-              <button class="btn btn-danger" type="button">REMOVE</button>
+              <button class="btn btn-danger" type="button" onclick="removeProductFromBasket(${selectedProduct.id})">REMOVE</button>
             </td>
           </tr>
         `
@@ -64,6 +63,11 @@ function basketProductsGenerator(userBasketArray) {
 }
 
 function removeProductFromBasket(productId) {
+    console.log("productId: ", productId);
+    let updateUserBasket = userBasket.filter(product => product.id !== productId)
+    userBasket = updateUserBasket
+    console.log("userBasket: ", userBasket);
+    basketProductsGenerator(userBasket)
 
 }
 
