@@ -33,9 +33,16 @@ allProducts.forEach(function (product) {
 })
 
 function addProductToBasketArray(productId) {
-    let newAddProduct = allProducts.find(product => product.id === productId)
-    userBasket.push(newAddProduct)
-    basketProductsGenerator(userBasket)
+    let isInLate =  userBasket.findIndex(product => product.id === productId)
+    console.log("isInLate: ", isInLate);
+    if(isInLate === -1){
+
+        let newAddProduct = allProducts.find(product => product.id === productId)
+        userBasket.push(newAddProduct)
+        basketProductsGenerator(userBasket)
+    }else{
+        alert("این محصول قبلا به سبد خرید اضافه شده است")
+    }
 
 }
 
