@@ -1,14 +1,15 @@
 let allProducts = [
-    { id: 1, title: 'Album 1', price: 5, img: 'Images/Album1.png', count: 1 },
-    { id: 2, title: 'Album 2', price: 15, img: 'Images/Album2.png', count: 1 },
-    { id: 3, title: 'Album 3', price: 20, img: 'Images/Album3.png', count: 1 },
+    { id: 1, title: 'Album 1', price: 5,   img: 'Images/Album1.png', count: 1 },
+    { id: 2, title: 'Album 2', price: 15,  img: 'Images/Album2.png', count: 1 },
+    { id: 3, title: 'Album 3', price: 20,  img: 'Images/Album3.png', count: 1 },
     { id: 4, title: 'Album 4', price: 100, img: 'Images/Album4.png', count: 1 },
-    { id: 5, title: 'Coffee', price: 5, img: 'Images/Cofee.png', count: 1 },
-    { id: 6, title: 'Shirt', price: 50, img: 'Images/Shirt.png', count: 1 },
+    { id: 5, title: 'Coffee',  price: 5,   img: 'Images/Cofee.png',  count: 1 },
+    { id: 6, title: 'Shirt',   price: 50,  img: 'Images/Shirt.png',  count: 1 },
 ]
 
 let userBasket = []
 let tableRowCount = 1
+let totalPrice = 0
 
 let $ = document
 const shopItemsContainer = $.querySelector('.shop-items')
@@ -34,7 +35,6 @@ allProducts.forEach(function (product) {
 
 function addProductToBasketArray(productId) {
     let isInLate =  userBasket.findIndex(product => product.id === productId)
-    console.log("isInLate: ", isInLate);
     if(isInLate === -1){
 
         let newAddProduct = allProducts.find(product => product.id === productId)
@@ -61,21 +61,19 @@ function basketProductsGenerator(userBasketArray) {
               <span class="cart-price fw-bold">$ ${selectedProduct.price}</span>
             </td>
             <td>
-              <input class="cart-quantity-input" type="number" value="1" />
+              <input class="cart-quantity-input" type="number" value=${selectedProduct.count} onchange="updateProductCount(${selectedProduct.id}, event)" />
               <button class="btn btn-danger" type="button" onclick="removeProductFromBasket(${selectedProduct.id})">REMOVE</button>
             </td>
           </tr>
         `
     })
+    calcTotalPrice(userBasketArray)
 }
 
 function removeProductFromBasket(productId) {
-    console.log("productId: ", productId);
     let updateUserBasket = userBasket.filter(product => product.id !== productId)
     userBasket = updateUserBasket
-    console.log("userBasket: ", userBasket);
     basketProductsGenerator(userBasket)
-
 }
 
 removeAllProductsBtn.addEventListener('click', function () {
@@ -85,9 +83,27 @@ removeAllProductsBtn.addEventListener('click', function () {
 })
 
 function calcTotalPrice(userBasketArray) {
-
+    totalPrice = userBasketArray.reduce((sum, product) => {
+        return sum + product.price * product.count
+    }, 0)
+    console.log("totalPrice: ", totalPrice);
+    cartTotalPriceElem.innerHTML = totalPrice
 }
 
-function updateProductCount(productId, newCount) {
+function updateProductCount(productId, event) {
+    // console.log("event: ", event.target.value);
+    // console.log("productId: ", productId);
+    if(event.target.value > 0) {
+        userBasket.forEach(product => {
+            if (product.id === productId) {
+                product.count = event.target.value
+            }
+        })
+    }else{
+        event.target.value = "1"
+    }
+
+    calcTotalPrice(userBasket)
+    
 
 }
