@@ -9,7 +9,6 @@ let allProducts = [
 
 let userBasket = []
 let tableRowCount = 1
-let totalPrice = 0
 
 let $ = document
 const shopItemsContainer = $.querySelector('.shop-items')
@@ -34,8 +33,10 @@ allProducts.forEach(function (product) {
 })
 
 function addProductToBasketArray(productId) {
-    let isInLate =  userBasket.findIndex(product => product.id === productId)
-    if(isInLate === -1){
+    let isInLate =  userBasket.some(product => product.id === productId)
+    console.log("isInLate: ", isInLate);
+    
+    if(!isInLate){
 
         let newAddProduct = allProducts.find(product => product.id === productId)
         userBasket.push(newAddProduct)
@@ -71,8 +72,7 @@ function basketProductsGenerator(userBasketArray) {
 }
 
 function removeProductFromBasket(productId) {
-    let updateUserBasket = userBasket.filter(product => product.id !== productId)
-    userBasket = updateUserBasket
+     userBasket = userBasket.filter(product => product.id !== productId)
     basketProductsGenerator(userBasket)
 }
 
@@ -83,16 +83,13 @@ removeAllProductsBtn.addEventListener('click', function () {
 })
 
 function calcTotalPrice(userBasketArray) {
-    totalPrice = userBasketArray.reduce((sum, product) => {
+    let totalPrice = userBasketArray.reduce((sum, product) => {
         return sum + product.price * product.count
     }, 0)
-    console.log("totalPrice: ", totalPrice);
     cartTotalPriceElem.innerHTML = totalPrice
 }
 
 function updateProductCount(productId, event) {
-    // console.log("event: ", event.target.value);
-    // console.log("productId: ", productId);
     if(event.target.value > 0) {
         userBasket.forEach(product => {
             if (product.id === productId) {
