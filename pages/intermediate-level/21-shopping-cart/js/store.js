@@ -18,16 +18,19 @@ const cartTotalPriceElem = $.querySelector('.cart-total-price')
 
 allProducts.forEach(function (product) {
     shopItemsContainer.innerHTML +=
-        `
-        <div class="product-item" />
-        <span class="shop-item-title">Album ${product.id}</span>
-        <img class="shop-item-image" src=${product.img} />
-        <div class="shop-item-details">
-            <span class="shop-item-price">$ ${product.price}</span>
-            <button class="btn btn-primary shop-item-button" type="button" onclick="addProductToBasketArray(${product.id})">
-            ADD TO CART
-            </button>
-        </div>
+    `
+        <div class="product-item" >
+            <span class="shop-item-title">Album ${product.id}</span>
+            <img class="shop-item-image" src=${product.img} />
+            <div class="shop-item-details">
+                <span class="shop-item-price">$ ${product.price}</span>
+                <button 
+                    class="btn btn-primary shop-item-button"  
+                    onclick="addProductToBasketArray(${product.id})"
+                >
+                  ADD TO CART
+                </button>
+            </div>
         </div>
     `
 })
@@ -55,15 +58,29 @@ function basketProductsGenerator(userBasketArray) {
           <tr>
             <th scope="row">${index+1}</th>
             <td>
-              <img class="cart-item-image ms-3" src=${selectedProduct.img} width="100" height="100 />
+              <img 
+                class="cart-item-image ms-3" 
+                src=${selectedProduct.img} 
+                width="100" 
+                height="100 
+              />
               <span class="fw-bold">${selectedProduct.title}</span>
             </td>
             <td>
               <span class="cart-price fw-bold">$ ${selectedProduct.price}</span>
             </td>
             <td>
-              <input class="cart-quantity-input" type="number" value=${selectedProduct.count} onchange="updateProductCount(${selectedProduct.id}, event)" />
-              <button class="btn btn-danger" type="button" onclick="removeProductFromBasket(${selectedProduct.id})">REMOVE</button>
+              <input 
+                class="cart-quantity-input" 
+                type="number" 
+                value=${selectedProduct.count} 
+                onchange="updateProductCount(${selectedProduct.id}, event)"
+             />
+              <button class="btn btn-danger" 
+                      onclick="removeProductFromBasket(${selectedProduct.id})"       
+              >
+                REMOVE
+              </button>
             </td>
           </tr>
         `
