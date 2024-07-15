@@ -43,6 +43,7 @@ function addProductToBasketArray(productId) {
 
         let newAddProduct = allProducts.find(product => product.id === productId)
         userBasket.push(newAddProduct)
+        setLocalStorage(userBasket)
         basketProductsGenerator(userBasket)
     }else{
         alert("این محصول قبلا به سبد خرید اضافه شده است")
@@ -90,11 +91,13 @@ function basketProductsGenerator(userBasketArray) {
 
 function removeProductFromBasket(productId) {
      userBasket = userBasket.filter(product => product.id !== productId)
+     setLocalStorage(userBasket)
     basketProductsGenerator(userBasket)
 }
 
 removeAllProductsBtn.addEventListener('click', function () {
     userBasket = []
+    setLocalStorage(userBasket)
     basketProductsGenerator(userBasket)
 
 })
@@ -118,6 +121,19 @@ function updateProductCount(productId, event) {
     }
 
     calcTotalPrice(userBasket)
+    setLocalStorage(userBasket)
     
 
+}
+function setLocalStorage(userBasketArry){
+    localStorage.setItem("basket", JSON.stringify(userBasketArry))
+}
+
+window.onload = () => {
+    let localStorageBasket = JSON.parse(localStorage.getItem("basket"))
+    console.log("localStorageBasket: ", localStorageBasket);
+    if(localStorageBasket) {
+        userBasket = localStorageBasket
+        basketProductsGenerator(userBasket)
+    }
 }
