@@ -17,7 +17,7 @@ const removeAllProductsBtn = $.querySelector('#remove-all-products')
 const cartTotalPriceElem = $.querySelector('.cart-total-price')
 
 allProducts.forEach(function (product) {
-    shopItemsContainer.innerHTML +=
+    shopItemsContainer.insertAdjacentHTML("afterbegin", 
     `
         <div class="product-item" >
             <span class="shop-item-title">Album ${product.id}</span>
@@ -33,6 +33,7 @@ allProducts.forEach(function (product) {
             </div>
         </div>
     `
+    )
 })
 
 function addProductToBasketArray(productId) {
