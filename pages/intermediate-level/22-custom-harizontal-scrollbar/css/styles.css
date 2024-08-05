@@ -5,7 +5,9 @@
 
 #scroll {
   height: 10px;
-  background-color: #0D47A1;
+  background-color: #D50000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   position: fixed;
   /* width: 50%; */
 }

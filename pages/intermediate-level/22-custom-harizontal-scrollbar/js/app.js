@@ -21,8 +21,8 @@ window.addEventListener('scroll', function () {
  */
 let customScroll = document.querySelector('#scroll')
 window.addEventListener('scroll', function(){
-    console.log(document.documentElement.scrollTop)
-    console.log("scrollY is : ", window.scrollY)
+    // console.log(document.documentElement.scrollTop)
+    // console.log("scrollY is : ", window.scrollY)
     let scrollY = window.scrollY
     let clientHeight = document.body.clientHeight
     let innerHeight = window.innerHeight
