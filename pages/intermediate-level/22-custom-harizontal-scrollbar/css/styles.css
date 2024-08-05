@@ -5,25 +5,37 @@
 
 #scroll {
   height: 10px;
-  background-color: red;
+  background-color: #0D47A1;
   position: fixed;
   /* width: 50%; */
 }
 
-.gray {
+.red, .green, .blue, .violet, .orange {
   width: 100%;
-  background-color: #333;
   display: flex;
   height: 500px;
   justify-content: center;
   align-items: center;
 }
 
+.red {
+  background-color: #80DEEA;
+  font-size: 50px;
+  font-weight: bold ;
+}
+
+.green {
+  background-color: green;
+}
+
 .blue {
-  width: 100%;
-  background-color: lightblue;
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
+  background-color: blue;
+}
+
+.violet {
+  background-color: violet;
+}
+
+.orange {
+  background-color: orange;
 }

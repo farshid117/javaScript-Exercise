@@ -1,6 +1,5 @@
-// DOM => Document Object Model
-// BOM => Browser Object Model
 
+/* 
 let customScroll = document.querySelector('#scroll')
 
 window.addEventListener('scroll', function () {
@@ -18,4 +17,17 @@ window.addEventListener('scroll', function () {
     customScroll.style.width = scrollPercentRounded + '%'
 
     console.log(scrollPercentRounded);
+})
+ */
+let customScroll = document.querySelector('#scroll')
+window.addEventListener('scroll', function(){
+    console.log(document.documentElement.scrollTop)
+    console.log("scrollY is : ", window.scrollY)
+    let scrollY = window.scrollY
+    let clientHeight = document.body.clientHeight
+    let innerHeight = window.innerHeight
+
+    let scrollPercent = Math.round(scrollY / (clientHeight - innerHeight) * 100)
+    console.log("scrollPercent: ", scrollPercent);
+    customScroll.style.width = scrollPercent+ "%"
 })
