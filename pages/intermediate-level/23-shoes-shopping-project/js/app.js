@@ -13,7 +13,7 @@ productsArray.forEach(function (product) {
     productsRow.innerHTML +=  
         
         `
-          <div class=" col-md-6 col-lg-4">
+          <div class="col-12 col-lg-4">
             <div class="product-card">
                 <h1> ${product.title} </h1>
                 <p>Lorem ipsum, or lipsum as it is sometimes known</p>

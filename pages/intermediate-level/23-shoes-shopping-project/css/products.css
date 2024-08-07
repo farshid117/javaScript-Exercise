@@ -4,15 +4,13 @@
   font-family: sans-serif;
 }
 
-.details {
-  display: flex;
-  margin-top: 100px;
-  justify-content: space-evenly;
-  width: 100vw;
+.image img {
+  display: inline-block;
+  object-fit: cover;
+width: 100%;
 }
 
 .desc {
-  width: 50%;
   padding: 20px;
 }
 
@@ -21,13 +19,13 @@
 }
 
 .desc p {
-    font-size: 20px;
-    line-height: 40px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .navbar {
-  width: 100%;
-  background-color: #ccc;
+ 
+  background-color: #7ed6df;
   padding: 40px;
 }
 
