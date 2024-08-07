@@ -10,9 +10,16 @@ let productsArray = [
 ]
 
 productsArray.forEach(function (product) {
-    productsRow.innerHTML +=  
+    productsRow.innerHTML += 
+    `
+    
+    `   
+    
+})
+ productsArray.forEach(function (product) {
+   productsRow.insertAdjacentHTML('beforeend', 
         
-        `
+       `
           <div class="col-12 col-lg-4">
             <div class="product-card">
                 <h1> ${product.title} </h1>
@@ -27,23 +34,5 @@ productsArray.forEach(function (product) {
 
         `
     
-    
-})
-/* productsArray.forEach(function (product) {
-    productsContainer.insertAdjacentHTML('beforeend', 
-        
-        `
-          <div class="product-card">
-                <h1> ${product.title} </h1>
-                <p>Lorem ipsum, or lipsum as it is sometimes known</p>
-                <div class="product-pic" style="background-image: url( ${product.img} );"></div>
-                <div class="product-info">
-                        <div class="product-price">$  ${product.price} </div>
-                        <a href="product.html?id=${product.id}" class="product-button">See More</a>
-                </div>
-          </div>
-
-        `
-    
     )
-}) */
+}) 
