@@ -8,14 +8,14 @@ let productsArray = [
     { id: 2, title: 'Women Shoe', price: 81, img: 'images/2.png' },
     { id: 3, title: 'Boots',      price: 34, img: 'images/3.png' },
 ]
-
-productsArray.forEach(function (product) {
+//todo: Approach1
+/* productsArray.forEach(function (product) {
     productsRow.innerHTML += 
     `
     
-    `   
-    
-})
+    `     
+}) */
+//todo: Approach2
  productsArray.forEach(function (product) {
    productsRow.insertAdjacentHTML('beforeend', 
         
