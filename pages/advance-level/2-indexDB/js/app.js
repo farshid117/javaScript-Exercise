@@ -3,6 +3,7 @@ const registerForm = $.querySelector('.register-form')
 const nameInput = $.querySelector('.name-input')
 const passwordInput = $.querySelector('.password-input')
 const emailInput = $.querySelector('.email-input')
+const domTable = $.querySelector('table')
 
 let db = null
 let objectStore = null
@@ -11,12 +12,13 @@ window.addEventListener('load', () => {
     let DBOpenReq = indexedDB.open('bimehap', 2)
 
     DBOpenReq.addEventListener('error', (err) => {
-        console.warn('Error', err);
+        console.warn('DBOpenReq Error', err);
     })
     
     DBOpenReq.addEventListener('success', (event) => {
         db = event.target.result
-        console.log('Success', event.target.result);
+        getUsers()
+        console.log('DBOpenReq Success', event.target.result);
     })
 
     DBOpenReq.addEventListener('upgradeneeded', (event) => {
@@ -68,13 +70,12 @@ registerForm.addEventListener('submit', event => {
     clearInputs()
 
     request.addEventListener('error', (err) => {
-        console.warn('Request Error:', err)
+        console.warn('add Request Error:', err)
     })
 
     request.addEventListener('success', (event) => {
-        console.log("request success",event)
+        console.log("add request success", event)
     })
-
 })
 
 function clearInputs () {
@@ -94,5 +95,28 @@ function getUsers(){
         console.log("Tx :", event)
     })
 
-  
+    let store = tx.objectStore('users')
+    let request = store.getAll()
+
+    request.addEventListener('error', (err) => {
+        console.warn('getAll Request Error:', err)
+    })
+
+    request.addEventListener('success', (event) => {
+        console.log("getAll Request success", event)
+        let allUsers = event.target.result //is Array
+        console.log("allUsers: ", allUsers);
+
+        allUsers.map(user => {
+            domTable.insertAdjacentHTML("beforeend", 
+                `<tr>
+                   <td>${user.userID}</td>
+                   <td>${user.name}</td>
+                   <td>${user.password}</td>
+                   <td>${user.email}</td>
+                 <tr>
+                `
+            )
+        })
+    })
 }
