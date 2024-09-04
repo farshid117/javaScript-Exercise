@@ -8,7 +8,7 @@ let db = null
 let objectStore = null
 
 window.addEventListener('load', () => {
-    let DBOpenReq = indexedDB.open('SabzLearn', 16)
+    let DBOpenReq = indexedDB.open('bimehap', 2)
 
     DBOpenReq.addEventListener('error', (err) => {
         console.warn('Error', err);
@@ -32,9 +32,9 @@ window.addEventListener('load', () => {
             })
         }
 
-        if (db.objectStoreNames.contains('courses')) {
-            db.deleteObjectStore('courses')
-        }
+        // if (db.objectStoreNames.contains('courses')) {
+        //     db.deleteObjectStore('courses')
+        // }
 
         // db.createObjectStore('courses')
 
@@ -54,7 +54,7 @@ registerForm.addEventListener('submit', event => {
         email: emailInput.value,
     }
 
-    let tx = db.transaction('users', 'readwrite')
+    let tx = db.transaction('users', 'readwrite') //connect to user objectStor
 
     tx.addEventListener('error', (err) => {
         console.warn('Tx Error:', err)
