@@ -43,7 +43,6 @@ window.addEventListener('load', () => {
     })
 })
 
-
 registerForm.addEventListener('submit', event => {
     event.preventDefault()
 
@@ -54,14 +53,14 @@ registerForm.addEventListener('submit', event => {
         email: emailInput.value,
     }
 
-    let tx = db.transaction('users', 'readwrite') //connect to user objectStor
+    let tx = db.transaction('users', 'readwrite') //connect to users objectStore
 
     tx.addEventListener('error', (err) => {
         console.warn('Tx Error:', err)
     })
 
-    tx.addEventListener('Tx Success', (event) => {
-        console.log(event)
+    tx.addEventListener('complete', (event) => {
+        console.log("Tx Complete :",event)
     })
 
     let store = tx.objectStore('users')
@@ -72,8 +71,8 @@ registerForm.addEventListener('submit', event => {
         console.warn('Request Error:', err)
     })
 
-    request.addEventListener('Request Success', (event) => {
-        console.log(event)
+    request.addEventListener('success', (event) => {
+        console.log("request success",event)
     })
 
 })
@@ -82,4 +81,18 @@ function clearInputs () {
     nameInput.value = ''
     passwordInput.value = ''
     emailInput.value = ''
+}
+
+function getUsers(){
+    let tx = db.transaction('users', 'readonly') //connect to users objectStore
+
+    tx.addEventListener('error', (err) => {
+        console.warn('Tx Error:', err)
+    })
+
+    tx.addEventListener('complete', (event) => {
+        console.log("Tx :", event)
+    })
+
+  
 }
