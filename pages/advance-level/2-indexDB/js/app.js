@@ -144,8 +144,7 @@ function removeUser(id){
     request.addEventListener('success', () => {
         console.warn('delete Request success')
         getUsers()
-    })
-   
+    })  
 }
 
 function createTx(storeName,mode){

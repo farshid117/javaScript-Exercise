@@ -10,12 +10,12 @@ const noStatusColumn = $.querySelector("#no_status")
 const formTag = $.querySelector("form")
 
 var count = 0
-//preventDefault to form
+//todo preventDefault to form
 formTag.addEventListener("submit",(event)=>{
  event.preventDefault()
 })
 
-//show & hide modal
+//todo show & hide modal Event
 addTodoBtn.addEventListener("click",(event)=>{
     modal.classList.add("active")
     overLay.classList.add("active")
@@ -25,49 +25,45 @@ modalCloseBtn.addEventListener("click",(event) => {
     overLay.classList.remove("active")
 })
 
-// add New Todo
+// todo: add New Todo
 modalSubmitBtn.addEventListener("click", (event) => {
     let newTodo = modalTodoInput.value
-    const div = document.createElement("div")
-    div.id = ++count
-    div.className="todo"
-    div.draggable="true"
-    div.setAttribute("ondragstart", "dragStartHandler(event)")
 
-   div.innerHTML = 
-   `
-    ${newTodo}
-    <span class="close" onclick="closeTodoHandler(event)">&times;</span>
-   `
-    noStatusColumn.append(div)
+    noStatusColumn.insertAdjacentHTML("beforeend",
+    `
+        <div  id=${++count}
+            class="todo"
+            draggable="true"
+            ondragstart="dragStartHandler(event)"
+        >
+            <span>${newTodo}</span>
+            <span class="close" onclick="closeTodoHandler(event)">&times;</span>
+      </div>
+    `
+    )
     
     modalTodoInput.value = ""
     modal.classList.remove("active")
     overLay.classList.remove("active")
      
 })
-//Remove Todo by &times;
+//todo Remove Todo by &times;
 function closeTodoHandler (event){
     event.target.parentElement.remove()
 }
 
-//preventDefault dragover for drop Elm
+//todo dragover Func
 function dragStartHandler(event){
-    // console.log(event.target)
-    event.dataTransfer.setData("dragElement", event.target.id)
+    event.dataTransfer.setData("dragElmID", event.target.id)
 }
 function dragoverHandler(event){
     event.preventDefault()
-    // console.log("dragover")
 }
 
-//Drop Event Handler Func
+//todo Drop Event Handler Func
 function dropHandler(event) {
-    console.log("Drop")
-    console.log("is : ",event.dataTransfer.getData("dragElement"))
-    let draggedElmID = event.dataTransfer.getData("dragElement")
+    let draggedElmID = event.dataTransfer.getData("dragElmID")
     const draggedTodo = document.getElementById(draggedElmID)
-    console.log("draggedTodo: ", draggedTodo);
 
     event.target.append(draggedTodo)
     

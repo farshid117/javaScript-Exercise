@@ -1,29 +1,32 @@
 const titleElem = document.querySelector('.title')
 
 document.addEventListener("keyup", (event)=>{
-    let userSelectedkey = event.code
-    let virtualUserSelectedElm = document.getElementById(userSelectedkey)
+   
+        let keySelected = document.getElementById(event.code)
+    // let keySelected = document.querySelector(`#${event.code}`) ✔️
 
-    appendUserSlectedKeyTODom(event, virtualUserSelectedElm)
+    appendUserSlectedKeyTODom(event, keySelected)
     
 })
 
-function appendUserSlectedKeyTODom(event, virtualUserSelectedElm) {
-    console.log("event: ", event);
+function appendUserSlectedKeyTODom(event, keySelected) {
+    // console.log("event: ", event);
     if (event.code === "Space") {
         titleElem.innerHTML += " "
+        keySelected.classList.add("hit")
         return
     } else if (event.code === "Backspace") {
         titleElem.innerHTML = titleElem.innerHTML.slice(0, -1)
-        return
+        keySelected.classList.add("hit")
+        
     }
     else {
-        titleElem.innerHTML += virtualUserSelectedElm.innerHTML
-        virtualUserSelectedElm.classList.add("hit")
+        titleElem.innerHTML += keySelected.innerHTML
+        keySelected.classList.add("hit")
     }
 
-    virtualUserSelectedElm.addEventListener("animationend", () => {
-        virtualUserSelectedElm.classList.remove("hit")
+    keySelected.addEventListener("animationend", () => {
+        keySelected.classList.remove("hit")
     })
 }
 
