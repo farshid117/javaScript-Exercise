@@ -1,0 +1,18 @@
+/* 2-intermediate-Level --> 2-keyboard-event styles */
+    .keboard-event-body{
+        background: #1c1a39;
+        color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .keyboard-event-btn{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
