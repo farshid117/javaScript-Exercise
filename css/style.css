@@ -320,6 +320,20 @@ h4 {
   flex-wrap: wrap;
 }
 
+.name,
+.fname {
+  color: red;
+}
+
+.list {
+  padding-right: 30px;
+}
+
+.p-op {
+  line-height: 1.5;
+  color: cornflowerblue;
+}
+
 /* Responsive Styles */
 @media screen and (min-width: 576px) {
   .svg__img {
@@ -368,6 +382,35 @@ h4 {
     padding: 0.5rem 1rem;
   }
 }
+/* elementry-Level */
+.name,
+.fname {
+  color: red;
+}
+
+.list {
+  padding-right: 30px;
+}
+
+.p-op {
+  line-height: 1.5;
+  color: cornflowerblue;
+}
+
+.math-body {
+  background: #1c1a39;
+  color: #fff;
+  overflow-x: hidden !important;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.math-header {
+  color: orange;
+}
+
+/* intermediate-Level */
+/* advance-level */
 .auto-complete-body {
   background: #644bff;
   padding: 0 20px;

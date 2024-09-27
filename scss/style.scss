@@ -11,5 +11,13 @@
 
 @import "components/mediaqueries";
 
+/* elementry-Level */
+@import "./components/pages/elementary-level/1-prompt.scss";
+@import "./components/pages/elementary-level/2-convert-datatype.scss";
+@import "./components/pages/elementary-level/3-logical-operators.scss";
+@import "./components/pages/elementary-level/10-math";
+/* intermediate-Level */
+
+/* advance-level */
 @import "../pages/advance-level/1-auto-complete-box/auto-complete";
 @import "../pages/advance-level/2-indexDB/css/indexDB";
