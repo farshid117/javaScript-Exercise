@@ -1,4 +1,5 @@
 /* Variables & Fontfamily style */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @font-face {
   font-family: Vazir;
@@ -367,6 +368,90 @@ h4 {
     padding: 0.5rem 1rem;
   }
 }
+.auto-complete-body {
+  background: #644bff;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background: #664AFF;
+}
+
+.auto-complete-wrapper {
+  max-width: 450px; /* append to child */
+  margin: 150px auto;
+}
+
+.auto-complete-wrapper .search-input {
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.auto-complete-wrapper .search-input input {
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auto-complete-wrapper .search-input.active input {
+  border-radius: 5px 5px 0 0;
+}
+
+.auto-complete-wrapper .search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.auto-complete-wrapper .search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.auto-complete-wrapper .search-input.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+  cursor: pointer;
+}
+
+.auto-complete-wrapper .search-input .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+}
+
 .login-page, .register-page {
   width: 360px;
   padding: 8% 0 0;
@@ -445,22 +530,22 @@ h4 {
 }
 
 /* Table Start */
-table {
+.indexdb-table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 50px;
 }
 
-td,
-th {
+.indexdb-table-td,
+.indexdb-table-th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
   font-weight: bold;
 }
 
-tr:nth-child(even) {
+.indexdb-table-tr:nth-child(even) {
   background-color: #dddddd;
 }
 
@@ -468,7 +553,7 @@ tr:nth-child(even) {
   text-align: center;
 }
 
-table .removebtn {
+.indexdb-table .removebtn {
   background: red;
   color: #fff;
   border: 0;
@@ -478,7 +563,7 @@ table .removebtn {
   cursor: pointer;
 }
 
-table .removebtn:hover {
+.indexdb-table .removebtn:hover {
   background: #880E4F;
 }
 
