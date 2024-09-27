@@ -17,9 +17,14 @@
 @import "./components/pages/elementary-level/3-logical-operators.scss";
 @import "./components/pages/elementary-level/10-math";
 @import "./components/pages/elementary-level/11-array";
+
 /* intermediate-Level */
 @import "./components/pages/intermediate-level/1-mouse-events";
 @import "./components/pages/intermediate-level/2-keyboard-event";
+@import "./components/pages/intermediate-level/3-touch-events";
+@import "./components/pages/intermediate-level/4-event-flow";
+@import "./components/pages/intermediate-level/5-form-event";
+@import "../pages/intermediate-level/7-musicPlayer-project/css/music-player";
 
 /* advance-level */
 @import "../pages/advance-level/1-auto-complete-box/auto-complete";

@@ -1,0 +1,43 @@
+/* intermediate-level : 5-form-event */
+.form-event-body {
+  background: #1c1a39;
+  color: #fff;
+  overflow-x: hidden !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+}
+
+.form-h3,
+.form-h2,
+h1 {
+  color: orange;
+}
+
+#result2 {
+  color: orange;
+}
+
+input::placeholder {
+  font-size: 12px !important;
+  font-weight: bold;
+  color: #777 !important;
+}
+
+#textarea1,
+#check1,
+input[type="checkbox"] {
+  accent-color: pink !important;
+}
+
+#usererror,
+#passerror,
+#yearerror,
+#codeerror,
+#emailerror {
+  color: red;
+  font-size: 13px;
+}

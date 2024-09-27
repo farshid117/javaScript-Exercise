@@ -1,0 +1,38 @@
+/* intermediate-level: bom */
+
+    .bom-body {
+
+        background: #1c1a39;
+        color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+
+        flex-wrap: wrap;
+    }
+
+    .bom-header {
+        color: orange;
+    }
+
+    .square {
+        width: 150px;
+        height: 150px;
+        background: url(../../img/khodam.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .square2 {
+        width: 200px;
+        height: 200px;
+        background: url(../../img/khodam.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .text {
+        color: #fff;
+    }

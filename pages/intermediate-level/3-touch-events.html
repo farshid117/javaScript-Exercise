@@ -23,37 +23,18 @@
 
 <!-- //todo: styles section -->
 <style>
-    body {
-        background: #1c1a39;
-        color: #fff;
-        overflow-x: hidden !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap;
-        text-align: left;
-    }
-    .touch{
-        width: 300px;
-        height: 300px;
-        background: yellow;
-    }
-    p{
-        transform: .5s;
-    }
+   
 </style>
 <!-- //todo: body section -->
 
-<body>
+<body class="touch-event-body">
     <div class="containerr">
         <div class="row">
             <div class="col-12 text-center mx-auto d-flex flex-column align-items-center" id="app-body">
                 <div class="touch my-3">
 
                 </div>
-                <p></p>
+                <p class="touch-p"></p>
             </div>
             <div class="returnBtn text-center">
                 <button class="button button__red" onclick="refreshHandler(event)">رفرش</button>

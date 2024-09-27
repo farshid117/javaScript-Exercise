@@ -23,59 +23,15 @@
 
 <!-- //todo: styles section -->
 <style>
-    *{
-        overflow-x: none !important;
-    }
-    body {
-        background: #1c1a39;
-        color: #fff;
-        overflow-x: hidden !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap;
-    }
 
-    h3,
-    h2,
-    h1 {
-        color: orange;
-    }
-
-    #result2 {
-        color: orange;
-    }
-
-    input::placeholder {
-        font-size: 12px !important;
-        font-weight: bold;
-        color: #777 !important;
-    }
-
-    #textarea1,
-    #check1,
-    input[type="checkbox"] {
-        accent-color: pink !important;
-    }
-
-    #usererror,
-    #passerror,
-    #yearerror,
-    #codeerror,
-    #emailerror {
-        color: red;
-        font-size: 13px;
-    }
 </style>
 <!-- //todo: body section -->
 
-<body>
+<body class="form-event-body">
     <div class="containerr">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-center fw-bold">تست عملی رویدادها و خاصیت‌های فرم</h3>
+                <h3 class="text-center fw-bold form-h3">تست عملی رویدادها و خاصیت‌های فرم</h3>
                 <h5>در این جلسه به پراپرتی‌های فرم و کنترل‌های آن میپردازیم :</h5>
                 <!-- --------------------------section1 get form & controll with forms shortcut --------------------------- -->
                 <section id="form-text" class="mt-4">
@@ -117,7 +73,7 @@
 
                 <!-- ------------------- order with checkbox Event & property  ---------------------- -->
                 <section id="order" class="">
-                    <h3 class="text-center fw-bold">checkbox Example : Resturant Order</h3>
+                    <h3 class="text-center fw-bold .form-h3">checkbox Example : Resturant Order</h3>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
@@ -142,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3 class="text-warning fw-bold order-title"></h3>
+                    <h3 class="text-warning fw-bold order-title .form-h3"></h3>
                     <div class="container">
                         <div class="row">
                             <div class="col-11">
@@ -154,7 +110,7 @@
                 <!-- ------------- radio Button --------------------- -->
                 <hr>
                 <section id="radio" class="mt-5">
-                    <h2 class="text-center fw-bold">Radio Button Example</h2>
+                    <h2 class="text-center fw-bold .form-h2">Radio Button Example</h2>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
@@ -190,13 +146,13 @@
                             </div>
                         </div>
                     </div>
-                    <h3>وضعیت فعلی شما</h3>
+                    <h3 class="form-h3">وضعیت فعلی شما</h3>
                     <p id="result2"></p>
                 </section>
                 <hr>
                 <!-- ------------------ dropDown(List) control propery ------------------ -->
                 <section id="drop-down" class="mt-5">
-                    <h2 class="fw-bold text-center">Dropdown VS Radio Example</h2>
+                    <h2 class="fw-bold text-center form-h2">Dropdown VS Radio Example</h2>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6">
@@ -225,13 +181,13 @@
                             </div>
                         </div>
                     </div>
-                    <h3 class="fw-bold">وضعیت فعلی شما</h3>
+                    <h3 class="fw-bold form-h3">وضعیت فعلی شما</h3>
                     <p id="result4"></p>
                 </section>
                 <!-- --------------select input value Focus & Blur Event ---------------------- -->
                 <hr>
                 <section id="Focus" class="mt-5">
-                    <h2 class="fw-bold text-center">Select Input Value With Focus & Blur Event</h2>
+                    <h2 class="fw-bold text-center form-h2">Select Input Value With Focus & Blur Event</h2>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
@@ -255,7 +211,7 @@
                 <hr>
                 <!-- ----------validation with blur Event --------------- -->
                 <section id="blurExample" class="mt-5">
-                    <h2 class="text-center fw-bold">Validation with Blur Event</h2>
+                    <h2 class="text-center fw-bold form-h2">Validation with Blur Event</h2>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-11 col-md-6">
@@ -286,7 +242,7 @@
                 <hr>
                 <!-- ------------------  Test Change Event for All forms Controls   ------------------- -->
                 <section id="change-event" class="mt-5">
-                    <h3 class="text-center my-3 fw-bold">Test Change Event For All Form Controls</h3>
+                    <h3 class="text-center my-3 fw-bold form-h3">Test Change Event For All Form Controls</h3>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-8">
@@ -317,7 +273,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-12">
-                                <h3 class="text-center my-3 fw-bold">Test Change Event For All Form </h3>
+                                <h3 class="text-center my-3 fw-bold form-h3">Test Change Event For All Form </h3>
                             </div>
                             <div class="col-12 col-md-8">
                                 <div class="card">

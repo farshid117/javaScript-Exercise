@@ -1,0 +1,20 @@
+/* intermediate-Level: 4-event-flow styles */
+.event-flow-body {
+        background: #1c1a39;
+        color: #fff;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+    }
+
+    .ef-header {
+        color: orange;
+    }
+
+    .ef-item {
+        cursor: pointer;
+    }
