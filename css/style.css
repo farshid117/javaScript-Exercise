@@ -1,4 +1,5 @@
 /* Variables & Fontfamily style */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @font-face {
   font-family: Vazir;
   src: url("../fonts/Vazir.eot");
@@ -366,5 +367,121 @@ h4 {
     padding: 0.5rem 1rem;
   }
 }
+.login-page, .register-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form-index-db {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form-index-db input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.form-index-db button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3 ease;
+  -webkit-transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form-index-db button:hover,
+.form-index-db button:active,
+.form-index-db button:focus {
+  background: #43a047;
+}
+
+.form-index-db .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form-index-db .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.form-index-db .register-form {
+  display: none;
+}
+
+.indexDB-body {
+  background: #76b852;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8dc26f);
+  background: -moz-linear-gradient(right, #76b852, #8dc26f);
+  background: -o-linear-gradient(right, #76b852, #8dc26f);
+  background: linear-gradient(to left, #76b852, #8dc26f);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Table Start */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.text-center {
+  text-align: center;
+}
+
+table .removebtn {
+  background: red;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+table .removebtn:hover {
+  background: #880E4F;
+}
+
+/* Table End */
 
 /*# sourceMappingURL=style.css.map */

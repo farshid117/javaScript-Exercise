@@ -112,12 +112,12 @@ function getUsers(){
 
         allUsers.map(user => {
             domTable.insertAdjacentHTML("beforeend", 
-                `<tr>
-                   <td>${user.userID}</td>
-                   <td>${user.name}</td>
-                   <td>${user.password}</td>
-                   <td>${user.email}</td>
-                   <td>
+                `<tr class="indexdb-table-tr">
+                   <td class="indexdb-table-td">${user.userID}</td>
+                   <td class="indexdb-table-td">${user.name}</td>
+                   <td class="indexdb-table-td">${user.password}</td>
+                   <td class="indexdb-table-td">${user.email}</td>
+                   <td class="indexdb-table-td">
                         <button class="removebtn" id=${user.userID} onclick="removeUser(${user.userID})">Remove</button>
                    </td>
                  <tr>
