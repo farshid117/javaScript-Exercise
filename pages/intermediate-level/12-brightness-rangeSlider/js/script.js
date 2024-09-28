@@ -1,4 +1,4 @@
-const bgImg = document.querySelector(".container")
+const bgImg = document.querySelector(".range-slider-container")
 const inputRange = document.querySelector("#range")
 
 inputRange.addEventListener("change",(event) => {
