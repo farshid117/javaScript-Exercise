@@ -3,7 +3,7 @@ const weightInput = $.querySelector('#weight')
 const heightInput = $.querySelector('#height')
 const weightVal = $.querySelector('#weight-val')
 const heightVal = $.querySelector('#height-val')
-const bmiResult = $.querySelector('#result')
+const bmiResult = $.querySelector('#bmi-result')
 const categoryElem = $.querySelector('#category')
 
 function bmiCalculator () {

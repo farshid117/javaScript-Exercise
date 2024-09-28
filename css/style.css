@@ -1393,6 +1393,70 @@ body {
   right: 0;
 }
 
+.bmi-body {
+  height: 100vh;
+  background: linear-gradient(135deg, #61d954, #2ebf75);
+}
+
+.bmi-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  width: 50%;
+  min-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bmi-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.bmi-row span {
+  font-weight: 500;
+}
+
+.bmi-rang {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 70%;
+  height: 3.5px;
+  background-color: #dcdcdc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.bmi-rang::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #1c1c1c;
+  cursor: pointer;
+}
+
+#bmi-result {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #0be881;
+}
+
+#category {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
 /* advance-level */
 .auto-complete-body {
   background: #644bff;
