@@ -1,13 +1,13 @@
 const $ = document
 const addTodoBtn = $.getElementById("add_btn")
-const modal = $.querySelector(".modal")
+const modal = $.querySelector(".dragable-modal")
 const overLay = $.querySelector("#overlay")
 const modalCloseBtn = $.querySelector(".close-modal")
 const statusCloseBtns = $.querySelectorAll(".close") //NodeList
 const modalTodoInput = $.querySelector("#todo_input")
 const modalSubmitBtn = $.querySelector("#todo_submit")
 const noStatusColumn = $.querySelector("#no_status")
-const formTag = $.querySelector("form")
+const formTag = $.querySelector(".modal-form")
 
 var count = 0
 //todo preventDefault to form

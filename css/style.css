@@ -791,6 +791,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
+/* intermediate-level: daragable-todolist */
 .darg-todolist-body {
   font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
@@ -875,15 +876,8 @@ input[type=checkbox] {
   color: #343444;
 }
 
-/* modal */
-.close-modal {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.modal {
+/* todo: modal */
+.dragable-modal {
   width: 450px;
   position: fixed;
   top: -50%;
@@ -894,22 +888,33 @@ input[type=checkbox] {
   border-radius: 10px;
   z-index: 2;
   background-color: #fff;
+  margin: 0;
 }
 
-.modal.active {
+.dragable-modal.active {
   top: 35%;
 }
 
-.modal .header {
+.dragable-modal .dragable-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #2a3c57;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
 }
 
-.modal .body {
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dragable-modal .modal-body {
   padding: 0.75rem;
 }
 
