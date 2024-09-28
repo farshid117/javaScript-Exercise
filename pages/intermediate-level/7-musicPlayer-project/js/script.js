@@ -1,5 +1,5 @@
 ﻿const image = document.querySelector("#cover");
-const title = document.getElementById("music-title");
+const title = document.querySelector(".music-titlee");
 const artist = document.getElementById("music-artist");
 const music = document.querySelector("audio");
 const currentTimeEl = document.getElementById("current-time");
@@ -17,8 +17,7 @@ let songIndex = 0;
 // Music
 const songs = [
   {
-    path:
-      "media/html.m4a",
+    path:"media/html.m4a",
     displayName: "Html Padcast",
     artist: "Ozbi",
     cover:
@@ -31,8 +30,7 @@ const songs = [
     cover: "images/peakpx.jpg",
   },
   {
-    path:
-      "media/bazar.m4a",
+    path:"media/bazar.m4a",
     displayName: "Earn",
     artist: "Linkin Park",
     cover:

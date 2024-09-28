@@ -582,6 +582,7 @@ input[type=checkbox] {
   font-size: 13px;
 }
 
+/* intermediate-level: 7-music-player */
 .music-player-body {
   margin: 0;
   min-height: 100vh;
@@ -652,10 +653,9 @@ input[type=checkbox] {
   height: 100%;
 }
 
-#musi-title {
+.music-titlee {
   font-size: 25px;
   text-align: center;
-  margin: 0;
 }
 
 #music-artist {
@@ -724,10 +724,10 @@ input[type=checkbox] {
   .img-container {
     left: 29px;
   }
-  h2 {
+  .music-titlee {
     font-size: 20px;
   }
-  h3 {
+  #music-artist {
     font-size: 15px;
   }
   .player-controls {
