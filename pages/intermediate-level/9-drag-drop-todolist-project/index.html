@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../../../css/style.css" />
 
   <title>Draggable TodoLis </title>
 </head>
 
-<body>
+<body class="darg-todolist-body">
 
-  <!-- modal -->
+  <!-- todo modal -->
   <div class="modal" id="todo_form">
     <div class="header">
       <div class="title">Add Todo</div>
@@ -27,7 +27,7 @@
   <!-- todo -->
   <div class="todo-container">
     <div class="status" id="no_status">
-      <h1>No Status</h1>
+      <h1 class="todo-header">No Status</h1>
       <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
       <div  id="0" 
             class="todo"
@@ -39,13 +39,13 @@
       </div>
     </div>
     <div class="status" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-      <h1>Not Started</h1>
+      <h1 class="todo-header">Not Started</h1>
     </div>
     <div class="status" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-      <h1>In Progress</h1>
+      <h1 class="todo-header">In Progress</h1>
     </div>
     <div class="status" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
-      <h1>Completed</h1>
+      <h1 class="todo-header">Completed</h1>
     </div>
   </div>
 
