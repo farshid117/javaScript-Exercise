@@ -10,13 +10,13 @@
   <title>LocalStorage TodoList</title>
 
   <!-- Bootstrap -->
-  <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="../../../css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link href="../../../css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="local-todolist-body">
   <div class="container mt-4">
-    <h2 class="text-center fw-bold">Todo List App With LocalStorage</h2>
+    <h2 class="text-center fw-bold text-white">Todo List App With LocalStorage</h2>
 
     <!-- Input New Todo -->
     <div class="row justify-content-center mt-5">
@@ -26,16 +26,16 @@
           <input type="text" class="form-control" name="" id="itemInput" placeholder="add new todo" />
         </div>
         <div class="form-btn mt-3">
-          <button id="addButton" class="btn btn-primary">Add New Todo</button>
-          <button id="clearButton" class="btn btn-danger">Clear All Todos</button>
+          <button id="addButton" class="btn btn-primary local-btn">Add New Todo</button>
+          <button id="clearButton" class="btn btn-danger local-btn">Clear All Todos</button>
         </div>
       </div>
     </div>
     <div class="row justify-content-center mt-5">
       <div class="col-12 text-center">
-        <button id="all-todos" class="btn btn-primary" onclick="showAllTodosHandler()">All</button>
-        <button id="completed-todos" class="btn btn-success" onclick="showCompletedHandler()">Completed</button>
-        <button id="uncompleted-todos" class="btn btn-warning" onclick="showUncompletedHandler()">UnCompleted</button>
+        <button id="all-todos" class="btn btn-primary local-btn" onclick="showAllTodosHandler()">All</button>
+        <button id="completed-todos" class="btn btn-success local-btn" onclick="showCompletedHandler()">Completed</button>
+        <button id="uncompleted-todos" class="btn btn-warning local-btn" onclick="showUncompletedHandler()">UnCompleted</button>
       </div>
     </div>
     <!-- todoList Container -->
