@@ -1,24 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  box-sizing: border-box;
-}
-
-body {
+/* intermediate-level -> 23-cart styles */
+.cart-body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
   background: #7ed6df;
   transition: 0.6s linear;
+  font-family: "Open Sans", sans-serif;
 }
 
-/* .container {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-} */
 
 .product-card {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);

@@ -6,11 +6,11 @@
 	font-family: sans-serif;
 }
 
-body {
+.pagination-body {
 	background: #F3F3F3;
 }
 
-header {
+.pagination-header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,13 +19,13 @@ header {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-main {
+.pagination-main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-main .list {
+.pagination-main .list {
 	width: 100%;
 	max-width: 768px;
 	background-color: #FFF;
@@ -33,14 +33,14 @@ main .list {
 	margin-top: 25px;
 }
 
-main .list .item {
+.pagination-main .list .item {
 	padding: 15px;
 	border-bottom: 1px solid #CCC;
 }
-main .list .item:last-of-type {
+.pagination-main .list .item:last-of-type {
 	border-bottom: none;
 }
-main .list .item:hover {
+.pagination-main .list .item:hover {
 	background: rgba(0, 0, 0, 0.05);
 }
 
