@@ -9,7 +9,7 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: Vazir;
+  font-family: Vazir-bold;
   src: url("../fonts/Vazir-Bold.eot");
   src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Bold.woff2") format("woff2"), url("../fonts/Vazir-Bold.woff") format("woff"), url("../fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
@@ -735,18 +735,18 @@ input[type=checkbox] {
     left: 100px;
   }
 }
-* {
-  margin: 0;
+.music-list-body {
   direction: rtl;
   text-decoration: none;
   list-style-type: none;
-  font-family: "IRANSans";
+  font-family: "vazir";
 }
 
-h1 {
+.music-list-header {
   text-align: center;
   margin: 2rem;
   font-weight: bold;
+  font-family: "vazir";
 }
 
 .main-music {
