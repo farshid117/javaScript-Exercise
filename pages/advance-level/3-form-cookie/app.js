@@ -5,7 +5,7 @@ function getCookie(cookieName) {
 
     let CookieValue = null
     cookiesArray.some(cookie => {
-        if (cookie.includes(cookieName)) {
+        if(cookie.includes(cookieName)){
             CookieValue = cookie.substring(cookie.indexOf('=') + 1)
             return true
         }

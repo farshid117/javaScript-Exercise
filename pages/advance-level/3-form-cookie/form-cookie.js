@@ -24,5 +24,4 @@ loginBtn.addEventListener('click', event => {
     }
 
     clearInput()
-
 })
