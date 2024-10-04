@@ -11,20 +11,6 @@ function setCookie(cookieName, cookieValue, exDay) {
     document.cookie = `${cookieName}=${cookieValue};path=/;expires=${now}`
 }
 
-function getCookie(cookieName) {
-    let cookiesArray = document.cookie.split(';')
-
-    let CookieValue = null
-    cookiesArray.some(cookie => {
-        if (cookie.includes(cookieName)) {
-            CookieValue = cookie.substring(cookie.indexOf('=') + 1)
-            return true
-        }
-    })
-
-    return CookieValue
-}
-
 function clearInput() {
     usernameInput.value = ''
     passwordInput.value = ''
