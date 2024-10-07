@@ -1,7 +1,7 @@
 ﻿const image = document.querySelector("#cover");
 const title = document.querySelector(".music-titlee");
 const artist = document.getElementById("music-artist");
-const music = document.querySelector("audio");
+const audioElm = document.querySelector("audio");
 const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
 const progress = document.getElementById("progress");
@@ -14,7 +14,7 @@ const backgroundImage = document.getElementById("background-img");
 // Current Song
 let songIndex = 0;
 
-// Music
+// audioElm
 const songs = [
   {
     path:"media/html.m4a",
@@ -38,7 +38,7 @@ const songs = [
   },
 ];
 
-// Check if Playing
+// Flag :Check Playing
 let isPlaying = false;
 
 // Play
@@ -46,7 +46,7 @@ function playSong() {
   isPlaying = true;
   playBtn.classList.replace("fa-play", "fa-pause");
   playBtn.setAttribute("title", "Pause");
-  music.play();
+  audioElm.play();
 }
 
 // Pause
@@ -54,15 +54,14 @@ function pauseSong() {
   isPlaying = false;
   playBtn.classList.replace("fa-pause", "fa-play");
   playBtn.setAttribute("title", "Play");
-  music.pause();
+  audioElm.pause();
 }
 
 // Update DOM
 function loadSong(song) {
-  console.log(song)// object
   title.textContent = song.displayName;
   artist.textContent = song.artist;
-  music.src = song.path;
+  audioElm.src = song.path;
   changeCover(song.cover);
 }
 
@@ -131,8 +130,8 @@ function setProgressBar(e) {
   console.log("e: ", e);
   const width = this.clientWidth;
   const currentWithX = e.offsetX;
-  const duration = music.duration;
-  music.currentTime = (currentWithX / width) * duration //accure timeupdate event
+  const duration = audioElm.duration;
+  audioElm.currentTime = (currentWithX / width) * duration //accure timeupdate event
 }
 
 // Event Listeners
@@ -147,8 +146,8 @@ playBtn.addEventListener("click", function () {
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 progressContainer.addEventListener("click", setProgressBar);
-music.addEventListener("timeupdate", updateProgressBar);
-music.addEventListener("ended", nextSong);
+audioElm.addEventListener("timeupdate", updateProgressBar);
+audioElm.addEventListener("ended", nextSong);
 
 // On Load - Select First Song
 loadSong(songs[songIndex]);
