@@ -35,6 +35,24 @@ const songs = [
     cover: "images/cover2.jpg"
   },
 ];
+// Update DOM
+function loadSong(song) {
+  title.textContent = song.displayName;
+  artist.textContent = song.artist;
+  audioElm.src = song.path;
+  changeCover(song.cover);
+}
+
+function changeCover(cover) {
+  imgCover.classList.remove("active")
+
+  setTimeout(() => {
+    imgCover.src = cover
+    imgCover.classList.add("active")
+  }, 100)
+
+  backgroundImage.src = cover
+}
 
 // Flag :Check Playing
 let isPlaying = false;
@@ -53,25 +71,6 @@ function pauseSong() {
   playBtn.classList.replace("fa-pause", "fa-play");
   playBtn.setAttribute("title", "Play");
   audioElm.pause();
-}
-
-// Update DOM
-function loadSong(song) {
-  title.textContent = song.displayName;
-  artist.textContent = song.artist;
-  audioElm.src = song.path;
-  changeCover(song.cover);
-}
-
-function changeCover(cover) {
-  imgCover.classList.remove("active")
-
-  setTimeout(() => {
-    imgCover.src = cover
-    imgCover.classList.add("active")
-  }, 100)
-
-  backgroundImage.src = cover
 }
 
 // Previous Song
