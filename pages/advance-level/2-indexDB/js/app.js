@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     DBOpenReq.addEventListener('error', (err) => {
         console.warn('DBOpenReq Error', err);
     })
-    
+
     DBOpenReq.addEventListener('success', (event) => {
         db = event.target.result
         getUsers()
@@ -29,18 +29,12 @@ window.addEventListener('load', () => {
 
         console.log('Old V:', event.oldVersion);
         console.log('New V:', event.newVersion);
-        
+
         if (!db.objectStoreNames.contains('users')) {
             objectStore = db.createObjectStore('users', {
                 keyPath: 'userID'
             })
         }
-
-        // if (db.objectStoreNames.contains('courses')) {
-        //     db.deleteObjectStore('courses')
-        // }
-
-        // db.createObjectStore('courses')
 
         console.log('upgrade', db.objectStoreNames);
 
@@ -49,23 +43,24 @@ window.addEventListener('load', () => {
 
 registerForm.addEventListener('submit', event => {
     event.preventDefault()
-    if(nameInput.value == "" || passwordInput.value == "" || emailInput.value== ""){
+    if (nameInput.value == "" || passwordInput.value == "" || emailInput.value == "") {
         alert("pls fill all of field")
-    return
-    }else{
-    let newUser = {
-        userID: Math.floor(Math.random() * 9999),
-        name: nameInput.value,
-        password: passwordInput.value,
-        email: emailInput.value,
-    }
+        return
+    } else {
+
+        let newUser = {
+            userID: Math.floor(Math.random() * 9999),
+            name: nameInput.value,
+            password: passwordInput.value,
+            email: emailInput.value,
+        }
 
         createStore(newUser)
-}
-    
+    }
+
 })
 
-function createStore(newUser){
+function createStoreRow(newUser) {
     let tx = db.transaction('users', 'readwrite') //connect to users objectStore
 
     tx.addEventListener('error', (err) => {
@@ -89,15 +84,15 @@ function createStore(newUser){
     })
 }
 
-function clearInputs () {
+function clearInputs() {
     nameInput.value = ''
     passwordInput.value = ''
     emailInput.value = ''
 }
 
-function getUsers(){
+function getUsers() {
     domTable.innerHTML = ''
-    let tx = createTx("users","readonly")
+    let tx = createTx("users", "readonly")
 
     let store = tx.objectStore('users')
     let request = store.getAll()
@@ -111,7 +106,7 @@ function getUsers(){
         console.log("allUsers: ", allUsers);
 
         allUsers.map(user => {
-            domTable.insertAdjacentHTML("beforeend", 
+            domTable.insertAdjacentHTML("beforeend",
                 `<tr class="indexdb-table-tr">
                    <td class="indexdb-table-td">${user.userID}</td>
                    <td class="indexdb-table-td">${user.name}</td>
@@ -128,12 +123,12 @@ function getUsers(){
     })
 }
 
-function removeUser(id){
+function removeUser(id) {
     console.log(id);
-    console.log("allUsers in Remove Func : ", allUsers )
+    console.log("allUsers in Remove Func : ", allUsers)
 
-    let tx = createTx("users","readwrite")
-   
+    let tx = createTx("users", "readwrite")
+
     let store = tx.objectStore('users')
     let request = store.delete(id)
 
@@ -144,10 +139,10 @@ function removeUser(id){
     request.addEventListener('success', () => {
         console.warn('delete Request success')
         getUsers()
-    })  
+    })
 }
 
-function createTx(storeName,mode){
+function createTx(storeName, mode) {
     let tx = db.transaction(storeName, mode) //connect to users objectStore
 
     tx.addEventListener('error', (err) => {
