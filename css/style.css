@@ -46,7 +46,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 html {
@@ -679,12 +678,12 @@ input[type=checkbox] {
 
 /* Progress */
 .progress-container {
-  background: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 5px auto 40px;
   height: 4px;
   width: 90%;
+  background: #fff;
+  margin: 5px auto 40px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .progress {
@@ -704,28 +703,24 @@ input[type=checkbox] {
 
 /* Controls */
 .player-controls {
-  position: relative;
-  top: -15px;
-  left: 120px;
   width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.fas {
-  font-size: 30px;
-  color: rgb(129, 129, 129);
-  margin-right: 30px;
-  cursor: pointer;
-  user-select: none;
+.player-controls .ctrl-btn {
+  color: #333;
+  font-size: 24px;
 }
 
-.fas:hover {
-  filter: brightness(80%);
+.player-controls .ctrl-btn:hover {
+  color: #1a1a1a;
 }
 
-.main-button {
-  font-size: 40px;
-  position: relative;
-  top: 3px;
+.paly-btn {
+  font-size: 32px;
 }
 
 /* Media Query: iPhone (Vertical) */
@@ -741,10 +736,6 @@ input[type=checkbox] {
   }
   #music-artist {
     font-size: 15px;
-  }
-  .player-controls {
-    top: -10px;
-    left: 100px;
   }
 }
 /* intermediate-level: 8-Music-List styles */
@@ -785,24 +776,25 @@ input[type=checkbox] {
   cursor: pointer;
 }
 
-.fa-play, .fa-pause {
-  background: #ff0404;
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateY(-50%);
-  transform: translateX(50%);
-  width: 66px;
-  height: 50px;
-  line-height: 50px;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px;
-  color: #fff;
-  visibility: hidden;
-}
+/* .fa-play, .fa-pause {
+    background: #ff0404;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
 
+    width: 66px;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+
+    border-radius: 10px;
+    color: #fff;
+    visibility: hidden;
+} */
 /* intermediate-level: daragable-todolist */
 .darg-todolist-body {
   font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

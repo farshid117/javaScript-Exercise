@@ -111,28 +111,25 @@
 
  /* Controls */
  .player-controls {
-   position: relative;
-   top: -15px;
-   left: 120px;
    width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
  }
 
- .fas {
-   font-size: 30px;
-   color: rgb(129, 129, 129);
-   margin-right: 30px;
-   cursor: pointer;
-   user-select: none;
+  .player-controls .ctrl-btn{
+    color: #333;
+    font-size: 24px;
  }
 
- .fas:hover {
-   filter: brightness(80%);
+ .player-controls .ctrl-btn:hover {
+  color: #1a1a1a;
  }
 
- .main-button {
-   font-size: 40px;
-   position: relative;
-   top: 3px;
+ .paly-btn{
+  font-size: 32px;
  }
 
  /* Media Query: iPhone (Vertical) */
@@ -154,7 +151,6 @@
    }
 
    .player-controls {
-     top: -10px;
-     left: 100px;
+  
    }
  }
