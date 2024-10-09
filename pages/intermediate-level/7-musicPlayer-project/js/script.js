@@ -94,11 +94,11 @@ function nextSong() {
 }
 
 // Update Progress Bar & Time
-function updateProgressBar(e) {
+function updateProgressBar(event) {
   if (isPlaying) {
-    const duration = e.srcElement.duration; //refer to audio Tag
-    //todo e.srcElement == e.target
-    const currentTime = e.target.currentTime //todo: update in setProgressBar Func
+    const duration = event.srcElement.duration; //refer to audio Tag
+    //! event.srcElement == event.target 
+    const currentTime = event.target.currentTime // update in setProgressBar Func
     // Update progress bar width
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width  = progressPercent + "%";
@@ -123,10 +123,12 @@ function updateProgressBar(e) {
 }
 
 // Set Progress Bar
-function setProgressBar(e) {
-  console.log("e: ", e);
-  const width = this.clientWidth;
-  const currentWithX = e.offsetX;
+function setProgressBar(event) {
+  console.log("e: ", event);
+  const width = this.clientWidth; //width of progress-container
+  console.log("clientWidth: ", width);
+  const currentWithX = event.offsetX; //width of point that click in progress bar from left
+  console.log("currentWithX: ", currentWithX);
   const duration = audioElm.duration;
   audioElm.currentTime = (currentWithX / width) * duration //accure timeupdate event
 }
