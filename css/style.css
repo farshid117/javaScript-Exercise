@@ -681,7 +681,7 @@ input[type=checkbox] {
   height: 4px;
   width: 90%;
   background: #fff;
-  margin: 5px auto 40px;
+  margin: 5px auto 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -719,7 +719,7 @@ input[type=checkbox] {
   color: #1a1a1a;
 }
 
-.paly-btn {
+.player-controls .play-btn {
   font-size: 32px;
 }
 
