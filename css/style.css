@@ -684,6 +684,7 @@ input[type=checkbox] {
   margin: 5px auto 20px;
   border-radius: 5px;
   cursor: pointer;
+  direction: ltr;
 }
 
 .progress {
@@ -699,6 +700,7 @@ input[type=checkbox] {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  direction: ltr;
 }
 
 /* Controls */
