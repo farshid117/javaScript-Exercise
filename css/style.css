@@ -641,7 +641,7 @@ input[type=checkbox] {
   height: 300px;
   position: relative;
   top: -50px;
-  left: 50px;
+  right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -720,7 +720,7 @@ input[type=checkbox] {
 }
 
 .player-controls .play-btn {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 /* Media Query: iPhone (Vertical) */
