@@ -4,8 +4,8 @@ const artist = document.getElementById("music-artist");
 const audioElm = document.querySelector("audio");
 const currentTimeEl = document.getElementById("current-time");
 const durationEl = document.getElementById("duration");
-const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
+const progress = document.getElementById("progress");
 const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
@@ -96,8 +96,8 @@ function nextSong() {
 // Update Progress Bar & Time
 function updateProgressBar(event) {
   if (isPlaying) {
-    const duration = event.srcElement.duration; //refer to audio Tag
-    //! event.srcElement == event.target 
+    const duration = event.srcElement.duration; //? refer to audio Tag ~ event.target
+
     const currentTime = event.target.currentTime // update in setProgressBar Func
     // Update progress bar width
     const progressPercent = (currentTime / duration) * 100;
@@ -124,13 +124,15 @@ function updateProgressBar(event) {
 
 // Set Progress Bar
 function setProgressBar(event) {
-  console.log("e: ", event);
-  const width = this.clientWidth; //width of progress-container
-  console.log("clientWidth: ", width);
-  const currentWithX = event.offsetX; //width of point that click in progress bar from left
+  
+  const width = this.clientWidth; // ~ event.target.clientWidth in pixels
+  const currentWithX = event.offsetX; //width of point that click in progressbar from left in pixels
+  const duration = audioElm.duration; //in seconds
+  audioElm.currentTime = (currentWithX / width) * duration //accure timeupdate event in seconds --> happen timeupdate Event
+  
+  console.log("duration: ", duration);
   console.log("currentWithX: ", currentWithX);
-  const duration = audioElm.duration;
-  audioElm.currentTime = (currentWithX / width) * duration //accure timeupdate event
+  console.log("clientWidth: ", width);
 }
 
 // Event Listeners
