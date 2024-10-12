@@ -17,9 +17,8 @@
 .change-theme-card {
     height: 420px;
     width: 320px;
-    background: linear-gradient(to bottom,
-            var(--theme-color) 30%,
-            #ffffff 1px);
+    // background: linear-gradient(to bottom,var(--theme-color) 30%, #ffffff 1px);
+    background: linear-gradient(to bottom,var(--theme-color) 0px,var(--theme-color) 110px, #fff 110px);
     background-size: 100% 100%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
