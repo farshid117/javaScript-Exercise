@@ -98,10 +98,12 @@ function updateProgressBar(event) {
   if (isPlaying) {
     const duration = event.srcElement.duration; //? refer to audio Tag ~ event.target
 
-    const currentTime = event.target.currentTime // update in setProgressBar Func
+    const currentTime = event.target.currentTime // update by user - read /write Property
+
     // Update progress bar width
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width  = progressPercent + "%";
+
     // Calculate display for duration
     const durationMinutes = Math.floor(duration / 60);
     let durationSeconds   = Math.floor(duration % 60);
@@ -112,7 +114,7 @@ function updateProgressBar(event) {
     if (durationSeconds) {
       durationEl.textContent = durationMinutes + ":" + durationSeconds;
     }
-    // Calculate display for currentTime
+    // Calculate display for currentTime --> convert second to Minutes
     const currentMinutes = Math.floor(currentTime / 60);
     let   currentSeconds = Math.floor(currentTime % 60);
     if (currentSeconds < 10) {
@@ -130,9 +132,9 @@ function setProgressBar(event) {
   const duration = audioElm.duration; //in seconds
   audioElm.currentTime = (currentWithX / width) * duration //accure timeupdate event in seconds --> happen timeupdate Event
   
-  console.log("duration: ", duration);
-  console.log("currentWithX: ", currentWithX);
-  console.log("clientWidth: ", width);
+  console.log("duration: ", duration)
+  console.log("currentWithX: ", currentWithX)
+  console.log("clientWidth: ", width)
 }
 
 // Event Listeners
