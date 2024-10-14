@@ -1,36 +1,41 @@
 let $ = document
-const players = $.querySelectorAll('.play-icon') //NodeList
+const playericons = $.querySelectorAll('.play-icon') //NodeList
 const audiosElm = $.querySelectorAll('audio')  //NodeList
 
-let musicName;
+let musicIconName;
 let currentIcon;
+let previousAudio;
 
 // Flag: Check if Playing
 let isPlaying = false;
 
-players.forEach((player) => {
+playericons.forEach((playericon) => {
+    playericon.addEventListener('click', runMusic)
+})
 
-    player.addEventListener('click', (event) => {
-        currentIcon.nextElementSibling
-        musicName = event.target.dataset.name
+function runMusic(event){ 
         currentIcon = event.target
+        musicIconName = event.target.dataset.name
+       
 
-        audiosElm.forEach((audio) =>  {
-            if (audio.dataset.name === musicName) {
-                if (audio.dataset.play === "false"){
-                    audio.currentTime = 0
+        audiosElm.forEach((audio) => {
+            if (audio.dataset.name == musicIconName) {
+                previousAudio = audio
+                if (audio.dataset.play === "false") {
                     currentIcon.classList.replace("fa-play", "fa-pause");
                     audio.setAttribute("data-play", "true")
                     audio.play()
 
                 } else {
                     currentIcon.classList.replace("fa-pause", "fa-play");
-                    audio.pause()
                     audio.setAttribute("data-play", "false")
+                    audio.pause()
                 }
+            }else{
+                audio.pause()
+                audio.currentTime = 0
+                audio.previousElementSibling.classList.replace("fa-pause", "fa-play");
+                audio.setAttribute("data-play", "false")
             }
         })
-
-    })
-
-})
+}
