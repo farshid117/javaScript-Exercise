@@ -1,52 +1,59 @@
 /* intermediate-level: 8-Music-List styles */
-.music-list-body{
-    direction: rtl;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: "vazir";
+.music-list-body {
+  direction: rtl;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "vazir";
 }
 .music-list-header {
-    text-align: center;
-    margin: 2rem;
-    font-weight: bold;
-    font-family: "vazir";
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+  font-family: "vazir";
 }
 
 .main-music {
-    position: relative;
+  position: relative;
 }
 .main-music img {
-    display: block;
-    height: 200px;
-    object-fit: cover;
-    transition: all .4s ease;
-    border-radius: 10px;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  border-radius: 10px;
 }
 .main-music:hover img {
-    box-shadow: 0 0 25px #5d5d5d;
-    /* transform: translateY(-5px); */
+  box-shadow: 0 0 25px #5d5d5d;
+  /* transform: translateY(-5px); */
 }
 
 .main-music:hover i {
-    visibility: visible;
-    cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
 }
 
- .music-list-btn {
-    background: #ff0404;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%,-50%);
+.music-list-btn {
+  background: #ff0404;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 
-    width: 66px;
-    height: 50px;
-    line-height: 50px;
-    display: flex;
-    justify-content: center;
+  width: 66px;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
 
-    border-radius: 10px;
-    color: #fff;
-    visibility: hidden;
-} 
+  border-radius: 10px;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+.music-list-btn.active {
+  visibility: visible;
+  opacity: 1;
+}

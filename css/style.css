@@ -775,6 +775,7 @@ input[type=checkbox] {
 
 .main-music:hover i {
   visibility: visible;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -793,6 +794,13 @@ input[type=checkbox] {
   border-radius: 10px;
   color: #fff;
   visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.music-list-btn.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* intermediate-level: daragable-todolist */
