@@ -12,7 +12,6 @@ playericons.forEach((playericon) => {
     playericon.addEventListener('click', runMusic)
 })
 
-
 function runMusic(event) {
     currentIcon = event.target
     musicIconName = event.target.dataset.name
