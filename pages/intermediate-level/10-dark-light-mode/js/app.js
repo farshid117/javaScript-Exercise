@@ -5,7 +5,6 @@ const flicker = document.querySelector('.flicker')
 switchElement.addEventListener('click', function () {
   // Hint: Add 'dark' class to body :))
   document.body.classList.toggle('dark')
-  console.log(document.body.className)
 
   if (document.body.classList.contains('dark')) {
     localStorage.setItem('theme', 'dark')
