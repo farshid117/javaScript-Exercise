@@ -4,30 +4,23 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @font-face {
   font-family: Vazir;
   src: url("../fonts/Vazir.eot");
-  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Vazir.woff2") format("woff2"),
-    url("../fonts/Vazir.woff") format("woff"),
-    url("../fonts/Vazir.ttf") format("truetype");
+  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir.woff2") format("woff2"), url("../fonts/Vazir.woff") format("woff"), url("../fonts/Vazir.ttf") format("truetype");
   font-weight: normal;
 }
 @font-face {
   font-family: "Vazir-bold";
   src: url("../fonts/Vazir-Bold.eot");
-  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Vazir-Bold.woff2") format("woff2"),
-    url("../fonts/Vazir-Bold.woff") format("woff"),
-    url("../fonts/Vazir-Bold.ttf") format("truetype");
+  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Bold.woff2") format("woff2"), url("../fonts/Vazir-Bold.woff") format("woff"), url("../fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: "Booter - Zero Zero";
-  src: url("../Fonts/Booter - Zero Zero.woff") format("woff"),
-    url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
+  src: url("../Fonts/Booter - Zero Zero.woff") format("woff"), url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -119,8 +112,7 @@ h4 {
 .section {
   padding: 4rem 0 1rem 0;
 }
-.section__title,
-.section__title_center {
+.section__title, .section__title_center {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-bottom: 1rem;
@@ -128,8 +120,7 @@ h4 {
 .section__title_center {
   text-align: center;
 }
-.section__title span,
-.section__title_center span {
+.section__title span, .section__title_center span {
   color: var(--primary-color);
 }
 
@@ -228,19 +219,19 @@ h4 {
   background: red;
 }
 .button__pink {
-  background: #e91e63;
+  background: #E91E63;
 }
 .button__violet {
-  background: #9c27b0;
+  background: #9C27B0;
 }
 .button__blue {
-  background: #2196f3;
+  background: #2196F3;
 }
 .button__orange {
-  background: #ff5722;
+  background: #FF5722;
 }
 .button__green {
-  background: #4caf50;
+  background: #4CAF50;
 }
 
 /* header section style */
@@ -289,9 +280,7 @@ h4 {
   align-items: center;
   gap: 1.5rem;
 }
-.nav__item-link,
-.nav__toggle,
-.nav__logo {
+.nav__item-link, .nav__toggle, .nav__logo {
   color: var(--title-color);
 }
 
@@ -577,7 +566,7 @@ input::placeholder {
 
 #textarea1,
 #check1,
-input[type="checkbox"] {
+input[type=checkbox] {
   accent-color: pink !important;
 }
 
@@ -802,8 +791,7 @@ input[type="checkbox"] {
 
 /* intermediate-level: daragable-todolist */
 .darg-todolist-body {
-  font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -862,8 +850,7 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
   border-radius: 4px;
   padding: 0.1rem 0.5rem 0.1rem 1rem;
   font-size: 1.5rem;
@@ -984,10 +971,18 @@ input[type="checkbox"] {
 .dark-light-p {
   margin: 0px;
   font-size: 20px;
+  font-family: Vazir;
+}
+
+.dark .dark-light-p {
+  margin: 0px;
+  font-size: 20px;
+  font-family: Vazir;
+  color: aliceblue;
 }
 
 .dark-light-a {
-  color: rgb(162, 0, 255);
+  color: rgb(17, 17, 17);
   font-size: 20px;
   text-decoration: none;
   font-weight: 100;
@@ -995,6 +990,13 @@ input[type="checkbox"] {
 
 .dark .dark-light-a {
   color: rgb(246, 169, 241);
+  font-family: Vazir;
+}
+
+.dark-light-p {
+  margin: 0px;
+  font-size: 20px;
+  font-family: Vazir;
 }
 
 .dark-light-header {
@@ -1020,8 +1022,7 @@ input[type="checkbox"] {
   top: 5px;
   left: 5px;
   transition: 0.3s;
-  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
-    inset -4px -4px 4px rgba(195, 193, 198, 0.9);
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
   cursor: pointer;
 }
 
@@ -1111,7 +1112,6 @@ input[type="checkbox"] {
   position: absolute;
   width: 80px;
   height: 80px;
-  transform: rotate(-25deg) skew(25deg);
 }
 
 .cube:before {
@@ -1119,7 +1119,6 @@ input[type="checkbox"] {
   content: "";
   width: 21px;
   height: 100%;
-  transform: skewY(-45deg);
   left: -20px;
   bottom: -10px;
 }
@@ -1129,7 +1128,6 @@ input[type="checkbox"] {
   content: "";
   width: 100%;
   height: 21px;
-  transform: skewX(-45deg);
   left: -10px;
   bottom: -20px;
 }
@@ -1137,7 +1135,7 @@ input[type="checkbox"] {
 #html {
   left: 100px;
   bottom: 80px;
-  background-image: url("../images/html-square.png");
+  background-image: url("../pages/intermediate-Level/10-dark-light-mode/images/html-square.png");
   background-size: cover;
   background-color: rgb(175, 119, 227);
   box-shadow: -60px 60px 20px rgba(50, 50, 50, 0.15);
@@ -1154,7 +1152,7 @@ input[type="checkbox"] {
 #css {
   left: 250px;
   bottom: 240px;
-  background-image: url("../images/css-square.png");
+  background-image: url("../pages/intermediate-Level/10-dark-light-mode/images/css-square.png");
   background-size: cover;
   background-color: rgb(227, 119, 191);
   box-shadow: -100px 100px 20px rgba(50, 50, 50, 0.15);
@@ -1171,7 +1169,7 @@ input[type="checkbox"] {
 #javascript {
   left: 450px;
   bottom: 200px;
-  background-image: url("../images/javascript-square.png");
+  background-image: url("../pages/intermediate-Level/10-dark-light-mode/images/javascript-square.png");
   background-size: cover;
   background-color: rgb(119, 227, 186);
   box-shadow: -40px 40px 20px rgba(50, 50, 50, 0.15);
@@ -1188,7 +1186,7 @@ input[type="checkbox"] {
 #react {
   left: 350px;
   bottom: 40px;
-  background-image: url("../images/react-square.png");
+  background-image: url("../pages/intermediate-Level/10-dark-light-mode/images/react-square.png");
   background-size: cover;
   background-color: rgb(119, 193, 227);
   box-shadow: -80px 80px 20px rgba(50, 50, 50, 0.15);
@@ -1234,8 +1232,7 @@ footer {
   color: #fff;
 }
 
-.status-btn,
-.delete-btn {
+.status-btn, .delete-btn {
   outline: 0;
   border: none;
 }
@@ -1280,8 +1277,7 @@ footer {
 
 /* intermediate-level: 12-birghtness-rangeSlider styles */
 .range-slider-container {
-  background: url(../pages/intermediate-level/12-brightness-rangeSlider/images/city.jpg)
-    no-repeat center;
+  background: url(../pages/intermediate-level/12-brightness-rangeSlider/images/city.jpg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -1373,8 +1369,7 @@ footer {
   }
 }
 /* Prive & next Button */
-.prev,
-.next {
+.prev, .next {
   position: absolute;
   z-index: 10;
   height: 100%;
@@ -1422,12 +1417,7 @@ footer {
 .change-theme-card {
   height: 420px;
   width: 320px;
-  background: linear-gradient(
-    to bottom,
-    var(--theme-color) 0px,
-    var(--theme-color) 110px,
-    #fff 110px
-  );
+  background: linear-gradient(to bottom, var(--theme-color) 0px, var(--theme-color) 110px, #fff 110px);
   background-size: 100% 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
@@ -1583,18 +1573,15 @@ footer {
   font-size: 1em;
 }
 
-#tab,
-#Backspace {
+#tab, #Backspace {
   width: 5em;
 }
 
-#CapsLock,
-#Enter {
+#CapsLock, #Enter {
   width: 6em;
 }
 
-#ShiftLeft,
-#ShiftRight {
+#ShiftLeft, #ShiftRight {
   width: 8em;
 }
 
@@ -1756,7 +1743,7 @@ footer {
 
 /* pagination styles */
 .pagination-body {
-  background: #f3f3f3;
+  background: #F3F3F3;
 }
 
 .pagination-header {
@@ -1764,7 +1751,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: #eee;
+  background-color: #EEE;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1777,14 +1764,14 @@ footer {
 .pagination-main .list {
   width: 100%;
   max-width: 768px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #FFF;
+  border: 1px solid #CCC;
   margin-top: 25px;
 }
 
 .pagination-main .list .item {
   padding: 15px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
 }
 
 .pagination-main .list .item:last-of-type {
@@ -1811,21 +1798,21 @@ footer {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #44aaee;
+  background-color: #44AAEE;
   margin: 5px;
   transition: 0.4s;
-  color: #fff;
+  color: #FFF;
   font-size: 18px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .page-numbers button:hover {
-  background-color: #44eeaa;
+  background-color: #44EEAA;
 }
 
 .page-numbers button.active {
-  background-color: #44eeaa;
+  background-color: #44EEAA;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1915,7 +1902,7 @@ footer {
 }
 
 .main-footer {
-  background-color: #56ccf2;
+  background-color: #56CCF2;
   color: white;
   padding: 0.25em 0;
 }
@@ -2023,7 +2010,7 @@ footer {
   height: 34px;
   width: 50px;
   border-radius: 5px;
-  border: 1px solid #56ccf2;
+  border: 1px solid #56CCF2;
   background-color: #eee;
   color: #333;
   padding: 0;
@@ -2068,18 +2055,14 @@ footer {
 /* intermediate-level -> 21-horizontal-scrollbar styles */
 #scroll {
   height: 10px;
-  background-color: #d50000;
+  background-color: #D50000;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   position: fixed;
   /* width: 50%; */
 }
 
-.red,
-.green,
-.blue,
-.violet,
-.orange {
+.red, .green, .blue, .violet, .orange {
   width: 100%;
   display: flex;
   height: 100vh;
@@ -2090,7 +2073,7 @@ footer {
 }
 
 .red {
-  background-color: #80deea;
+  background-color: #80DEEA;
 }
 
 .green {
@@ -2218,7 +2201,7 @@ footer {
 
 /* intermediate-level -> 23-cart-product style */
 .cart-product-body {
-  background: #fff;
+  background: #FFf;
 }
 
 .image img {
@@ -2261,7 +2244,7 @@ footer {
 
 ::selection {
   color: #fff;
-  background: #664aff;
+  background: #664AFF;
 }
 
 .auto-complete-wrapper {
@@ -2337,8 +2320,7 @@ footer {
   cursor: pointer;
 }
 
-.login-page,
-.register-page {
+.login-page, .register-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
@@ -2450,7 +2432,7 @@ footer {
 }
 
 .indexdb-table .removebtn:hover {
-  background: #880e4f;
+  background: #880E4F;
 }
 
 /* Table End */
@@ -2458,11 +2440,7 @@ footer {
 .formcookie-body {
   background: #76b852; /* fallback for old browsers */
   background: rgb(141, 194, 111);
-  background: linear-gradient(
-    90deg,
-    rgb(141, 194, 111) 0%,
-    rgb(118, 184, 82) 50%
-  );
+  background: linear-gradient(90deg, rgb(141, 194, 111) 0%, rgb(118, 184, 82) 50%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2477,7 +2455,7 @@ footer {
 .form-cookie {
   position: relative;
   z-index: 1;
-  background: #ffffff;
+  background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -2502,10 +2480,10 @@ footer {
   text-transform: uppercase;
   border: 0;
   outline: 0;
-  background: #4caf50;
+  background: #4CAF50;
   width: 100%;
   padding: 15px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
@@ -2515,7 +2493,7 @@ footer {
 .form-cookie button:hover,
 .form-cookie button:active,
 .form-cookie button:focus {
-  background: #43a047;
+  background: #43A047;
 }
 
 .form-cookie .message {
@@ -2525,7 +2503,7 @@ footer {
 }
 
 .form-cookie .message a {
-  color: #4caf50;
+  color: #4CAF50;
   text-decoration: none;
 }
 
