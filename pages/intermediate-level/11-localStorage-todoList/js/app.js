@@ -137,11 +137,14 @@ itemInput.addEventListener("keyup", (event) => {
         addNewTodo()
     }
 })
+
 // todo: Sync Other open Tab
-window.addEventListener("storage", () => {
-    alert("LocalStrage Update!")
-    location.reload()
-})
+window.addEventListener("storage", function (event) {
+    if (event.storageArea === localStorage) {
+        console.log(`تغییر در localStorage: کلید ${event.key}، مقدار جدید: ${event.newValue}`);
+        alert("داده در لوکال استوریج تغییر کرد");
+    }
+});
 
 //todo: get todos from LocalStorage in onload Event
 window.onload = () => {
