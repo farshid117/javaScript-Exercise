@@ -56,7 +56,7 @@
   justify-content: flex-end;
   padding: 30px;
 }
-
+/* todo: switch-Btn */
 .switch {
   width: 80px;
   height: 40px;
@@ -153,6 +153,7 @@
   flex-wrap: wrap;
 }
 
+/*  todo: Hero-image */
 .hero-image {
   position: relative;
   width: 50%;
@@ -165,7 +166,7 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  // transform: rotate(-25deg) skew(25deg);
+  transform: rotate(-25deg) skew(25deg);
 }
 
 .cube:before {
@@ -173,7 +174,7 @@
   content: "";
   width: 21px;
   height: 100%;
-  // transform: skewY(-45deg);
+  transform: skewY(-45deg);
   left: -20px;
   bottom: -10px;
 }
@@ -183,7 +184,7 @@
   content: "";
   width: 100%;
   height: 21px;
-  // transform: skewX(-45deg);
+  transform: skewX(-45deg);
   left: -10px;
   bottom: -20px;
 }
