@@ -9,7 +9,7 @@
   color: rgb(57, 57, 57);
 }
 
-.dark-light-h1{
+.dark-light-h1 {
   font-size: 70px;
   line-height: 70px;
   font-weight: 300;
@@ -26,6 +26,7 @@
 .dark-light-p {
   margin: 0px;
   font-size: 20px;
+  font-family: Vazir;
 }
 
 .dark-light-a {
@@ -37,6 +38,7 @@
 
 .dark .dark-light-a {
   color: rgb(246, 169, 241);
+  font-family: Vazir;
 }
 
 .dark-light-header {
@@ -64,7 +66,7 @@
   transition: 0.3s;
   box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
     inset -4px -4px 4px rgb(195 193 198 / 90%);
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dark {

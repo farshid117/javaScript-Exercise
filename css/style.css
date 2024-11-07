@@ -4,23 +4,30 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 @font-face {
   font-family: Vazir;
   src: url("../fonts/Vazir.eot");
-  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir.woff2") format("woff2"), url("../fonts/Vazir.woff") format("woff"), url("../fonts/Vazir.ttf") format("truetype");
+  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff") format("woff"),
+    url("../fonts/Vazir.ttf") format("truetype");
   font-weight: normal;
 }
 @font-face {
   font-family: "Vazir-bold";
   src: url("../fonts/Vazir-Bold.eot");
-  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir-Bold.woff2") format("woff2"), url("../fonts/Vazir-Bold.woff") format("woff"), url("../fonts/Vazir-Bold.ttf") format("truetype");
+  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Bold.woff2") format("woff2"),
+    url("../fonts/Vazir-Bold.woff") format("woff"),
+    url("../fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 @font-face {
   font-family: "Booter - Zero Zero";
-  src: url("../Fonts/Booter - Zero Zero.woff") format("woff"), url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
+  src: url("../Fonts/Booter - Zero Zero.woff") format("woff"),
+    url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -112,7 +119,8 @@ h4 {
 .section {
   padding: 4rem 0 1rem 0;
 }
-.section__title, .section__title_center {
+.section__title,
+.section__title_center {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-bottom: 1rem;
@@ -120,7 +128,8 @@ h4 {
 .section__title_center {
   text-align: center;
 }
-.section__title span, .section__title_center span {
+.section__title span,
+.section__title_center span {
   color: var(--primary-color);
 }
 
@@ -219,19 +228,19 @@ h4 {
   background: red;
 }
 .button__pink {
-  background: #E91E63;
+  background: #e91e63;
 }
 .button__violet {
-  background: #9C27B0;
+  background: #9c27b0;
 }
 .button__blue {
-  background: #2196F3;
+  background: #2196f3;
 }
 .button__orange {
-  background: #FF5722;
+  background: #ff5722;
 }
 .button__green {
-  background: #4CAF50;
+  background: #4caf50;
 }
 
 /* header section style */
@@ -280,7 +289,9 @@ h4 {
   align-items: center;
   gap: 1.5rem;
 }
-.nav__item-link, .nav__toggle, .nav__logo {
+.nav__item-link,
+.nav__toggle,
+.nav__logo {
   color: var(--title-color);
 }
 
@@ -330,20 +341,6 @@ h4 {
   flex-direction: row-reverse;
   gap: 0.5rem;
   flex-wrap: wrap;
-}
-
-.name,
-.fname {
-  color: red;
-}
-
-.list {
-  padding-right: 30px;
-}
-
-.p-op {
-  line-height: 1.5;
-  color: cornflowerblue;
 }
 
 /* Responsive Styles */
@@ -580,7 +577,7 @@ input::placeholder {
 
 #textarea1,
 #check1,
-input[type=checkbox] {
+input[type="checkbox"] {
   accent-color: pink !important;
 }
 
@@ -805,7 +802,8 @@ input[type=checkbox] {
 
 /* intermediate-level: daragable-todolist */
 .darg-todolist-body {
-  font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -864,7 +862,8 @@ input[type=checkbox] {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
   border-radius: 4px;
   padding: 0.1rem 0.5rem 0.1rem 1rem;
   font-size: 1.5rem;
@@ -1021,7 +1020,8 @@ input[type=checkbox] {
   top: 5px;
   left: 5px;
   transition: 0.3s;
-  box-shadow: inset 4px 4px 4px rgb(255, 255, 255), inset -4px -4px 4px rgba(195, 193, 198, 0.9);
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+    inset -4px -4px 4px rgba(195, 193, 198, 0.9);
   cursor: pointer;
 }
 
@@ -1234,7 +1234,8 @@ footer {
   color: #fff;
 }
 
-.status-btn, .delete-btn {
+.status-btn,
+.delete-btn {
   outline: 0;
   border: none;
 }
@@ -1279,7 +1280,8 @@ footer {
 
 /* intermediate-level: 12-birghtness-rangeSlider styles */
 .range-slider-container {
-  background: url(../pages/intermediate-level/12-brightness-rangeSlider/images/city.jpg) no-repeat center;
+  background: url(../pages/intermediate-level/12-brightness-rangeSlider/images/city.jpg)
+    no-repeat center;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -1371,7 +1373,8 @@ footer {
   }
 }
 /* Prive & next Button */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   z-index: 10;
   height: 100%;
@@ -1419,7 +1422,12 @@ footer {
 .change-theme-card {
   height: 420px;
   width: 320px;
-  background: linear-gradient(to bottom, var(--theme-color) 0px, var(--theme-color) 110px, #fff 110px);
+  background: linear-gradient(
+    to bottom,
+    var(--theme-color) 0px,
+    var(--theme-color) 110px,
+    #fff 110px
+  );
   background-size: 100% 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
@@ -1575,15 +1583,18 @@ footer {
   font-size: 1em;
 }
 
-#tab, #Backspace {
+#tab,
+#Backspace {
   width: 5em;
 }
 
-#CapsLock, #Enter {
+#CapsLock,
+#Enter {
   width: 6em;
 }
 
-#ShiftLeft, #ShiftRight {
+#ShiftLeft,
+#ShiftRight {
   width: 8em;
 }
 
@@ -1745,7 +1756,7 @@ footer {
 
 /* pagination styles */
 .pagination-body {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 
 .pagination-header {
@@ -1753,7 +1764,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: #EEE;
+  background-color: #eee;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1766,14 +1777,14 @@ footer {
 .pagination-main .list {
   width: 100%;
   max-width: 768px;
-  background-color: #FFF;
-  border: 1px solid #CCC;
+  background-color: #fff;
+  border: 1px solid #ccc;
   margin-top: 25px;
 }
 
 .pagination-main .list .item {
   padding: 15px;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 
 .pagination-main .list .item:last-of-type {
@@ -1800,21 +1811,21 @@ footer {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #44AAEE;
+  background-color: #44aaee;
   margin: 5px;
   transition: 0.4s;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .page-numbers button:hover {
-  background-color: #44EEAA;
+  background-color: #44eeaa;
 }
 
 .page-numbers button.active {
-  background-color: #44EEAA;
+  background-color: #44eeaa;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1904,7 +1915,7 @@ footer {
 }
 
 .main-footer {
-  background-color: #56CCF2;
+  background-color: #56ccf2;
   color: white;
   padding: 0.25em 0;
 }
@@ -2012,7 +2023,7 @@ footer {
   height: 34px;
   width: 50px;
   border-radius: 5px;
-  border: 1px solid #56CCF2;
+  border: 1px solid #56ccf2;
   background-color: #eee;
   color: #333;
   padding: 0;
@@ -2057,14 +2068,18 @@ footer {
 /* intermediate-level -> 21-horizontal-scrollbar styles */
 #scroll {
   height: 10px;
-  background-color: #D50000;
+  background-color: #d50000;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   position: fixed;
   /* width: 50%; */
 }
 
-.red, .green, .blue, .violet, .orange {
+.red,
+.green,
+.blue,
+.violet,
+.orange {
   width: 100%;
   display: flex;
   height: 100vh;
@@ -2075,7 +2090,7 @@ footer {
 }
 
 .red {
-  background-color: #80DEEA;
+  background-color: #80deea;
 }
 
 .green {
@@ -2203,7 +2218,7 @@ footer {
 
 /* intermediate-level -> 23-cart-product style */
 .cart-product-body {
-  background: #FFf;
+  background: #fff;
 }
 
 .image img {
@@ -2246,7 +2261,7 @@ footer {
 
 ::selection {
   color: #fff;
-  background: #664AFF;
+  background: #664aff;
 }
 
 .auto-complete-wrapper {
@@ -2322,7 +2337,8 @@ footer {
   cursor: pointer;
 }
 
-.login-page, .register-page {
+.login-page,
+.register-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
@@ -2434,7 +2450,7 @@ footer {
 }
 
 .indexdb-table .removebtn:hover {
-  background: #880E4F;
+  background: #880e4f;
 }
 
 /* Table End */
@@ -2442,7 +2458,11 @@ footer {
 .formcookie-body {
   background: #76b852; /* fallback for old browsers */
   background: rgb(141, 194, 111);
-  background: linear-gradient(90deg, rgb(141, 194, 111) 0%, rgb(118, 184, 82) 50%);
+  background: linear-gradient(
+    90deg,
+    rgb(141, 194, 111) 0%,
+    rgb(118, 184, 82) 50%
+  );
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2457,7 +2477,7 @@ footer {
 .form-cookie {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -2482,10 +2502,10 @@ footer {
   text-transform: uppercase;
   border: 0;
   outline: 0;
-  background: #4CAF50;
+  background: #4caf50;
   width: 100%;
   padding: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
@@ -2495,7 +2515,7 @@ footer {
 .form-cookie button:hover,
 .form-cookie button:active,
 .form-cookie button:focus {
-  background: #43A047;
+  background: #43a047;
 }
 
 .form-cookie .message {
@@ -2505,7 +2525,7 @@ footer {
 }
 
 .form-cookie .message a {
-  color: #4CAF50;
+  color: #4caf50;
   text-decoration: none;
 }
 
