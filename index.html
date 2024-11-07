@@ -1,233 +1,415 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="کلمات کلیدی پروژه برای بالابردن سئو" />
     <meta name="description" content="توضیحی از پروژه" />
     <meta name="outher" content="مهندس علیرضا خیاطپور" />
 
-    <link rel="icon" href="img/logo3.png" type="image/png">
-    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/logo3.png" type="image/png" />
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/bootstrap-icons.css" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>تمرین‌های جاوااسکریپت</title>
-
-</head>
-<style>
+  </head>
+  <style>
     body {
-        background: #1c1a39 !important;
+      background: #1c1a39 !important;
     }
-</style>
+  </style>
 
-<body>
-
+  <body>
+    <!-- todo: Site Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo"><span>AliCoder</span><span>.ir</span></a>
+      <nav class="nav container">
+        <a href="#home" class="nav__logo"
+          ><span>AliCoder</span><span>.ir</span></a
+        >
 
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item ">
-                        <a href="#home" class="nav__item_link">صفحه اصلی</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#️about" class="nav__item_link ">درباره ما</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#️support" class="nav__item_link ">پشتیبانی</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__item_link">خدمات</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-toggle-on" style="font-size:30px;"></i>
-                    </li>
-                </ul>
-            </div>
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__item_link">صفحه اصلی</a>
+            </li>
+            <li class="nav__item">
+              <a href="#️about" class="nav__item_link">درباره ما</a>
+            </li>
+            <li class="nav__item">
+              <a href="#️support" class="nav__item_link">پشتیبانی</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__item_link">خدمات</a>
+            </li>
+            <li>
+              <i class="bi bi-toggle-on" style="font-size: 30px"></i>
+            </li>
+          </ul>
+        </div>
 
-            <div class="nav__toggle">
-                <i class="bi bi-list-nested"></i>
-            </div>
+        <div class="nav__toggle">
+          <i class="bi bi-list-nested"></i>
+        </div>
 
-            <a href="" class="button button__header">کلیک کن</a>
-
-        </nav>
+        <a href="" class="button button__header">کلیک کن</a>
+      </nav>
     </header>
     <article>
-        <img src="./img/khodam3.jpg" height="400px" alt="home-img">
+      <img src="./img/khodam3.jpg" height="400px" alt="home-img" />
     </article>
-    <section class="home section" id="fundamental">
-        <div class="container home__container ">
-            <article class="home__info">
-                <h1 class="home__title text-white">
-                    تمرین‌های جاوااسکریپت<br />
-                    <span>1 - سطح مقدماتی Elementary :</span>
-                </h1>
+    <!-- todo: js-Elementry-MiniProject -->
+    <section class="home section" id="elementry">
+      <div class="container home__container">
+        <article class="home__info">
+          <h1 class="home__title text-white">
+            تمرین‌های جاوااسکریپت<br />
+            <span>1 - سطح مقدماتی Elementary :</span>
+          </h1>
 
-                <div class="home__links">
-                    <a href="./pages/elementary-level/1-prompt.html" class="button" dir="ltr">1- prompt method</a>
-                    <a href="./pages/elementary-level/2-convert-datatype.html" class="button button__red"
-                        dir="ltr">2-Convert DataType</a>
-                    <a href="./pages/elementary-level/3-basic-operators-math.html" class="button button__pink"
-                        dir="ltr">3-Basic operators</a>
-                    <a href="./pages/elementary-level/4-comparison operators.html" class="button button__violet"
-                        dir="ltr">4-comparison operators</a>
-                    <a href="./pages/elementary-level/5-if-condition.html" class="button button__blue" dir="ltr">5- if
-                        condition</a>
-                    <a href="./pages/elementary-level/6-evenOrodd.html" class="button button__orange" dir="ltr">6 - Even
-                        Or Odd?</a>
-                    <a href="./pages/elementary-level/7-ageCalculation.html" class="button button__green" dir="ltr">7 -
-                        ageCalculation</a>
-                    <a href="./pages/elementary-level/8-logicalOperator.html" class="button button__red" dir="ltr">8 -
-                        Logical Operator</a>
-                    <a href="./pages/elementary-level/9-strings.html" class="button" dir="ltr">9 - strings</a>
-                    <a href="./pages/elementary-level/10-math.html" class="button button__pink" dir="ltr">10 - Math</a>
-                    <a href="./pages/elementary-level/11-array.html" class="button button__violet" dir="ltr">11 -
-                        Array</a>
-                    <a href="./pages/elementary-level/background.html" class="button button__green"
-                        dir="ltr">Position</a>
-                </div>
-
-            </article>
-        </div>
+          <div class="home__links">
+            <a
+              href="./pages/elementary-level/1-prompt.html"
+              class="button"
+              dir="ltr"
+              >1- prompt method</a
+            >
+            <a
+              href="./pages/elementary-level/2-convert-datatype.html"
+              class="button button__red"
+              dir="ltr"
+              >2-Convert DataType</a
+            >
+            <a
+              href="./pages/elementary-level/3-basic-operators-math.html"
+              class="button button__pink"
+              dir="ltr"
+              >3-Basic operators</a
+            >
+            <a
+              href="./pages/elementary-level/4-comparison operators.html"
+              class="button button__violet"
+              dir="ltr"
+              >4-comparison operators</a
+            >
+            <a
+              href="./pages/elementary-level/5-if-condition.html"
+              class="button button__blue"
+              dir="ltr"
+              >5- if condition</a
+            >
+            <a
+              href="./pages/elementary-level/6-evenOrodd.html"
+              class="button button__orange"
+              dir="ltr"
+              >6 - Even Or Odd?</a
+            >
+            <a
+              href="./pages/elementary-level/7-ageCalculation.html"
+              class="button button__green"
+              dir="ltr"
+              >7 - ageCalculation</a
+            >
+            <a
+              href="./pages/elementary-level/8-logicalOperator.html"
+              class="button button__red"
+              dir="ltr"
+              >8 - Logical Operator</a
+            >
+            <a
+              href="./pages/elementary-level/9-strings.html"
+              class="button"
+              dir="ltr"
+              >9 - strings</a
+            >
+            <a
+              href="./pages/elementary-level/10-math.html"
+              class="button button__pink"
+              dir="ltr"
+              >10 - Math</a
+            >
+            <a
+              href="./pages/elementary-level/11-array.html"
+              class="button button__violet"
+              dir="ltr"
+              >11 - Array</a
+            >
+            <a
+              href="./pages/elementary-level/background.html"
+              class="button button__green"
+              dir="ltr"
+              >Position</a
+            >
+          </div>
+        </article>
+      </div>
     </section>
+    <!-- todo: js-intermediate-MiniProject -->
     <section class="home section" id="intermediate">
-        <div class="container home__container ">
-            <article class="home__info">
-                <h1 class="home__title text-white">
-                    تمرین‌های جاوااسکریپت<br />
-                    <span>2 - سطح متوسط Intermediate :</span>
-                </h1>
+      <div class="container home__container">
+        <article class="home__info">
+          <h1 class="home__title text-white">
+            تمرین‌های جاوااسکریپت<br />
+            <span>2 - سطح متوسط Intermediate :</span>
+          </h1>
 
-                <div class="home__links">
-                    <a href="./pages/intermediate-level/1-mouse-events.html" class="button" dir="ltr">1- Mouse
-                        Events</a>
-                    <a href="./pages/intermediate-level/2-keyboard-event.html" class="button button__red" dir="ltr">2-
-                        Mouse & Keyboard Event Property</a>
-                    <a href="./pages/intermediate-level/3-touch-events.html" class="button button__pink"
-                        dir="ltr">3-Touch Events & Event Property</a>
-                    <a href="./pages/intermediate-level/4-event-flow.html" class="button button__violet" dir="ltr">4-
-                        Event Flow Propagation & Delegation</a>
-                    <a href="./pages/intermediate-level/5-form-event.html" class="button button__blue" dir="ltr">5- Form
-                        Event & Property</a>
-                    <a href="./pages/intermediate-level/6-bom.html" class="button button__orange" dir="ltr">6 - Bom </a>
-                    <a href="./pages/intermediate-level/7-musicPlayer-project/index.html" class="button button__green"
-                        dir="ltr">7 - Music Player Project</a>
-                    <a href="./pages/intermediate-level/8-musicList-project/index.html" class="button button__red"
-                        dir="ltr">8 - Music List Project</a>
-                    <a href="./pages/intermediate-level/9-dragable-todolist/index.html" class="button" dir="ltr">9 -
-                        Drag & Drop TodoList</a>
-                    <a href="./pages/intermediate-level/10-dark-light-mode/index.html" class="button button__pink"
-                        dir="ltr">10 - Dark / Light Project</a>
-                    <a href="./pages/intermediate-level/11-localStorage-todoList/index.html"
-                        class="button button__violet" dir="ltr">11 - LocalStorage TodoList</a>
-                    <a href="./pages/intermediate-level/12-brightness-rangeSlider/index.html"
-                        class="button button__green" dir="ltr">12 - Screen Brightness Slider</a>
-                    <a href="./pages/intermediate-level/13-photo-slider/index.html" class="button button__pink"
-                        dir="ltr">13 - Photo Slider</a>
-                    <a href="./pages/intermediate-level/14-bmi-calculator/index.html" class="button button__violet"
-                        dir="ltr">14 - BMI Calculator</a>
-                    <a href="./pages/intermediate-level/15-dynamic-change-theme/index.html" class="button" dir="ltr">15
-                        - Dynamic Change Theme</a>
-                    <a href="./pages/intermediate-level/16-animate-virtual-keyboard/index.html"
-                        class="button button__red " dir="ltr">16 - Animate Virtual Keyboard</a>
-                    <a href="./pages/intermediate-level/17-booklist-project/index.html" class="button button__orange "
-                        dir="ltr">17 - bookList Project</a>
-                    <a href="./pages/intermediate-level/18-digital-clock/index.html" class="button button__blue"
-                        dir="ltr">18 - Digital Clok</a>
-                    <a href="./pages/intermediate-level/19-text-generator/index.html" class="button button__violet "
-                        dir="ltr">19 - Text Generator</a>
-                    <a href="./pages/intermediate-level/20-pagnation-project/index.html" class="button button__pink"
-                        dir="ltr">20 - Pagination</a>
-                    <a href="./pages/intermediate-level/21-shopping-cart/index.html" class="button button__green"
-                        dir="ltr">21 - Shoping Cart</a>
-                    <a href="./pages/intermediate-level/22-custom-harizontal-scrollbar/index.html" class="button "
-                        dir="ltr">22- Custom Scrollbar</a>
-                    <a href="./pages/intermediate-level/23-shoes-shopping-project" class="button button__violet"
-                        dir="ltr">23 - Shoes Shopping</a>
-                </div>
-            </article>
-        </div>
+          <div class="home__links">
+            <a
+              href="./pages/intermediate-level/1-mouse-events.html"
+              class="button"
+              dir="ltr"
+              >1- Mouse Events</a
+            >
+            <a
+              href="./pages/intermediate-level/2-keyboard-event.html"
+              class="button button__red"
+              dir="ltr"
+              >2- Mouse & Keyboard Event Property</a
+            >
+            <a
+              href="./pages/intermediate-level/3-touch-events.html"
+              class="button button__pink"
+              dir="ltr"
+              >3-Touch Events & Event Property</a
+            >
+            <a
+              href="./pages/intermediate-level/4-event-flow.html"
+              class="button button__violet"
+              dir="ltr"
+              >4- Event Flow Propagation & Delegation</a
+            >
+            <a
+              href="./pages/intermediate-level/5-form-event.html"
+              class="button button__blue"
+              dir="ltr"
+              >5- Form Event & Property</a
+            >
+            <a
+              href="./pages/intermediate-level/6-bom.html"
+              class="button button__orange"
+              dir="ltr"
+              >6 - Bom
+            </a>
+            <a
+              href="./pages/intermediate-level/7-musicPlayer-project/index.html"
+              class="button button__green"
+              dir="ltr"
+              >7 - Music Player Project</a
+            >
+            <a
+              href="./pages/intermediate-level/8-musicList-project/index.html"
+              class="button button__red"
+              dir="ltr"
+              >8 - Music List Project</a
+            >
+            <a
+              href="./pages/intermediate-level/9-dragable-todolist/index.html"
+              class="button"
+              dir="ltr"
+              >9 - Drag & Drop TodoList</a
+            >
+            <a
+              href="./pages/intermediate-level/10-dark-light-mode/index.html"
+              class="button button__pink"
+              dir="ltr"
+              >10 - Dark / Light Project</a
+            >
+            <a
+              href="./pages/intermediate-level/11-localStorage-todoList/index.html"
+              class="button button__violet"
+              dir="ltr"
+              >11 - LocalStorage TodoList</a
+            >
+            <a
+              href="./pages/intermediate-level/12-brightness-rangeSlider/index.html"
+              class="button button__green"
+              dir="ltr"
+              >12 - Screen Brightness Slider</a
+            >
+            <a
+              href="./pages/intermediate-level/13-photo-slider/index.html"
+              class="button button__pink"
+              dir="ltr"
+              >13 - Photo Slider</a
+            >
+            <a
+              href="./pages/intermediate-level/14-bmi-calculator/index.html"
+              class="button button__violet"
+              dir="ltr"
+              >14 - BMI Calculator</a
+            >
+            <a
+              href="./pages/intermediate-level/15-dynamic-change-theme/index.html"
+              class="button"
+              dir="ltr"
+              >15 - Dynamic Change Theme</a
+            >
+            <a
+              href="./pages/intermediate-level/16-animate-virtual-keyboard/index.html"
+              class="button button__red"
+              dir="ltr"
+              >16 - Animate Virtual Keyboard</a
+            >
+            <a
+              href="./pages/intermediate-level/17-booklist-project/index.html"
+              class="button button__orange"
+              dir="ltr"
+              >17 - bookList Project</a
+            >
+            <a
+              href="./pages/intermediate-level/18-digital-clock/index.html"
+              class="button button__blue"
+              dir="ltr"
+              >18 - Digital Clok</a
+            >
+            <a
+              href="./pages/intermediate-level/19-text-generator/index.html"
+              class="button button__violet"
+              dir="ltr"
+              >19 - Text Generator</a
+            >
+            <a
+              href="./pages/intermediate-level/20-pagnation-project/index.html"
+              class="button button__pink"
+              dir="ltr"
+              >20 - Pagination</a
+            >
+            <a
+              href="./pages/intermediate-level/21-shopping-cart/index.html"
+              class="button button__green"
+              dir="ltr"
+              >21 - Shoping Cart</a
+            >
+            <a
+              href="./pages/intermediate-level/22-custom-harizontal-scrollbar/index.html"
+              class="button"
+              dir="ltr"
+              >22- Custom Scrollbar</a
+            >
+            <a
+              href="./pages/intermediate-level/23-shoes-shopping-project"
+              class="button button__violet"
+              dir="ltr"
+              >23 - Shoes Shopping</a
+            >
+          </div>
+        </article>
+      </div>
     </section>
-    <section class="home section" id="intermediate">
-        <div class="container home__container ">
-            <article class="home__info">
-                <h1 class="home__title text-white">
-                    تمرین‌های جاوااسکریپت<br />
-                    <span>3 - سطح پیشرفته Advance :</span>
-                </h1>
+    <!-- todo: js-advance-MiniProject -->
+    <section class="home section" id="advance">
+      <div class="container home__container">
+        <article class="home__info">
+          <h1 class="home__title text-white">
+            تمرین‌های جاوااسکریپت<br />
+            <span>3 - سطح پیشرفته Advance :</span>
+          </h1>
 
-                <div class="home__links">
-                    <a href="./pages/advance-level/1-auto-complete-box/index.html" class="button" dir="ltr">1- Auto
-                        Complete Box</a>
-                    <a href="./pages/advance-level/2-indexDB/register.html" class="button button__red" dir="ltr">2- Form
-                        With Indexed DB </a>
-                    <a href="./pages/advance-level/3-form-cookie/index.html" class="button button__pink"
-                        dir="ltr">3-Form Cookie</a>
-                    <a href="./pages/advance-level/4-event-flow.html" class="button button__violet" dir="ltr">4- Event
-                        Flow Propagation & Delegation</a>
-                    <a href="./pages/advance-level/5-form.html" class="button button__blue" dir="ltr">5- Form Event &
-                        Property</a>
-                    <a href="./pages/advance-level/6-bom.html" class="button button__orange" dir="ltr">6 - Bom </a>
-                    <a href="./pages/advance-level/7-musicPlayer-project/index.html" class="button button__green"
-                        dir="ltr">7 - Music Player Project</a>
-                    <a href="./pages/advance-level/8-musicList-project/index.html" class="button button__red"
-                        dir="ltr">8 - Music List Project</a>
-                    <a href="./pages/advance-level/9-drag-drop-todolist-project/index.html" class="button" dir="ltr">9-
-                        Drag & Drop TodoList</a>
-                    <a href="./pages/advance-level/10-dark-light-mode/index.html" class="button button__pink"
-                        dir="ltr">10 - Dark / Light Project</a>
-                    <a href="./pages/advance-level/11-localStorage-todoList/index.html" class="button button__violet"
-                        dir="ltr">11 - LocalStorage TodoList</a>
-                </div>
-            </article>
-        </div>
+          <div class="home__links">
+            <a
+              href="./pages/advance-level/1-auto-complete-box/index.html"
+              class="button"
+              dir="ltr"
+              >1- Auto Complete Box</a
+            >
+            <a
+              href="./pages/advance-level/2-indexDB/register.html"
+              class="button button__red"
+              dir="ltr"
+              >2- Form With Indexed DB
+            </a>
+            <a
+              href="./pages/advance-level/3-form-cookie/index.html"
+              class="button button__pink"
+              dir="ltr"
+              >3-Form Cookie</a
+            >
+            <a
+              href="./pages/advance-level/4-event-flow.html"
+              class="button button__violet"
+              dir="ltr"
+              >4- Event Flow Propagation & Delegation</a
+            >
+            <a
+              href="./pages/advance-level/5-form.html"
+              class="button button__blue"
+              dir="ltr"
+              >5- Form Event & Property</a
+            >
+            <a
+              href="./pages/advance-level/6-bom.html"
+              class="button button__orange"
+              dir="ltr"
+              >6 - Bom
+            </a>
+            <a
+              href="./pages/advance-level/7-musicPlayer-project/index.html"
+              class="button button__green"
+              dir="ltr"
+              >7 - Music Player Project</a
+            >
+            <a
+              href="./pages/advance-level/8-musicList-project/index.html"
+              class="button button__red"
+              dir="ltr"
+              >8 - Music List Project</a
+            >
+            <a
+              href="./pages/advance-level/9-drag-drop-todolist-project/index.html"
+              class="button"
+              dir="ltr"
+              >9- Drag & Drop TodoList</a
+            >
+            <a
+              href="./pages/advance-level/10-dark-light-mode/index.html"
+              class="button button__pink"
+              dir="ltr"
+              >10 - Dark / Light Project</a
+            >
+            <a
+              href="./pages/advance-level/11-localStorage-todoList/index.html"
+              class="button button__violet"
+              dir="ltr"
+              >11 - LocalStorage TodoList</a
+            >
+          </div>
+        </article>
+      </div>
     </section>
     <!-- <article class="svg__img home__img ">
         <img src="./img/1.svg" alt="home-img">
     </article> -->
 
-
     <footer class="footer section" id="footer">
-        <div class="container footer__container">
-
-        </div>
+      <div class="container footer__container"></div>
     </footer>
 
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const header = document.querySelector(".header")
-        const navBtn = document.querySelector(".button__header")
-        window.addEventListener("scroll", function () {
-
-            if (window.scrollY > 230) {
-                header.style.backgroundColor = "#fff"
-                header.style.transition = "background-color .5s ease"
-
-            } else {
-                header.style.backgroundColor = "transparent"
-                navBtn.style.display = "none"
-
-
-            }
-        })
+      const header = document.querySelector(".header");
+      const navBtn = document.querySelector(".button__header");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 230) {
+          header.style.backgroundColor = "#fff";
+          header.style.transition = "background-color .5s ease";
+        } else {
+          header.style.backgroundColor = "transparent";
+          navBtn.style.display = "none";
+        }
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
