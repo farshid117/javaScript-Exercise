@@ -4,14 +4,10 @@ const UlTodoList = $.querySelector("#todoList")
 const addButton = $.querySelector("#addButton")
 const clearButton = $.querySelector("#clearButton")
 
-
-
 let todosArray = []
 
-
-
 //add New Todo Function
-function addNewTodo(){
+function addNewTodo() {
     if (itemInput.value.trim()) {
         const todo = {
             id: todosArray.length + 1,
@@ -20,7 +16,6 @@ function addNewTodo(){
         }
 
         todosArray.push(todo)
-        console.log("todosArray: ", todosArray)
 
         setLocalStorage(todosArray)
         createTodoItems(todosArray)
@@ -37,11 +32,11 @@ function createTodoItems(todosList) {
 
     todosList.forEach((todo) => {
         const li = document.createElement("li")
-        li.className = todo.status === "uncompleted" ? 
-                       "todoList_item uncompleted well list-group-item" : 
-                       "todoList_item completed well list-group-item"
+        li.className = todo.status === "uncompleted" ?
+            "todoList_item uncompleted well list-group-item" :
+            "todoList_item completed well list-group-item"
         li.innerHTML =
-        `
+            `
             <label>${todo.text}</label>
             <div class="todoList_item__btn">
                 <button class="btn btn-success status-btn" 
@@ -64,39 +59,39 @@ function createTodoItems(todosList) {
 function changeStatusHandler(event, id) {
     // console.log("changeBtn Clicked!")
 
- /*    let targetElm = event.target.parentElement.parentElement
-    if (targetElm.classList.contains("completed")) {
-        targetElm.classList.remove("completed")
-        targetElm.classList.add("uncompleted")
-        event.target.innerText = "completed"
-
-        let todoIndex = todosArray.findIndex(todo => todo.id === id)
-        let todo = todosArray.find(todo => todo.id === id)
-        todo.status = "uncompleted"
-
-        todosArray[todoIndex] = todo
-        setLocalStorage(todosArray)
-
-    } else {
-        targetElm.classList.remove("uncompleted")
-        targetElm.classList.add("completed")
-        event.target.innerText = "uncompleted"
-
-        let todoIndex = todosArray.findIndex(todo => todo.id === id)
-        let todo = todosArray.find(todo => todo.id === id)
-        todo.status = "completed"
-
-        todosArray[todoIndex] = todo
-        setLocalStorage(todosArray)
-    } */
+    /*    let targetElm = event.target.parentElement.parentElement
+       if (targetElm.classList.contains("completed")) {
+           targetElm.classList.remove("completed")
+           targetElm.classList.add("uncompleted")
+           event.target.innerText = "completed"
+   
+           let todoIndex = todosArray.findIndex(todo => todo.id === id)
+           let todo = todosArray.find(todo => todo.id === id)
+           todo.status = "uncompleted"
+   
+           todosArray[todoIndex] = todo
+           setLocalStorage(todosArray)
+   
+       } else {
+           targetElm.classList.remove("uncompleted")
+           targetElm.classList.add("completed")
+           event.target.innerText = "uncompleted"
+   
+           let todoIndex = todosArray.findIndex(todo => todo.id === id)
+           let todo = todosArray.find(todo => todo.id === id)
+           todo.status = "completed"
+   
+           todosArray[todoIndex] = todo
+           setLocalStorage(todosArray)
+       } */
 
     //approach 2
     todosArray.forEach(todo => {
-        if(todo.id === id){
-            if (todo.status === "completed"){
+        if (todo.id === id) {
+            if (todo.status === "completed") {
                 todo.status = "uncompleted"
                 event.target.innerText = "completed"
-            }else{
+            } else {
                 todo.status = "completed"
                 event.target.innerText = "uncompleted"
             }
@@ -107,19 +102,19 @@ function changeStatusHandler(event, id) {
 }
 function deleteTodoHandler(event, id) {
     event.target.parentElement.parentElement.remove()
-  
+
     let todoIndex = todosArray.findIndex(todo => todo.id === id)
     todosArray.splice(todoIndex, 1) // splice: swiss army knife & change self array
     setLocalStorage(todosArray)
 }
 
 //todo: filter todosArray
-function showCompletedHandler(){
+function showCompletedHandler() {
     filterTodosArray = todosArray.filter(todo => todo.status === "completed")
     console.log("filterTodosArray: ", filterTodosArray);
     createTodoItems(filterTodosArray)
 }
-function showUncompletedHandler(){
+function showUncompletedHandler() {
     filterTodosArray = todosArray.filter(todo => todo.status === "uncompleted")
     console.log("filterTodosArray: ", filterTodosArray);
     createTodoItems(filterTodosArray)
@@ -142,19 +137,20 @@ itemInput.addEventListener("keyup", (event) => {
         addNewTodo()
     }
 })
-
-window.addEventListener("storage",() => {
+// todo: Sync Other open Tab
+window.addEventListener("storage", () => {
     alert("LocalStrage Update!")
+    location.reload()
 })
 
 //todo: get todos from LocalStorage in onload Event
 window.onload = () => {
     itemInput.focus()
     let localStorageTodosArray = JSON.parse(localStorage.getItem("LocalStorageTodosArray"))
-    if (localStorageTodosArray.length > 0){
+    if (localStorageTodosArray.length > 0) {
         todosArray = localStorageTodosArray
-        
-    }else{
+
+    } else {
         todosArray = []
         alert("Haven't Any Todos in LocalStorage")
     }
