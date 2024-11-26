@@ -39,8 +39,6 @@ function runMusic(event) {
             audio.currentTime = 0
             audio.previousElementSibling.classList.replace("fa-pause", "fa-play");
             audio.setAttribute("data-play", "false")
-
-
         }
     })
 }
