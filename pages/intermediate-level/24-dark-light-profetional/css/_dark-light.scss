@@ -1,0 +1,196 @@
+/* 24-dark-light-profitional-styles */
+/* متغیرهای تم */
+:root {
+  --navbar-bg: #fff;
+  --header-bg: #f0f8ff;
+  --products-bg: #f9f9f9;
+  --card-bg: #ffffff;
+  --footer-bg: #eeeeee;
+  --text-color: #333;
+}
+
+.drak-light-pro-body.dark {
+  --navbar-bg: #333c4c;
+  --header-bg: #111827;
+  --products-bg: #111827;
+  --card-bg: #242a38;
+  --footer-bg: #333c4c;
+  --text-color: #f9f9f9;
+}
+
+/* استایل‌های پایه */
+.drak-light-pro-body {
+  font-family: vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--products-bg);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+/* نوار بالا */
+.navbar-dark-light-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-bg);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: calc(100% - 2rem);
+  z-index: 10;
+}
+.navbar-dark-light-pro .logo{
+  font-weight: bold;
+}
+.nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.theme-switch {
+  font-family: vazir;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #16a34a;
+  color: #fff;
+}
+
+/* هدر */
+.header-dark-light-pro {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+.card2 {
+  width: calc(33.333% - 2rem) * 2;
+  background-color: var(--card-bg);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.header-dark-light-pro img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+border: 4px solid #333c4c;
+}
+
+.header-dark-light-pro h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* بخش محصولات */
+.products {
+  padding: 2rem;
+  background-color: var(--products-bg);
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card-dark-light-pro {
+  width: calc(33.333% - 2rem);
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card-dark-light-pro img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.4s;
+  border: 2px solid #333c4c;
+}
+.carcard-dark-light-pro .ava-img,.card-dark-light-pro .rayan-img {
+  object-position: initial;
+}
+
+
+.card-dark-light-pro h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-dark-light-pro p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* هاور روی کارت‌ها */
+.card-dark-light-pro:hover img {
+  transform: scale(1.05);
+}
+
+/* فوتر */
+.footer-drak-light-pro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+}
+
+.footer-drak-light-pro .social-icons {
+  margin: 1rem 0;
+}
+
+.footer-drak-light-pro .social-icons img {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer-drak-light-pro p {
+  margin: 0.5rem 0;
+}
+
+/* ریسپانسیو */
+@media screen and (max-width: 768px) {
+  .card-dark-light-pro {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-dark-light-pro {
+    width: 100%;
+  }
+}
