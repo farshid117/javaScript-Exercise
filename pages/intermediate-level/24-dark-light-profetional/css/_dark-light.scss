@@ -69,12 +69,13 @@
   padding: 2rem;
   background-color: var(--header-bg);
   color: var(--text-color);
+  display: flex;
+  justify-content: center;
+
 }
 
-$card-base-width: 33.333%;
-$card-offset: 2rem;
 .card2 {
-  width: calc((33.333% - 2rem) * 2);
+  width: calc((33.333% - 2rem) * 3);
   background-color: var(--card-bg);
   padding: 2rem 1rem;
   border-radius: 8px;
@@ -127,7 +128,7 @@ $card-offset: 2rem;
 
 .card-dark-light-pro img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   object-position: top center;
   border-radius: 5px;
@@ -136,7 +137,7 @@ $card-offset: 2rem;
   transition: transform 0.4s;
   border: 2px solid #333c4c;
 }
-.carcard-dark-light-pro .ava-img,
+.card-dark-light-pro .ava-img,
 .card-dark-light-pro .rayan-img {
   object-position: initial;
 }
@@ -167,10 +168,14 @@ $card-offset: 2rem;
   padding: 2rem 1rem;
   background-color: var(--footer-bg);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-drak-light-pro .social-icons {
   margin: 1rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-drak-light-pro .social-icons img {
