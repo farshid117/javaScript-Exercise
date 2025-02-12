@@ -16,6 +16,7 @@
   --card-bg: #242a38;
   --footer-bg: #333c4c;
   --text-color: #f9f9f9;
+  transition: all 1s;
 }
 
 /* استایل‌های پایه */
@@ -25,7 +26,7 @@
   padding: 0;
   background-color: var(--products-bg);
   color: var(--text-color);
-  transition: all 0.3s;
+   transition: all 1s;
 }
 
 /* نوار بالا */
